@@ -1,0 +1,57 @@
+[
+  {
+    "id_catogery": 5,
+    "id": 1,
+    "name": "موتور و ماشین"
+  },
+  {
+    "id_catogery": 5,
+    "id": 2,
+    "name": "پذیرایی/مراسم"
+  },
+  {
+    "id_catogery": 5,
+    "id": 3,
+    "name": "خدمات رایانه ای و موبایل"
+  },
+  {
+    "id_catogery": 5,
+    "id": 4,
+    "name": "مالی/ حسابداری/بیمه"
+  },
+  {
+    "id_catogery": 5,
+    "id": 5,
+    "name": "حمل و نقل"
+  },
+  {
+    "id_catogery": 5,
+    "id": 6,
+    "name": "پیشه و مهارت"
+  },
+  {
+    "id_catogery": 5,
+    "id": 7,
+    "name": "آرایشگری و زیبایی"
+  },
+  {
+    "id_catogery": 5,
+    "id": 8,
+    "name": "سرگرمی"
+  },
+  {
+    "id_catogery": 5,
+    "id": 9,
+    "name": "نظافت"
+  },
+  {
+    "id_catogery": 5,
+    "id": 10,
+    "name": "باغبانی و درختکاری"
+  },
+  {
+    "id_catogery": 5,
+    "id": 11,
+    "name": "آموزشی"
+  }
+]

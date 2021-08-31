@@ -1,0 +1,36 @@
+[
+  {
+    "id_catogery": 1,
+    "id_group": 6,
+    "name": "مشارکت در ساخت",
+    "code": 1,
+
+    "city": "",
+    "img_url": [],
+    "adviser": ["همه", "شخصی", "مشاور املاک"],
+    "imadiate": "فوری",
+    "mobile": "",
+    "codemeli": "",
+    "title": "",
+    "explation": ""
+  },
+  {
+    "id_catogery": 1,
+    "id_group": 6,
+    "name": "پیش فروش",
+    "code": 2,
+
+    "city": "",
+    "img_url": [],
+    "adviser": ["همه", "شخصی", "مشاور املاک"],
+    "imadiate": "فوری",
+    "mobile": "",
+    "codemeli": "",
+    "title": "",
+    "explation": ""
+  },
+  {
+    "name": "همه آگهی های پروژه های ساخت و ساز",
+    "code": 3
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id_catogery": 8,
+    "id": 1,
+    "name": "رویداد"
+  },
+  {
+    "id_catogery": 8,
+    "id": 2,
+    "name": "داوطلبانه"
+  },
+  {
+    "id_catogery": 8,
+    "id": 3,
+    "name": "گم شده ها"
+  }
+]

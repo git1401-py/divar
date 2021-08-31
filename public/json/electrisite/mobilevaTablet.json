@@ -1,0 +1,406 @@
+[
+    {
+        "id_catogery": 3,
+        "id_group": 1,
+      "name": "موبایل",
+      "code": 1,
+      "city": "",
+      "minprice": [
+          "100 هزار",
+          "250 هزار",
+          "500 هزار",
+          "800 هزار",
+          "1 میلیون",
+          "2 میلیون",
+          "3 میلیون",
+          "5 میلیون",
+          "7 میلیون و 500 هزار",
+          "10 میلیون",
+          "20 میلیون"
+        ],
+        "maxprice": [
+          "100 هزار",
+          "250 هزار",
+          "500 هزار",
+          "800 هزار",
+          "1 میلیون",
+          "2 میلیون",
+          "3 میلیون",
+          "5 میلیون",
+          "7 میلیون و 500 هزار",
+          "10 میلیون",
+          "20 میلیون"
+        ],
+        "price": "",
+        "types":[
+          {
+            "name":"ایسر",
+            "code":"acer",
+            "type":["ایسر Liquid C1","ایسر Liquid E1","ایسر Liquid E2","ایسر Liquid E3","ایسر Liquid E3 Duo Plus","ایسر Liquid E600","ایسر Liquid E700","ایسر Liquid Gallant E350","ایسر Liquid Glow E330","ایسر Liquid Jade","ایسر Liquid Jade 2","ایسر Liquid Jade Primo","ایسر Liquid Jade S","ایسر Liquid M320","ایسر Liquid M330","ایسر Liquid S1","ایسر Liquid S2","ایسر Liquid X1","ایسر Liquid X2","ایسر Liquid Z110","ایسر Liquid Z2","ایسر Liquid Z200","ایسر Liquid Z220","ایسر Liquid Z3","ایسر Liquid Z320","ایسر Liquid Z330","ایسر Liquid Z4","ایسر Liquid Z410","ایسر Liquid Z5","ایسر Liquid Z500","ایسر Liquid Z520","ایسر Liquid Z530","ایسر Liquid Z530S","ایسر Liquid Z6","ایسر Liquid Z630","ایسر Liquid Z630S","ایسر Liquid Z6 Plus","ایسر Liquid Zest","ایسر Liquid Zest Plus","سایر مدل های ایسر"]
+          },
+          {
+            "name":"آلکاتل",
+            "code":"",
+            "type":["آلکاتل 1SE (2020)","آلکاتل 1x","آلکاتل 1x (2019)","آلکاتل 3088","آلکاتل 3c","آلکاتل 3L (2020)","آلکاتل 3L (2021)","آلکاتل 3T 10","آلکاتل 3T 8","آلکاتل 3v","آلکاتل 3v (2019)","آلکاتل 3x (2019)","آلکاتل 3X (2020)","آلکاتل 5","آلکاتل 5v","آلکاتل 7","آلکاتل A3","آلکاتل A3 XL","آلکاتل A5 LED","آلکاتل A7","آلکاتل A7 XL","آلکاتل Evolve","آلکاتل Evolve 2","آلکاتل Fierce","آلکاتل Fierce 2","آلکاتل Fierce 4","آلکاتل Fierce XL","آلکاتل Fierce XL (Windows)","آلکاتل Fire C","آلکاتل Fire E","آلکاتل Fire S","آلکاتل Flash","آلکاتل Flash 2","آلکاتل Flash (2017)","آلکاتل Flash Plus","آلکاتل Flash Plus 2","آلکاتل Go Flip 3","آلکاتل Go Play","آلکاتل Hero","آلکاتل Hero 2","آلکاتل Hero 8","آلکاتل Idol 2 S","آلکاتل Idol 3C","آلکاتل Idol 4s","آلکاتل Idol 4s Windows","آلکاتل Idol 5","آلکاتل Idol 5s","آلکاتل Idol 5s (USA)","آلکاتل Idol Alpha","آلکاتل Idol S","آلکاتل Idol X","آلکاتل Idol X+","آلکاتل One Touch Evo 7","آلکاتل One Touch Idol","آلکاتل One Touch Idol Ultra","آلکاتل One Touch Pixi","آلکاتل One Touch Scribe Easy","آلکاتل One Touch Scribe HD","آلکاتل One Touch Scribe HD-LTE","آلکاتل One Touch Scribe X","آلکاتل One Touch Snap","آلکاتل One Touch Star","آلکاتل Orange Klif","آلکاتل OT-983","آلکاتل OT-988 Shockwave","آلکاتل OT-992D","آلکاتل OT-995","آلکاتل OT-997","آلکاتل OT-997D","آلکاتل Pixi 2","آلکاتل Pixi 3 (3.5)","آلکاتل Pixi 3 (3.5) Firefox","آلکاتل Pixi 3 (4)","آلکاتل Pixi 3 (5.5)","آلکاتل Pixi 3 (5.5) LTE","آلکاتل Pixi 4 (3.5)","آلکاتل Pixi 4 (4)","آلکاتل Pixi 4 (5)","آلکاتل Pixi 4 (6)","آلکاتل Pixi 4 (6) 3G","آلکاتل Pixi 4 Plus Power","آلکاتل Pixi First","آلکاتل Pop 2 (4.5)","آلکاتل Pop 2 (4.5) Dual SIM","آلکاتل Pop 2 (5)","آلکاتل Pop 2 (5) Premium","آلکاتل Pop 3 (5)","آلکاتل Pop 3 (5.5)","آلکاتل Pop 4","آلکاتل Pop 4+","آلکاتل Pop 4S","آلکاتل Pop 7","آلکاتل Pop 7 LTE","آلکاتل Pop Astro","آلکاتل Pop C1","آلکاتل Pop C2","آلکاتل Pop C3","آلکاتل Pop C5","آلکاتل Pop C9","آلکاتل Pop D1","آلکاتل Pop D3","آلکاتل Pop D5","آلکاتل Pop Icon","آلکاتل Pop S3","آلکاتل Pop S7","آلکاتل Pop S9","آلکاتل Pop Star","آلکاتل Pop Star LTE","آلکاتل Pop Up","آلکاتل Pulsemix","آلکاتل Shine Lite","آلکاتل U5","آلکاتل U5 HD","آلکاتل X1","سایر مدل‌های آلکاتل"]
+          },
+          {
+            "name":"آمازون",
+            "code":"",
+            "type":["آمازون Fire Phone","سایر مدل‌های آمازون"]
+          },
+          {
+            "name":"اپل",
+            "code":"",
+            "type":["اپل iPad 10.2 (2020)","اپل iPad Air (2020)","اپل iPhone 11","اپل iPhone 11 Pro","اپل iPhone 11 Pro Max","اپل iPhone 12","اپل iPhone 12 mini","اپل iPhone 12 Pro","اپل iPhone 12 Pro Max","اپل iPhone 4","اپل iPhone 4 CDMA","اپل iPhone 4s","اپل iPhone 5","اپل iPhone 5c","اپل iPhone 5s","اپل iPhone 6","اپل iPhone 6 Plus","اپل iPhone 6s","اپل iPhone 6s Plus","اپل iPhone 7","اپل iPhone 7 Plus","اپل iPhone 8","اپل iPhone 8 Plus","اپل iPhone SE","اپل iPhone SE (2020)","اپل iPhone X","اپل iPhone XR","اپل iPhone XS","اپل iPhone XS Max","سایر مدل‌های اپل"]                },
+          {
+            "name":"آرکاس",
+            "code":"",
+            "type":["آرکاس 40b Titanium","آرکاس 40c Titanium","آرکاس 40 Titanium","آرکاس 45 Helium 4G","آرکاس 45 Platinum","آرکاس 45 Titanium","آرکاس 50b Cobalt","آرکاس 50b Helium 4G","آرکاس 50b Platinum","آرکاس 50 Cobalt","آرکاس 50c Oxygen","آرکاس 50d Helium 4G","آرکاس 50 Diamond","آرکاس 50 Graphite","آرکاس 50 Helium 4G","آرکاس 50 Oxygen","آرکاس 50 Platinum","آرکاس 50 Saphir","آرکاس 50 Titanium","آرکاس 53 Platinum","آرکاس 53 Titanium","آرکاس 55b Cobalt","آرکاس 55 Cobalt Plus","آرکاس 55 Graphite","آرکاس 64 Xenon","آرکاس Diamond 2 Plus","آرکاس Diamond Alpha","آرکاس Diamond Alpha+","آرکاس Diamond Gamma","آرکاس Diamond Omega","آرکاس Diamond Plus","آرکاس Diamond S","آرکاس Saphir 50X","آرکاس Sense 50x","آرکاس Sense 55s","سایر مدل‌های آرکاس"]
+          },
+          {
+            "name":"ایسوس",
+            "code":"",
+            "type":["ایسوس Fonepad Note FHD6","ایسوس PadFone 2","ایسوس PadFone Infinity","ایسوس PadFone Infinity 2","ایسوس PadFone Infinity Lite","ایسوس PadFone mini","ایسوس PadFone mini 4G (Intel)","ایسوس PadFone mini (Intel)","ایسوس PadFone S","ایسوس PadFone X","ایسوس PadFone X mini","ایسوس Pegasus","ایسوس Pegasus 2 Plus","ایسوس ROG Phone 3 Strix","ایسوس ROG Phone 3 ZS661KS","ایسوس ROG Phone 5","ایسوس ROG Phone 5 Pro","ایسوس ROG Phone 5 Ultimate","ایسوس ROG Phone II ZS660KL","ایسوس ROG Phone ZS600KL","ایسوس Zenfone 2 Deluxe ZE551ML","ایسوس Zenfone 2E","ایسوس Zenfone 2 Laser ZE601KL","ایسوس Zenfone 2 ZE550ML","ایسوس Zenfone 2 ZE551ML","ایسوس Zenfone 3 Deluxe 5.5 ZS550KL","ایسوس Zenfone 3 Deluxe ZS570KL","ایسوس Zenfone 3 Laser ZC551KL","ایسوس Zenfone 3 Max ZC553KL","ایسوس Zenfone 3s Max ZC521TL","ایسوس Zenfone 3 Ultra ZU680KL","ایسوس Zenfone 3 ZE552KL","ایسوس Zenfone 3 Zoom ZE553KL","ایسوس Zenfone 4 (2014)","ایسوس Zenfone 4 A450CG (2014)","ایسوس Zenfone 4 Max Plus ZC554KL","ایسوس Zenfone 4 Max Pro ZC554KL","ایسوس Zenfone 4 Max ZC520KL","ایسوس Zenfone 4 Pro ZS551KL","ایسوس Zenfone 4 Selfie Lite ZB553KL","ایسوس Zenfone 4 Selfie Pro ZD552KL","ایسوس Zenfone 4 Selfie ZB553KL","ایسوس Zenfone 4 Selfie ZD553KL","ایسوس Zenfone 4 ZE554KL","ایسوس Zenfone 5 A500CG (2014)","ایسوس Zenfone 5 A500KL (2014)","ایسوس Zenfone 5 A501CG (2015)","ایسوس Zenfone 5 Lite ZC600KL","ایسوس Zenfone 5 ZE620KL","ایسوس Zenfone 5z ZS620KL","ایسوس Zenfone 6 A600CG (2014)","ایسوس Zenfone 6 A601CG (2014)","ایسوس Zenfone 6 ZS630KL","ایسوس Zenfone 7 Pro ZS671KS","ایسوس Zenfone 7 ZS670KS","ایسوس Zenfone AR ZS571KL","ایسوس Zenfone C ZC451CG","ایسوس Zenfone Go T500","ایسوس Zenfone Go ZB450KL","ایسوس Zenfone Go ZB452KG","ایسوس Zenfone Go ZB500KL","ایسوس Zenfone Go ZB551KL","ایسوس Zenfone Go ZB552KL","ایسوس Zenfone Go ZB690KG","ایسوس Zenfone Go ZC451TG","ایسوس Zenfone Go ZC500TG","ایسوس ZenFone Lite (L1) ZA551KL","ایسوس ZenFone Live (L1) ZA550KL","ایسوس ZenFone Live (L2)","ایسوس Zenfone Live ZB501KL","ایسوس Zenfone Max (M1) ZB555KL","ایسوس Zenfone Max (M1) ZB556KL","ایسوس Zenfone Max Plus (M2) ZB634KL","ایسوس Zenfone Max Pro (M1) ZB601KL/ZB602K","ایسوس Zenfone Max Pro (M2) ZB631KL","ایسوس Zenfone Max Shot ZB634KL","ایسوس Zenfone Max ZC550KL","ایسوس Zenfone Max ZC550KL (2016)","ایسوس Zenfone Pegasus 3","ایسوس Zenfone Pegasus 3s","ایسوس Zenfone Selfie ZD551KL","ایسوس Zenfone Zoom ZX550","ایسوس Zenfone Zoom ZX551ML","سایر مدل‌های ایسوس"]
+          },
+          {
+            "name":"بلک ‌بری",
+            "code":"",
+            "type":["بلک‌بری 9720","بلک‌بری A10","بلک‌بری Aurora","بلک‌بری Classic","بلک‌بری Classic Non Camera","بلک‌بری DTEK50","بلک‌بری DTEK60","بلک‌بری Evolve","بلک‌بری Evolve X","بلک‌بری KEY2","بلک‌بری KEY2 LE","بلک‌بری Keyone","بلک‌بری Leap","بلک‌بری Motion","بلک‌بری Passport","بلک‌بری Priv","بلک‌بری Q10","بلک‌بری Q5","بلک‌بری Z10","بلک‌بری Z3","بلک‌بری Z30","سایر مدل‌های بلک‌بری"]
+          },
+          {
+            "name":"بلو",
+            "code":"",
+            "type":["بلو Advance 4.0","بلو Advance 4.0 L","بلو Advance 4.0 L2","بلو Advance 4.0 L3","بلو Advance 4.0 M","بلو Advance L4","بلو Advance L5","بلو Amour","بلو Bold N1","بلو C5","بلو C5 (2017)","بلو C5 2019","بلو C5L","بلو C5L 2020","بلو C5 LTE","بلو C5 Plus","بلو C6 2019","بلو Dash 3.2","بلو Dash 3.5","بلو Dash 4.0","بلو Dash 4.5","بلو Dash 4.5 (2016)","بلو Dash 5.0","بلو Dash C Music","بلو Dash G","بلو Dash JR","بلو Dash L","بلو Dash L2","بلو Dash L3","بلو Dash L4","بلو Dash L4 LTE","بلو Dash L5 LTE","بلو Dash M","بلو Dash M2","بلو Dash Music","بلو Dash Music 4.0","بلو Dash Music JR","بلو Dash X","بلو Dash X2","بلو Dash XL","بلو Dash X LTE","بلو Dash X Plus","بلو Dash X Plus LTE","بلو Diamond M","بلو Elite 3.8","بلو Energy Diamond","بلو Energy Diamond Mini","بلو Energy JR","بلو Energy M","بلو Energy X","بلو Energy X2","بلو Energy XL","بلو Energy X LTE","بلو Energy X Plus","بلو Energy X Plus 2","بلو G5","بلو G50","بلو G50 Mega","بلو G50 Plus","بلو G5 Plus","بلو G6","بلو G60","بلو G61","بلو G70","بلو G8","بلو G80","بلو G9","بلو G90","بلو G90 Pro","بلو G91","بلو G9 Pro","بلو Grand 5.5 HD","بلو Grand 5.5 HD ll","بلو Grand Energy","بلو Grand M","بلو Grand M2","بلو Grand M2 (2018)","بلو Grand M2 LTE","بلو Grand M3","بلو Grand Max","بلو Grand ini","بلو Grand X","بلو Grand XL","بلو Grand XL LTE","بلو Grand X LTE","بلو Life 8","بلو Life 8 LX","بلو Life Mark","بلو Life Max","بلو Life One","بلو Life One (2015)","بلو Life One M","بلو Life One X","بلو Life One X2","بلو Life One X (2016)","بلو Life One X2 Mini","بلو Life One X3","بلو Life One XL","بلو Life Play","بلو Life Play Mini","بلو Life Play S","بلو Life Play X","بلو Life Pro","بلو Life Pure","بلو Life Pure Mini","بلو Life View","بلو Life X8","بلو Life XL","بلو Neo 3.5","بلو Neo 4.5","بلو Neo X","بلو Neo XL","بلو Neo X LTE","بلو Neo X Mini","بلو Neo X Plus","بلو Pure XL","بلو Pure XR","بلو Quattro 4.5","بلو Quattro 4.5 HD","بلو Quattro 45.7 HD","بلو R1 HD","بلو R1 Plus","بلو R2","بلو R2 LTE","بلو R2 Plus","بلو S1","بلو Selfie","بلو Sport 4.5","بلو Studio 5.0","بلو Studio 5.0 C","بلو Studio 5.0 CE","بلو Studio 5.0 C HD","بلو Studio 5.0 E","بلو Studio 5.0 HD LTE","بلو Studio 5.0 ll","بلو Studio 5.0 LTE","بلو Studio 5.0 S","بلو Studio 5.0 S ll","بلو Studio 5.3","بلو Studio 5.3 ll","بلو Studio 5.3 S","بلو Studio 5.5","بلو Studio 5.5C","بلو Studio 5.5 HD","بلو Studio 5.5 S","بلو Studio 6.0 HD","بلو Studio 6.0 LTE","بلو Studio C","بلو Studio C 5 + 5","بلو Studio C 5 + 5 LTE","بلو Studio C 8+8","بلو Studio C 8+8 LTE","بلو Studio C HD","بلو Studio C Mini","بلو Studio C Super Camera","بلو Studio Energy","بلو Studio Energy 2","بلو Studio G","بلو Studio G2","بلو Studio G2 HD","بلو Studio G3","بلو Studio G4","بلو Studio G HD","بلو Studio G HD LTE","بلو Studio G LTE","بلو Studio G Max","بلو Studio G Mini","بلو Studio G Plus","بلو Studio G Plus HD","بلو Studio J1","بلو Studio J2","بلو Studio J5","بلو Studio J8","بلو Studio J8 LTE","بلو Studio J8M LTE","بلو Studio Max","بلو Studio Mega","بلو Studio Mega (2018)","بلو Studio Mega (2019)","بلو Studio M HD","بلو Studio Mini LTE","بلو Studio M LTE","بلو Studio One","بلو Studio One Plus","بلو Studio Pro","بلو Studio Selfi","بلو Studio View XL","بلو Studio Touch","بلو Studio X","بلو Studio X10","بلو Studio X10+","بلو Studio X12","بلو Studio X8 HD","بلو Studio X8 HD (2019)","بلو Studio X9 HD","بلو Studio XL","بلو Studio XL2","بلو Studio X Mini","بلو Tank 4.5","بلو Tank Xtreme 4.0","بلو Tank Xtreme 5.0","بلو Tank Xtreme Pro","بلو View 1","بلو Vivo 4.65 HD","بلو Vivo 4.8 HD","بلو Vivo 5","بلو Vivo 5 Mini","بلو Vivo 5R","بلو Vivo 6","بلو Vivo 8","بلو Vivo Air","بلو Vivo Air LTE","بلو Vivo lV","بلو Vivo one Plus","بلو Vivo one Plus (2019)","بلو Vivo Selfie","بلو Vivo XL","بلو Vivo XL2","بلو Vivo XL3","بلو Vivo XL3 Plus","بلو Vivo XL4","بلو Vivo XL5","بلو Win HD","بلو Win HD LTE","بلو Win HD JR","بلو Win HD JR LTE","بلو Zoey","سایر مدل‌های بلو"]
+          },
+          {
+            "name":"کت",
+            "code":"",
+            "type":["کت B100","کت B15","کت B15 Q","کت B35","کت S30","کت S31","کت S40","کت S42","کت S50","کت S52","کت S60","کت S62 Pro","سایر مدل‌های کت"]
+          },
+          {
+            "name":"انرجیزایر",
+            "code":"",
+            "type":["انرجیزایر Energy 100","انرجیزایر Energy 200","انرجیزایر Energy 240","انرجیزایر Energy 400","انرجیزایر Energy 400 LTE","انرجیزایر Energy 500","انرجیزایر Energy E10+","انرجیزایر Energy E11","انرجیزایر Energy E12","انرجیزایر Energy E241s","انرجیزایر Energy E500S","انرجیزایر Hardcase H500S","انرجیزایر Power Max P490S","سایر مدل‌های انرجیزایر"]
+          },
+          {
+            "name":"گیگابایت",
+            "code":"",
+            "type":["گیگابایت GSmart Akta A4","گیگابایت GSmart Aku A1","گیگابایت GSmart Alto A2","گیگابایت GSmart Arty A3","گیگابایت GSmart Classic","گیگابایت GSmart Classic Lite","گیگابایت GSmart Essence","گیگابایت GSmart Essence 4","گیگابایت GSmart G1362","گیگابایت GSmart GS202","گیگابایت GSmart Guru GX","گیگابایت GSmart GX2","گیگابایت GSmart Maya M1","گیگابایت GSmart Maya M1 v2","گیگابایت GSmart Maya M2","گیگابایت GSmart Maya M3","گیگابایت GSmart Maya MX","گیگابایت GSmart Rey R3","گیگابایت GSmart Rey R1","گیگابایت GSmart Roma R2","گیگابایت GSmart Roma RX","گیگابایت GSmart Saga S3","گیگابایت GSmart Sierra S1","گیگابایت GSmart Simba SX1","گیگابایت GSmart T4","گیگابایت GSmart T4 (Lite Edition)","گیگابایت GSmart Tuku T2","سایر مدل‌های گیگابایت"]
+          },
+          {
+            "name":"جیونی",
+            "code":"",
+            "type":["جیونی A1","جیونی A1 Lite","جیونی A1 Plus","جیونی Ctrl V1","جیونی Ctrl V2","جیونی Ctrl V3","جیونی Ctrl V4","جیونی Ctrl V4s","جیونی Ctrl V5","جیونی Ctrl V6L","جیونی Dream D1","جیونی Elife E3","جیونی Elife E5","جیونی Elife E6","جیونی Elife E7","جیونی Elife E8","جیونی Elife S5.1","جیونی Elife S5.5","جیونی Elife S7","جیونی Elife S Plus","جیونی F103","جیونی F103 Pro","جیونی F5","جیونی Gpad G1","جیونی Gpad G2","جیونی Gpad G3","جیونی Gpad G4","جیونی Gpad G5","جیونی M2","جیونی M2017","جیونی M6","جیونی M6 Plus","جیونی M6s Plus","جیونی M7","جیونی M7 Plus","جیونی M Power","جیونی Marathon M3","جیونی Marathon M4","جیونی Marathon M5","جیونی Marathon M5 enjoy","جیونی Marathon M5 lite","جیونی Marathon M5 mini","جیونی Marathon M% Plus","جیونی P15 Pro","جیونی P15 Mini","جیونی P7","جیونی P7 Max","جیونی P8 Max","جیونی Pioneer P1","جیونی Pioneer P2","جیونی Pioneer P2M","جیونی Pioneer P2S","جیونی Pioneer P3","جیونی Pioneer P3S","جیونی Pioneer P4","جیونی Pioneer P4S","جیونی Pioneer P5L","جیونی Pioneer P5W","جیونی Pioneer P6","جیونی S10","جیونی S10B","جیونی S10C","جیونی S11","جیونی S11 lite","جیونی S11S","جیونی S5.1 Pro","جیونی S6","جیونی S6 Pro","جیونی S6s","جیونی S8","جیونی S9","جیونی Steel 2","جیونی W909","جیونی X1","جیونی X1s","سایر مدل‌های جیونی"]
+          },
+          {
+            "name":"جی‌‌ال‌ایکس",
+            "code":"",
+            "type":["جی‌‌ال‌ایکس Arya","جی‌‌ال‌ایکس C6000","جی‌‌ال‌ایکس E51","جی‌‌ال‌ایکس Shahab","جی‌‌ال‌ایکس X","جی‌‌ال‌ایکس Zoom me C58","سایر مدل‌های جی‌‌ال‌ایکس"]
+          },
+          {
+            "name":"گوگل",
+            "code":"",
+            "type":["گوگل Pixel","گوگل Pixel 2","گوگل Pixel 2 XL","گوگل Pixel 3","گوگل Pixel 3a","گوگل Pixel 3a XL","گوگل Pixel 3 Xl","گوگل Pixel 4","گوگل Pixel 4a","گوگل Pixel 4a 5G","گوگل Pixel 4 XL","گوگل Pixel 5","گوگل Pixel XL","سایر مدل‌های گوگل"]
+          },
+          {
+            "name":"جی‌پلاس",
+            "code":"",
+            "type":["جی‌پلاس P10","جی‌پلاس Q10","جی‌پلاس T10","جی‌پلاس X10","سایر مدل‌های جی‌پلاس"]
+          },
+          {
+            "name":"آنر",
+            "code":"",
+            "type":["آنر 10","آنر 10 Lite","آنر 10X Lite","آنر 20","آنر 20e","آنر 20i","آنر 20 lite","آنر 20 lite(China)","آنر 20 Pro","آنر 20S","آنر 30","آنر 30i","آنر 30 Pro","آنر 30 Pro+","آنر 30S","آنر 30 Youth","آنر 3C","آنر 3C 4G","آنر 3C Play","آنر 3X G750","آنر 3X Pro","آنر 4C","آنر 4 Play","آنر 4X","آنر 5A","آنر 5c","آنر 5X","آنر 6","آنر 6A (Pro)","آنر 6C Pro","آنر 6 Plus","آنر 6X","آنر 7","آنر 7A","آنر 7C","آنر 7S","آنر 7X","آنر 8","آنر 8A 2020","آنر 8A Pro","آنر 8C","آنر 8 Pro","آنر 8S","آنر 8S 2020","آنر 8X","آنر 8X Max","آنر 9","آنر 9A","آنر 9C","آنر 9 lite","آنر 9N (9i)","آنر 9S","آنر 9X","آنر 9X Lite","آنر 9X Pro","آنر Bee","آنر Holly","آنر Holly 2 Plus","آنر Holly 3","آنر Magic","آنر Magic 2","آنر Magic 2 3D","آنر Note 10","آنر Note 8","آنر Pad 5 10.1","آنر Pad 6","آنر Play","آنر Play3","آنر Play 3e","آنر Play4","آنر Play4 Pro","آنر Play 4T","آنر Play 4T Pro","آنر Play 8A","آنر Play 9A","آنر V40 Lite","آنر View 10","آنر View 20","آنر View30 Pro","آنر X10 5G","آنر X10 Max 5G","سایر مدل‌های آنر"]
+          },
+          {
+            "name":"اچ‌تی‌سی",
+            "code":"",
+            "type":["اچ‌تی‌سی 10","اچ‌تی‌سی 10 evo","اچ‌تی‌سی 10 Lifestyle","اچ‌تی‌سی 8XT","اچ‌تی‌سی A12","اچ‌تی‌سی Butterfly","اچ‌تی‌سی Butterfly 2","اچ‌تی‌سی Butterfly 3","اچ‌تی‌سی Butterfly S","اچ‌تی‌سی Desire 10 Compact","اچ‌تی‌سی Desire 10 Pro","اچ‌تی‌سی Desire 12","اچ‌تی‌سی Desire 12s","اچ‌تی‌سی Desire 19+","اچ‌تی‌سی Desire 19s","اچ‌تی‌سی Desire 20+","اچ‌تی‌سی Desire 200","اچ‌تی‌سی Desire 20 Pro","اچ‌تی‌سی Desire 210 dual sim","اچ‌تی‌سی Desire 21 Pro 5G","اچ‌تی‌سی Desire 300","اچ‌تی‌سی Desire 310","اچ‌تی‌سی Desire 310 dual sim","اچ‌تی‌سی Desire 326G dual sim","اچ‌تی‌سی Desire 400 dual sim","اچ‌تی‌سی Desire 500","اچ‌تی‌سی Desire 501","اچ‌تی‌سی Desire 501 dual sim","اچ‌تی‌سی Desire 520","اچ‌تی‌سی Desire 526","اچ‌تی‌سی Desire 530","اچ‌تی‌سی Desire 600 dual sim","اچ‌تی‌سی Desire 601","اچ‌تی‌سی Desire 612","اچ‌تی‌سی Desire 616 dual sim","اچ‌تی‌سی Desire 620","اچ‌تی‌سی Desire 620G dual sim","اچ‌تی‌سی Desire 625","اچ‌تی‌سی Desire 626","اچ‌تی‌سی Desire 626G+","اچ‌تی‌سی Desire 626 (USA)","اچ‌تی‌سی Desire 628","اچ‌تی‌سی Desire 630","اچ‌تی‌سی Desire 650","اچ‌تی‌سی Desire 700","اچ‌تی‌سی Desire 700 dual sim","اچ‌تی‌سی Desire 728 Ultra","اچ‌تی‌سی Desire 816","اچ‌تی‌سی Desire 816 dual sim","اچ‌تی‌سی Desire 820","اچ‌تی‌سی Desire 820 dual sim","اچ‌تی‌سی Desire 820G+ dual sim","اچ‌تی‌سی Desire 820q dual sim","اچ‌تی‌سی Desire 820s dual sim","اچ‌تی‌سی Desire 825","اچ‌تی‌سی Desire 826 dual sim","اچ‌تی‌سی Desire 828 dual sim","اچ‌تی‌سی Desire 830","اچ‌تی‌سی Desire Eye","اچ‌تی‌سی Desire L","اچ‌تی‌سی Desire P","اچ‌تی‌سی Desire SV","اچ‌تی‌سی Desire U","اچ‌تی‌سی Desire X","اچ‌تی‌سی Desire XC","اچ‌تی‌سی Desire DNA","اچ‌تی‌سی EVO 3D CDMA","اچ‌تی‌سی Evo 4G","اچ‌تی‌سی Evo 4G+","اچ‌تی‌سی Evo 4G LTE","اچ‌تی‌سی EVO Design 4G","اچ‌تی‌سی EVO Shift 4G","اچ‌تی‌سی EVO View 4G","اچ‌تی‌سی Exodus 1","اچ‌تی‌سی Exodus 1s","اچ‌تی‌سی First","اچ‌تی‌سی J","اچ‌تی‌سی Jetstream","اچ‌تی‌سی One","اچ‌تی‌سی One A9","اچ‌تی‌سی One A9s","اچ‌تی‌سی One Dual Sim","اچ‌تی‌سی One (E8)","اچ‌تی‌سی One (E8) CDMA","اچ‌تی‌سی One E9","اچ‌تی‌سی One E9+","اچ‌تی‌سی One E9s dual sim","اچ‌تی‌سی One (M8) CDMA","اچ‌تی‌سی One (M8) dual sim","اچ‌تی‌سی One (M8 Eye)","اچ‌تی‌سی One (M8) for windows","اچ‌تی‌سی One (M8) for windows (CDMA)","اچ‌تی‌سی One (M8i)","اچ‌تی‌سی One M8 Prime","اچ‌تی‌سی One M8s","اچ‌تی‌سی One M9","اچ‌تی‌سی One M9+","اچ‌تی‌سی One M9 Prime Camera","اچ‌تی‌سی One M9s","اچ‌تی‌سی One M9+ Sureme Camera","اچ‌تی‌سی One Max","اچ‌تی‌سی One mini","اچ‌تی‌سی One mini 2","اچ‌تی‌سی One Remix","اچ‌تی‌سی One S9","اچ‌تی‌سی One SC","اچ‌تی‌سی One SV","اچ‌تی‌سی One SV CDMA","اچ‌تی‌سی One VX","اچ‌تی‌سی One X","اچ‌تی‌سی One X+","اچ‌تی‌سی One X10","اچ‌تی‌سی One X9","اچ‌تی‌سی One X AT&T","اچ‌تی‌سی One XC","اچ‌تی‌سی One XL","اچ‌تی‌سی Tiara","اچ‌تی‌سی U11","اچ‌تی‌سی U11+","اچ‌تی‌سی U11 Eyes","اچ‌تی‌سی U11 Life","اچ‌تی‌سی U12+","اچ‌تی‌سی U12 life","اچ‌تی‌سی U19e","اچ‌تی‌سی U20 5G","اچ‌تی‌سی U Play","اچ‌تی‌سی U Ultra","اچ‌تی‌سی Wildfire E2","اچ‌تی‌سی Wildfire E3","اچ‌تی‌سی Wildfire R70","اچ‌تی‌سی Wildfire X","اچ‌تی‌سی Windows Phone 8S","اچ‌تی‌سی Windows Phone 8X","اچ‌تی‌سی Windows Phone 8X CDMA","سایر مدل‌های اچ‌تی‌سی"]
+          },
+          {
+            "name":"هواوی",
+            "code":"",
+            "type":["هواوی Ascend D1 XL U9500E","هواوی Ascend D2","هواوی Ascend G312","هواوی Ascend G330","هواوی Ascend G330D U8825D","هواوی Ascend G350","هواوی Ascend G500","هواوی Ascend G510","هواوی Ascend G525","هواوی Ascend G526","هواوی Ascend G535","هواوی Ascend G6","هواوی Ascend G600","هواوی Ascend G615","هواوی Ascend G620s","هواوی Ascend G628","هواوی Ascend G630","هواوی Ascend G6 4G","هواوی Ascend G7","هواوی Ascend G700","هواوی Ascend G730","هواوی Ascend G740","هواوی Ascend GX1","هواوی Ascend Mate","هواوی Ascend Mate2 4G","هواوی Ascend Mate7","هواوی Ascend Mate7 Monarch","هواوی Ascend P1 LTE","هواوی Ascend P1 XL U9200E","هواوی Ascend P2","هواوی Ascend P6","هواوی Ascend P6 S","هواوی Ascend P7","هواوی Ascend P7 mini","هواوی Ascend P7 Sapphire Edition","هواوی Ascend W1","هواوی Ascend Y210D","هواوی Ascend Y221","هواوی Ascend Y300","هواوی Ascend Y320","هواوی Ascend Y330","هواوی Ascend Y511","هواوی Ascend Y520","هواوی Ascend Y530","هواوی Ascend Y540","هواوی Ascend Y550","هواوی Ascend Y600","هواوی Enjoy 10","هواوی Enjoy 10 Plus","هواوی Enjoy 10s","هواوی Enjoy 20 5G","هواوی Enjoy 20 Plus 5G","هواوی Enjoy 20 Pro","هواوی Enjoy 20 SE","هواوی Enjoy 5s","هواوی Enjoy 6","هواوی Enjoy 9e","هواوی Enjoy 9s","هواوی Enjoy Z 5G","هواوی Fusion 2 U8665","هواوی G10","هواوی G610s","هواوی G7 Plus","هواوی G8","هواوی G9 Plus","هواوی Mate 10","هواوی Mate 10 Lite","هواوی Mate 10 Porshe Design","هواوی Mate 10 Pro","هواوی Mate 20","هواوی Mate 20 lite","هواوی Mate 20 Pro","هواوی Mate 20 RS Porsche Design","هواوی Mate 20 X","هواوی Mate 20 X (5G)","هواوی Mate 30","هواوی Mate 30 5G","هواوی Mate 30E Pro 5G","هواوی Mate 30 Lite","هواوی Mate 30 Pro","هواوی Mate 30 Pro 5G","هواوی Mate 30 RS Porsche Design","هواوی Mate 40","هواوی Mate 40E","هواوی Mate 40 Pro","هواوی Mate 40 Pro+","هواوی Mate 9","هواوی Mate 9 Porsche Design","هواوی Mate 9 Pro","هواوی MatePad 10.4","هواوی MatePad 10.8","هواوی MatePad T 10s","هواوی MatePad T8","هواوی Mate RS Porsche Design","هواوی Mate S","هواوی Mate X","هواوی Mate X2","هواوی Mate Xs","هواوی MediaPad M6 Turbo 8.4","هواوی Nexus 6P","هواوی nova 2","هواوی nova 2 Plus","هواوی nova 2s","هواوی nova 3","هواوی nova 3i","هواوی nova 4","هواوی nova 4e","هواوی nova 5","هواوی nova 5i","هواوی nova 5i Pro","هواوی nova 5 Pro","هواوی nova 5T","هواوی nova 5z","هواوی nova 6","هواوی nova 6 SE","هواوی nova 7 5G","هواوی nova 7i","هواوی nova 7 Pro 5G","هواوی nova 7 SE","هواوی nova SE 5G Youth","هواوی nova 8 5G","هواوی nova 8 Pro 5G","هواوی nova 8 SE","هواوی nova Plus","هواوی P10","هواوی P10 Lite","هواوی P10 Plus","هواوی P20","هواوی P20 Lite","هواوی P20 lite(2019)","هواوی P20 Pro","هواوی P30","هواوی P30 lite","هواوی P30 lite New Edition","هواوی P30 Pro","هواوی P30 Pro New Edition","هواوی P40","هواوی P40 4G","هواوی P40 lite","هواوی P40 lite 5G","هواوی P40 Pro","هواوی P40 Pro+","هواوی P8","هواوی P8lite","هواوی P8 Lite (2017)","هواوی P8lite ALE-L04","هواوی P8 max","هواوی P9 lite","هواوی P9 lite mini","هواوی P9 Plus","هواوی Premia 4G M931","هواوی P smart","هواوی P smart 2019","هواوی P smart+ 2019","هواوی P smart 2020","هواوی P smart 2021","هواوی P smart Pro 2019","هواوی P Smart S","هواوی P Smart Z","هواوی SnapTo","هواوی Summit","هواوی U8687 Cronos","هواوی Y300II","هواوی Y3 (2017)","هواوی Y3 (2018)","هواوی Y360","هواوی Y2ll","هواوی Y5 (2019)","هواوی Y560","هواوی Y5ll","هواوی Y5 lite (2018)","هواوی Y5p","هواوی Y5 Prime (2018)","هواوی Y6","هواوی Y6 (2017)","هواوی Y6 (2018)","هواوی Y6 (2019)","هواوی Y625","هواوی Y635","هواوی Y6ll Compact","هواوی Y6p","هواوی Y6 Prime (2018)","هواوی Y6 Pro","هواوی Y6 Pro (2019)","هواوی Y7","هواوی Y7 (2018)","هواوی Y7 (2019)","هواوی Y7s","هواوی Y7p","هواوی Y7 Prime","هواوی Y7 Prime (2018)","هواوی Y7 Prime (2019)","هواوی Y7 Pro (2018)","هواوی Y7 Pro (2019)","هواوی Y8p","هواوی Y8s","هواوی Y9 (2018)","هواوی Y9 (2019)","هواوی Y9a","هواوی Y9 Prime (2019)","هواوی Y9s","هواوی Y Max","سایر مدل‌های هواوی"]
+          },
+          {
+            "name":"لنوو",
+            "code":"",
+            "type":["لنوو A1000","لنوو A1900","لنوو A2010","لنوو A269i","لنوو A316i","لنوو A319","لنوو A328","لنوو A3690","لنوو A369i","لنوو A390","لنوو A3900","لنوو A5","لنوو A5000","لنوو A516","لنوو A526","لنوو A536","لنوو A5860","لنوو A6000","لنوو A6000 Plus","لنوو A6010","لنوو A6010 Plus","لنوو A606","616","لنوو A630","لنوو A660","لنوو A6600","لنوو A6600 Plus","لنوو A680","لنوو A6 Note","لنوو A7000","لنوو A700 Plus","لنوو A700 Turbo","لنوو A706","لنوو A789","لنوو A800","لنوو A820","لنوو A830","لنوو A850","لنوو A850+","لنوو A8-50 A5500","لنوو A859","لنوو A880","لنوو A889","لنوو A916","لنوو A Plus","لنوو B","لنوو C2","لنوو C2 Power","لنوو Golden Warrior A8","لنوو Golden Warrior Note 8","لنوو K10 Note","لنوو K10 Plus","لنوو K3","لنوو K320t","لنوو K3 Note","لنوو K5","لنوو K5 Note","لنوو K5 Note (2018)","لنوو K5 play","لنوو K5 Pro","لنوو K6","لنوو K6 Enjoy","لنوو K6 Note","لنوو K6 Power","لنوو K80","لنوو K800","لنوو K860","لنوو K8 Note","لنوو K8 Plus","لنوو K9","لنوو K900","لنوو Legion 2 Pro","لنوو Legion Duel","لنوو Legion Duel 2","لنوو Legion Pro","لنوو Lemon 3","لنوو P2","لنوو P70","لنوو P700i","لنوو P770","لنوو P780","لنوو P90","لنوو Phab","لنوو Phab2","لنوو Phab2 Plus","لنوو Phab2 Pro","لنوو Phab Plus","لنوو S5","لنوو S5000","لنوو S560","لنوو S580","لنوو S5 Pro","لنوو S5 Pro GT","لنوو S60","لنوو S650","لنوو S720","لنوو S750","لنوو S820","لنوو S850","لنوو S856","لنوو S880","لنوو S890","لنوو S90 Sisley","لنوو S920","لنوو S930","لنوو S939","لنوو Vibe A","لنوو Vibe C","لنوو Vibe K5","لنوو Vibe K5 Plus","لنوو Vibe P1","لنوو Vibe P1m","لنوو Vibe P1 Turbo","لنوو Vibe S1","لنوو Vibe S1 Lite","لنوو Vibe Shot","لنوو Vibe X2","لنوو Vibe X2 Pro","لنوو Vibe X3","لنوو Vibe X3 c78","لنوو Vibe X S960","لنوو Vibe Z","لنوو Vibe Z2 Pro","لنوو Vibe Z3 Pro","لنوو Vibe Z K910","لنوو Z5","لنوو Z5 Pro","لنوو Z5 Pro GT","لنوو Z5s","لنوو Z6","لنوو Z6 Pro","لنوو Z6 Pro 5G","لنوو Z6 Youth","لنوو ZUK Edge","لنوو ZUK  Z1","لنوو ZUK  Z1 mini","لنوو ZUK  Z2","لنوو ZUK  Z2 Pro","سایر مدل‌های لنوو"]
+          },
+          {
+            "name":"ال‌جی",
+            "code":"",
+            "type":["ال‌جی 450","ال‌جی AKA","ال‌جی Bello II","ال‌جی Escape P870","ال‌جی F60","ال‌جی F70 D315","ال‌جی Folder 2","ال‌جی G2","ال‌جی G2 Lite","ال‌جی G2 mini","ال‌جی G2 mini LTE","ال‌جی G2 mini LTE (Tegra)","ال‌جی G3","ال‌جی G360","ال‌جی G3 S","ال‌جی G3 Screen","ال‌جی G3 S Dual","ال‌جی G3 Stylus","ال‌جی G4","ال‌جی G4 Beat","ال‌جی G4c","ال‌جی G4 Dual","ال‌جی G4 Pro","ال‌جی G5","ال‌جی G5 SE","ال‌جی G6","ال‌جی G7 Fit","ال‌جی G7 One","ال‌جی G7 ThinQ","ال‌جی G8S ThinQ","ال‌جی G8 ThinQ","ال‌جی G8X ThinQ","ال‌جی G Flex","ال‌جی G Flex2","ال‌جی G Pro 2","ال‌جی G Pro Lite","ال‌جی G Pro Lite Dual","ال‌جی G Stylo","ال‌جی G Vista","ال‌جی G Vista 2","ال‌جی GX F310L","ال‌جی Harmony","ال‌جی Intuition VS950","ال‌جی Joy","ال‌جی K10 (2017)","ال‌جی K10 (2018)","ال‌جی K11 Plus","ال‌جی K20 (2019)","ال‌جی K20 plus","ال‌جی K3","ال‌جی K30","ال‌جی K30 (2019)","ال‌جی K31","ال‌جی K3 (2017)","ال‌جی K4","ال‌جی K40","ال‌جی K40S","ال‌جی K41S","ال‌جی K42","ال‌جی K4 (2017)","ال‌جی K5","ال‌جی K50","ال‌جی K50S","ال‌جی K51S","ال‌جی K52","ال‌جی K61","ال‌جی K62","ال‌جی K71","ال‌جی K7 (2017)","ال‌جی K8","ال‌جی K8 (2017)","ال‌جی K8 (2018)","ال‌جی K92 5G","ال‌جی L20","ال‌جی L30","ال‌جی L35","ال‌جی L40 D160","ال‌جی L40 Dual D170","ال‌جی L45 Dual X132","ال‌جی L50","ال‌جی L60","ال‌جی L60 Dual","ال‌جی L65 D280","ال‌جی L65 Dual D285","ال‌جی L70 D320N","ال‌جی L70 Dual D325","ال‌جی L80","ال‌جی L80 Dual","ال‌جی L90 D405","ال‌جی L90 Dual D410","ال‌جی L Bello","ال‌جی Leon","ال‌جی L Fino","ال‌جی L Prime","ال‌جی Lucid2 VS870","ال‌جی Lucid 3 VS876","ال‌جی Mach LS860","ال‌جی Magna","ال‌جی Motion 4G MS770","ال‌جی Nexus 4 E960","ال‌جی Nexus 5","ال‌جی Nexus 5X","ال‌جی Optimus F3","ال‌جی Optimus F3Q","ال‌جی Optimus F7","ال‌جی Optimus G E970","ال‌جی Optimus G E975","ال‌جی Optimus GJ E975W","ال‌جی Optimus G Pro E985","ال‌جی Optimus L1 II E410","ال‌جی Optimus L2 II E435","ال‌جی Optimus L3 II Dual E435","ال‌جی Optimus L3 II E430","ال‌جی Optimus L4 II Dual E445","ال‌جی Optimus L4 II E440","ال‌جی Optimus L5 Dual E615","ال‌جی Optimus L5 II","ال‌جی Optimus L7 II Dual P715","ال‌جی Optimus L7 II P710","ال‌جی Optimus L9 II","ال‌جی Optimus L9 P760","ال‌جی Optimus L9 P769","ال‌جی Optimus Vu II","ال‌جی Optimus Vu P895","ال‌جی Q31","ال‌جی Q52","ال‌جی Q6","ال‌جی Q60","ال‌جی Q61","ال‌جی Q7","ال‌جی Q70","ال‌جی Q8 (2018)","ال‌جی Q9","ال‌جی Q92 5G","ال‌جی Q Stylo 4","ال‌جی Q Stylus","ال‌جی Ray","ال‌جی Spectrum II 4G VS930","ال‌جی Spirit","ال‌جی Splendor US730","ال‌جی Stylo 2","ال‌جی Stylus 2 Plus","ال‌جی Stylus 3","ال‌جی T385","ال‌جی Tribute","ال‌جی Tribute 2","ال‌جی Tribute Empire","ال‌جی U","ال‌جی V10","ال‌جی V20","ال‌جی V30","ال‌جی V30S ThinQ","ال‌جی V35 ThinQ","ال‌جی V40 ThinQ","ال‌جی V50S ThinQ 5G","ال‌جی V50 ThinQ 5G","ال‌جی V60 ThinQ 5G","ال‌جی V60 ThinQ 5G UW","ال‌جی Velvet","ال‌جی Velvet 5G","ال‌جی Volt","ال‌جی Vu 3 F300L","ال‌جی W10","ال‌جی W10 Alpha","ال‌جی W11","ال‌جی W30","ال‌جی W30 Pro","ال‌جی W31","ال‌جی W31+","ال‌جی W41","ال‌جی W41+","ال‌جی W41 Pro","ال‌جی Wing 5G","ال‌جی X4+","ال‌جی X5","ال‌جی X cam","ال‌جی X mach","ال‌جی X max","ال‌جی X power","ال‌جی X power 2","ال‌جی X power 3","ال‌جی X screen","ال‌جی X Skin","ال‌جی X style","ال‌جی X venture","ال‌جی Zone 4","سایر مدل‌های ال‌جی"]
+          },
+          {
+            "name":"میزو",
+            "code":"",
+            "type":["میزو 16","میزو 16 Plus","میزو 16s","میزو 16s Pro","میزو 16T","میزو 16X","میزو 16Xs","میزو 17","میزو 17 Pro","میزو C9","میزو C9 Pro","میزو E2","میزو E3","میزو M1","میزو M10","میزو M1 Metal","میزو M1 Note","میزو M2","میزو M2 Note","میزو M3","میزو M3e","میزو M3 Max","میزو M3 Note","میزو M3s","میزو M3x","میزو M5","میزو M5c","میزو M5 Note","میزو M5s","میزو M6","میزو M6 Note","میزو M6s","میزو M6T","میزو M8c","میزو MX2","میزو MX4","میزو MX4 Pro","میزو MX5","میزو MX6","میزو Note 8","میزو Note 9","میزو PRO 5","میزو PRO 5 mini","میزو Pro 6","میزو Pro 6 Plus","میزو Pro 6s","میزو Pro 7","میزو Pro 7 Plus","میزو U10","میزو U20","میزو V8","میزو V8 Pro","میزو X8","سایر مدل‌های میزو"]
+          },
+          {
+            "name":"مایکرومکس",
+            "code":"",
+            "type":["مایکرومکس Vdeo 3","سایر مدل‌های مایکرومکس"]
+          },
+          {
+            "name":"مایکروسافت",
+            "code":"",
+            "type":["مایکروسافت Lumia 1030","مایکروسافت Lumia 1330","مایکروسافت Lumia 430 Dual SIM","مایکروسافت Lumia 435","مایکروسافت Lumia 435 Dual SIM","مایکروسافت Lumia 532","مایکروسافت Lumia 532 Dual SIM","مایکروسافت Lumia 535","مایکروسافت Lumia 535 Dual SIM","مایکروسافت Lumia 540 Dual SIM","مایکروسافت Lumia 550","مایکروسافت Lumia 640 LTE","مایکروسافت Lumia 640 XL","مایکروسافت Lumia 650","مایکروسافت Lumia 850","مایکروسافت Lumia 950","مایکروسافت Lumia 950 Dual SIM","مایکروسافت Lumia 950 XL","مایکروسافت Lumia 950 XL Dual SIM","مایکروسافت Surface Duo","سایر مدل‌های مایکروسافت"]
+          },
+          {
+            "name":"موتورولا",
+            "code":"",
+            "type":["موتورولا DROID Maxx","موتورولا Droid Maxx 2","موتورولا DROID Mini","موتورولا DROID RAZR HD","موتورولا DROID RAZR M","موتورولا DROID RAZR MAXX","موتورولا DROID RAZR MAXX HD","موتورولا DROID RAZR XT912","موتورولا DROID Turbo","موتورولا DROID Ultra","موتورولا Edge","موتورولا Edge+","موتورولا Edge S","موتورولا Electrify M XT905","موتورولا Luge","موتورولا Moto C","موتورولا Moto C Plus","موتورولا Moto E","موتورولا Moto E (2020)","موتورولا Moto E3","موتورولا Moto E3 Power","موتورولا Moto E4","موتورولا Moto E4 Plus","موتورولا Moto E4 Plus (USA)","موتورولا Moto E4 (USA)","موتورولا Moto E5","موتورولا Moto E5 Play","موتورولا Moto E5 Play Go","موتورولا Moto E5 Plus","موتورولا Moto E6","موتورولا Moto E6i","موتورولا Moto E6 Play","موتورولا Moto E6 Plus","موتورولا Moto E6s (2020)","موتورولا Moto E7","موتورولا Moto E7 Plus","موتورولا Moto E7 Power","موتورولا Moto E Dual SIM","موتورولا Moto G","موتورولا Moto G10","موتورولا Moto G100","موتورولا Moto G10 Power","موتورولا Moto G (2nd gen)","موتورولا Moto G30","موتورولا Moto G (3rd gen)","موتورولا Moto G4","موتورولا Moto G 4G","موتورولا Moto G 4G (2nd gen)","موتورولا Moto G 4G Dual SIM (2nd gen)","موتورولا Moto G4 Play","موتورولا Moto G4 Plus","موتورولا Moto G5","موتورولا Moto G50","موتورولا Moto G 5G","موتورولا Moto G 5G Plus","موتورولا Moto G5 Plus","موتورولا Moto G5S","موتورولا Moto G5S Plus","موتورولا Moto G6","موتورولا Moto G60","موتورولا Moto G6 Play","موتورولا Moto G6 Plus","موتورولا Moto G7","موتورولا Moto G7 Play","موتورولا Moto G7 Plus","موتورولا Moto G7 Power","موتورولا Moto G8","موتورولا Moto G8 Play","موتورولا Moto G8 Plus","موتورولا Moto G8 Power","موتورولا Moto G8 Power Lite","موتورولا Moto G9 Play","موتورولا Moto G9 Plus","موتورولا Moto G9 Power","موتورولا Moto G Dual SIM","موتورولا Moto G Dual SIM (2nd gen)","موتورولا Moto G Dual SIM (3rd gen)","موتورولا Moto G Fast","موتورولا Moto G Power","موتورولا Moto G Power (2021)","موتورولا Moto G Stylus (2021)","موتورولا Moto Maxx","موتورولا Motosmart Me XT303","موتورولا Moto X","موتورولا Moto X4","موتورولا Moto X5","موتورولا Moto X Force","موتورولا Moto X Play","موتورولا Moto X Play Dual SIM","موتورولا Moto Z","موتورولا Moto Z2 Force","موتورولا Moto Z2 Play","موتورولا Moto Z3","موتورولا Moto Z3 Play","موتورولا Moto Z4","موتورولا Moto Z4 Force","موتورولا Moto Z4 Play","موتورولا Moto Z Force","موتورولا Nexus 6","موتورولا One 5G","موتورولا One 5G Ace","موتورولا One 5G UW","موتورولا One Action","موتورولا One Fusion","موتورولا One Fusion+","موتورولا One Hyper","موتورولا One Macro","موتورولا One (P30 Play)","موتورولا One Power (P30 Note)","موتورولا One Vision Plus","موتورولا One Zoom","موتورولا P30","موتورولا P40","موتورولا Razr 5G","موتورولا RAZR D1","موتورولا RAZR D3 XT919","موتورولا RAZR HD XT925","موتورولا RAZR i XT890","موتورولا RAZR MAXX","موتورولا RAZR M XT905","موتورولا RAZR V XT885","موتورولا XT319","سایر مدل‌های موتورولا"]
+          },
+          {
+            "name":"نوکیا",
+            "code":"",
+            "type":["نوکیا 1 ","نوکیا 1.4 ","نوکیا 1 Plus ","نوکیا 2 ","نوکیا 2.1 ","نوکیا 2.2 ","نوکیا 220 4G ","نوکیا 225 4G ","نوکیا 2.3 ","نوکیا 2.4 ","نوکیا 2720 Flip ","نوکیا 3 ","نوکیا 3.1 ","نوکیا 3.1 A ","نوکیا 3.1 C ","نوکیا 3.1 Plus ","نوکیا 3.2 ","نوکیا 3.4 ","نوکیا 4.2 ","نوکیا 5 ","نوکیا 5.1 ","نوکیا 515 ","نوکیا 5.1 Plus (Nokia X5) ","نوکیا 5.3 ","نوکیا 5310 (2020) ","نوکیا 5.4 ","نوکیا 5800 XpressMusic ","نوکیا 6 ","نوکیا 6.1 ","نوکیا 6.1 Plus (Nokia X6) ","نوکیا 6.2 ","نوکیا 6300 4G ","نوکیا 7 ","نوکیا 7.1 ","نوکیا 7.2 ","نوکیا 7 plus ","نوکیا 8 ","نوکیا 8000 4G ","نوکیا 800 Tough ","نوکیا 808 PureView ","نوکیا 8110 4G ","نوکیا 8.1 (Nokia X7) ","نوکیا 8.1 Plus ","نوکیا 8.3 5G ","نوکیا 8 Sirocco ","نوکیا 8 V 5G UW ","نوکیا 9.3 PureView ","نوکیا 9 PureView ","نوکیا Asha 210 ","نوکیا C1 ","نوکیا C10 ","نوکیا C1 Plus ","نوکیا C2 ","نوکیا C20 ","نوکیا C2 Tava ","نوکیا C2 Tennen ","نوکیا C3 ","نوکیا C5 Endi ","نوکیا G10 ","نوکیا Lumia 1320 ","نوکیا Lumia 1520 ","نوکیا Lumia 505 ","نوکیا Lumia 510 ","نوکیا Lumia 520 ","نوکیا Lumia 525 ","نوکیا Lumia 530 ","نوکیا Lumia 530 Dual SIM ","نوکیا Lumia 620 ","نوکیا Lumia 625 ","نوکیا Lumia 630 ","نوکیا Lumia 630 Dual SIM ","نوکیا Lumia 638 ","نوکیا Lumia 720 ","نوکیا Lumia 730 Dual SIM ","نوکیا Lumia 735 ","نوکیا Lumia 810 ","نوکیا Lumia 820 ","نوکیا Lumia 822 ","نوکیا Lumia 830 ","نوکیا Lumia 920 ","نوکیا Lumia 925 ","نوکیا Lumia 928 ","نوکیا Lumia 930 ","نوکیا Lumia Icon ","نوکیا N95 8GB ","نوکیا X ","نوکیا X10 ","نوکیا X20 ","نوکیا X2 Dual SIM ","نوکیا X71 ","نوکیا XL ","سایر مدل‌های نوکیا "]
+          },
+          {
+            "name":"وان پلاس",
+            "code":"",
+            "type":["وان پلاس 2","وان پلاس 3","وان پلاس 3T","وان پلاس 5","وان پلاس 5T","وان پلاس 6","وان پلاس 6T","وان پلاس 6T McLaren","وان پلاس 7","وان پلاس 7 Pro","وان پلاس 7 Pro 5G","وان پلاس 7T","وان پلاس 7T Pro","وان پلاس 7T Pro 5G McLaren","وان پلاس 8","وان پلاس 8 Pro","وان پلاس 8T","وان پلاس 8T+ 5G","وان پلاس 9","وان پلاس 9E","وان پلاس 9 Pro","وان پلاس 9R","وان پلاس Nord","وان پلاس Nord N100","وان پلاس Nord N10 5G","وان پلاس X","سایر مدل‌های وان پلاس"]
+          },
+          {
+            "name":"اوپو",
+            "code":"",
+            "type":["اوپو A1","اوپو A11","اوپو A11k","اوپو A12","اوپو A12e","اوپو A12s","اوپو A15","اوپو A15s","اوپو A1k","اوپو A3","اوپو A31","اوپو A31 (2015)","اوپو A32","اوپو A33 (2015)","اوپو A33 (2020)","اوپو A35","اوپو A37","اوپو A39","اوپو A3s","اوپو A52","اوپو A5 (2020)","اوپو A53","اوپو A53 (2015)","اوپو A53 5G","اوپو A53s","اوپو A54","اوپو A55 5G","اوپو A57","اوپو A59","اوپو A5 (AX5)","اوپو A5s (AX5s)","اوپو A7","اوپو A71","اوپو A71 (2018)","اوپو A72","اوپو A73","اوپو A74","اوپو A74 5G","اوپو A77","اوپو A77 (Mediatek)","اوپو A7n","اوپو A7x","اوپو A83","اوپو A9","اوپو A91","اوپو A92","اوپو A9 (2020)","اوپو A92s","اوپو A93","اوپو A93 5G","اوپو A94","اوپو A94 5G","اوپو A95 5G","اوپو Ace2","اوپو F1","اوپو F11","اوپو F11 Pro","اوپو F15","اوپو F17","اوپو F17 Pro","اوپو F19","اوپو F19 Pro","اوپو F19 Pro+ 5G","اوپو F1 Plus","اوپو F1s","اوپو F3","اوپو F3 Plus","اوپو F5","اوپو F5 Youth","اوپو F7","اوپو F7 Youth","اوپو F9 (F9 Pro)","اوپو Find 5","اوپو Find 5 Mini","اوپو Find 7","اوپو Find 7a","اوپو Find X","اوپو Find X2","اوپو Find X2 Lite","اوپو Find X2 Neo","اوپو Find X2 Pro","اوپو Find X3","اوپو Find X3 Lite","اوپو Find X3 Neo","اوپو Find X3 Pro","اوپو Find X Lamborghini","اوپو Joy 3","اوپو Joy Plus","اوپو K1","اوپو K3","اوپو K7 5G","اوپو Mirror 3","اوپو Mirror 5","اوپو Mirror 5s","اوپو N1","اوپو N1 mini","اوپو N3","اوپو Neo","اوپو Neo 3","اوپو Neo 5","اوپو Neo 5 (2015)","اوپو Neo 5s","اوپو Neo 7","اوپو R1001 Joy","اوپو R11","اوپو R11 Plus","اوپو R11s","اوپو R11s Plus","اوپو R15","اوپو R15 Pro","اوپو R15x","اوپو R17","اوپو R1 R829T","اوپو R1S","اوپو R1x","اوپو R2001 Yoyo","اوپو R3","اوپو R5","اوپو R5s","اوپو R7","اوپو R7 lite","اوپو R7 Plus","اوپو R811 Real","اوپو R815T Clover","اوپو R817 Real","اوپو R819","اوپو R821T FInd Muse","اوپو R9 Plus","اوپو R9s","اوپو R9s Plus","اوپو Reno 10x zoom","اوپو Reno2","اوپو Reno2 F","اوپو Reno2 Z","اوپو Reno3 5G","اوپو Reno3 Pro","اوپو Reno3 Pro 5G","اوپو Reno4","اوپو Reno4 5G","اوپو Reno4 Pro 5G","اوپو Reno4 SE","اوپو Reno4 Z 5G","اوپو Reno5 5G","اوپو Reno5 F","اوپو Reno 5G","اوپو Reno5 Pro 5G","اوپو Reno5 Pro+ 5G","اوپو Reno5 Z","اوپو Reno A","اوپو Reno Ace","اوپو RX17 Neo","اوپو RX17 Pro","اوپو U3","اوپو U705T Ulike 2","سایر مدل‌های اوپو"]
+          },
+          {
+            "name":"پاناسونیک",
+            "code":"",
+            "type":["پاناسونیک Eluga A","پاناسونیک Eluga A2","پاناسونیک Eluga A3","پاناسونیک Eluga A3 Pro","پاناسونیک Eluga A4","پاناسونیک Eluga Arc","پاناسونیک Eluga Arc 2","پاناسونیک Eluga I","پاناسونیک Eluga I2","پاناسونیک Eluga I2 (2016)","پاناسونیک Eluga I2 Activ","پاناسونیک Eluga I3","پاناسونیک Eluga i3 Mega","پاناسونیک Eluga I4","پاناسونیک Eluga I5","پاناسونیک Eluga I7","پاناسونیک Eluga I7 (2019)","پاناسونیک Eluga I9","پاناسونیک Eluga Icon","پاناسونیک Eluga L2","پاناسونیک Eluga L 4G","پاناسونیک Eluga Mark","پاناسونیک Eluga Mark 2","پاناسونیک Eluga Note","پاناسونیک Eluga Pulse","پاناسونیک Eluga Pulse X","پاناسونیک Eluga Ray","پاناسونیک Eluga Ray 500","پاناسونیک Eluga Ray 530","پاناسونیک Eluga Ray 550","پاناسونیک Eluga Ray 600","پاناسونیک Eluga Ray 700","پاناسونیک Eluga Ray 800","پاناسونیک Eluga Ray Max","پاناسونیک Eluga Ray X","پاناسونیک Eluga S","پاناسونیک Eluga S mini","پاناسونیک Eluga Switch","پاناسونیک Eluga Tapp","پاناسونیک Eluga Turbo","پاناسونیک Eluga U","پاناسونیک Eluga U2","پاناسونیک Eluga Z","پاناسونیک Eluga Z1 Pro","پاناسونیک Lumix Smart Camera CM1","پاناسونیک P11","پاناسونیک P41","پاناسونیک P51","پاناسونیک P55","پاناسونیک P55 Max","پاناسونیک P61","پاناسونیک P77","پاناسونیک P81","پاناسونیک P85","پاناسونیک P85 Nxt","پاناسونیک P88","پاناسونیک P9","پاناسونیک P90","پاناسونیک P91","پاناسونیک P95","پاناسونیک P99","پاناسونیک T11","پاناسونیک T21","پاناسونیک T31","پاناسونیک T40","پاناسونیک T41","پاناسونیک T45","پاناسونیک T50","سایر مدل‌های پاناسونیک"]
+          },
+          {
+            "name":"فیلیپس",
+            "code":"",
+            "type":["فیلیپس I908","فیلیپس I928","فیلیپس S308","فیلیپس S309","فیلیپس S337","فیلیپس S396","فیلیپس S616","فیلیپس T939","فیلیپس V377","فیلیپس V526","فیلیپس V787","فیلیپس W6610","فیلیپس W7555","فیلیپس W8355","فیلیپس W8555","فیلیپس W8560","فیلیپس W8568","فیلیپس W8578","فیلیپس W9588","سایر مدل‌های فیلیپس"]
+          },
+          {
+            "name":"پرستیژ",
+            "code":"",
+            "type":["پرستیژ MultiPhone 3400 Duo","پرستیژ MultiPhone 3540 Duo","پرستیژ MultiPhone 4040 Duo","پرستیژ MultiPhone 4044 Duo","پرستیژ MultiPhone 4055 Duo","پرستیژ MultiPhone 4300 Duo","پرستیژ MultiPhone 4322 Duo","پرستیژ MultiPhone 4500 Duo","پرستیژ MultiPhone 4505 Duo","پرستیژ MultiPhone 5000 Duo","پرستیژ MultiPhone 5044 Duo","پرستیژ MultiPhone 5300 Duo","پرستیژ MultiPhone 5400 Duo","پرستیژ MultiPhone 5430 Duo","پرستیژ MultiPhone 5450 Duo","پرستیژ MultiPhone 5451 Duo","پرستیژ MultiPhone 5500 Duo","پرستیژ MultiPhone 5501 Duo","پرستیژ MultiPhone 5503 Duo","پرستیژ MultiPhone 5504 Duo","پرستیژ MultiPhone 5508 Duo","پرستیژ MultiPhone 7500","پرستیژ MultiPhone 7600 Duo","پرستیژ MultiPhone 8400 Duo","پرستیژ MultiPhone 8500 Duo","سایر مدل‌های پرستیژ"]
+          },
+          {
+            "name":"ریزر",
+            "code":"",
+            "type":["ریزر Phone","ریزر Phone 2","سایر مدل‌های ریزر"]
+          },
+          {
+            "name":"ریلمی",
+            "code":"",
+            "type":["ریلمی 7 (Global)","ریلمی 8","ریلمی 8 5G","ریلمی 8 Pro","ریلمی C20","ریلمی C21","ریلمی C25","ریلمی GT 5G","ریلمی GT Neo","ریلمی V13 5G","ریلمی X7 Pro Ultra","سایر مدل‌های ریلمی"]
+          },
+          {
+            "name":"سامسونگ",
+            "code":"",
+            "type":["سامسونگ A997 Rugby III","سامسونگ Ativ Odyssey I930","سامسونگ ATIV SE","سامسونگ Ativ S I8750","سامسونگ E1272","سامسونگ G3812B Galaxy S3 Slim","سامسونگ Galaxy A01","سامسونگ Galaxy A01 Core","سامسونگ Galaxy A02","سامسونگ Galaxy A02s","سامسونگ Galaxy A10","سامسونگ Galaxy A10e","سامسونگ Galaxy A10s","سامسونگ Galaxy A11","سامسونگ Galaxy A12","سامسونگ Galaxy A20","سامسونگ Galaxy A20e","سامسونگ Galaxy A20s","سامسونگ Galaxy A21","سامسونگ Galaxy A21s","سامسونگ Galaxy A2 Core","سامسونگ Galaxy A3","سامسونگ Galaxy A30","سامسونگ Galaxy A30s","سامسونگ Galaxy A31","سامسونگ Galaxy A32","سامسونگ Galaxy A3 (2016)","سامسونگ Galaxy A3 (2017)","سامسونگ Galaxy A32 5G","سامسونگ Galaxy A3 Duos","سامسونگ Galaxy A40","سامسونگ Galaxy A41","سامسونگ Galaxy A42 5G","سامسونگ Galaxy A5","سامسونگ Galaxy A50","سامسونگ Galaxy A50s","سامسونگ Galaxy A51","سامسونگ Galaxy A51 5G","سامسونگ Galaxy A51 5G UW","سامسونگ Galaxy A52","سامسونگ Galaxy A5 (2016)","سامسونگ Galaxy A5 (2017)","سامسونگ Galaxy A52 5G","سامسونگ Galaxy A5 Duos","سامسونگ Galaxy A60","سامسونگ Galaxy A6 (2018)","سامسونگ Galaxy A6+ (2018)","سامسونگ Galaxy A6s","سامسونگ Galaxy A70","سامسونگ Galaxy A70s","سامسونگ Galaxy A71","سامسونگ Galaxy A72","سامسونگ Galaxy A7 (2016)","سامسونگ Galaxy A7 (2017)","سامسونگ Galaxy A7 (2018)","سامسونگ Galaxy A7 Duos","سامسونگ Galaxy A8","سامسونگ Galaxy A80","سامسونگ Galaxy A8 (2016)","سامسونگ Galaxy A8 (2018)","سامسونگ Galaxy A8+ (2018)","سامسونگ Galaxy A8 Duos","سامسونگ Galaxy A8s","سامسونگ Galaxy A8 Star (A9 Star)","سامسونگ Galaxy A90 5G","سامسونگ Galaxy A91","سامسونگ Galaxy A9 (2018)","سامسونگ Galaxy Ace 4","سامسونگ Galaxy Ace 4 LTE G313","سامسونگ Galaxy Ace Advance S6800","سامسونگ Galaxy Ace Duos S6802","سامسونگ Galaxy Ace II X S7560M","سامسونگ Galaxy Ace NXT","سامسونگ Galaxy Ace S5830","سامسونگ Galaxy Ace Style","سامسونگ Galaxy Ace Style LTE G357","سامسونگ Galaxy Alpha","سامسونگ Galaxy Alpha (S801)","سامسونگ Galaxy Avant","سامسونگ Galaxy Axiom R830","سامسونگ Galaxy C10","سامسونگ Galaxy C5","سامسونگ Galaxy C5 Pro","سامسونگ Galaxy C7","سامسونگ Galaxy C7 (2017)","سامسونگ Galaxy C7 Pro","سامسونگ Galaxy C9 Pro","سامسونگ Galaxy Camera GC100","سامسونگ Galaxy Core Advance","سامسونگ Galaxy Core I8260","سامسونگ Galaxy Core II","سامسونگ Galaxy Core Lite LTE","سامسونگ Galaxy Core LTE","سامسونگ Galaxy Core LTE G386W","سامسونگ Galaxy Core Prime","سامسونگ Galaxy Discover S730M","سامسونگ Galaxy E5","سامسونگ Galaxy E7","سامسونگ Galaxy Exhibit T599","سامسونگ Galaxy Express 2","سامسونگ Galaxy Express I437","سامسونگ Galaxy Express I8730","سامسونگ Galaxy Express Prime","سامسونگ Galaxy F02s","سامسونگ Galaxy F12","سامسونگ Galaxy F41","سامسونگ Galaxy F62","سامسونگ Galaxy Fame S6810","سامسونگ Galaxy Fold","سامسونگ Galaxy Fold 5G","سامسونگ Galaxy Folder","سامسونگ Galaxy Folder2","سامسونگ Galaxy Fresh S7390","سامسونگ Galaxy Grand 2","سامسونگ Galaxy Grand 3","سامسونگ Galaxy Grand I9080","سامسونگ Galaxy Grand I9082","سامسونگ Galaxy Grand Max","سامسونگ Galaxy Grand Neo","سامسونگ Galaxy Grand Prime","سامسونگ Galaxy Grand Prime Plus","سامسونگ Galaxy J1","سامسونگ Galaxy J1 (2016)","سامسونگ Galaxy J1 4G","سامسونگ Galaxy J1 Ace","سامسونگ Galaxy J1 mini prime","سامسونگ Galaxy J1 Nxt","سامسونگ Galaxy J2","سامسونگ Galaxy J2 (2016)","سامسونگ Galaxy J2 (2017)","سامسونگ Galaxy J2 Core","سامسونگ Galaxy J2 Core (2020)","سامسونگ Galaxy J2 Prime","سامسونگ Galaxy J2 Pro (2016)","سامسونگ Galaxy J2 Pro (2018)","سامسونگ Galaxy J3 (2016)","سامسونگ Galaxy J3 (2017)","سامسونگ Galaxy J3 (2018)","سامسونگ Galaxy J3 Emerge","سامسونگ Galaxy J3 Pro","سامسونگ Galaxy J4","سامسونگ Galaxy J4+","سامسونگ Galaxy J4 Core","سامسونگ Galaxy J5","سامسونگ Galaxy J5 (2016)","سامسونگ Galaxy J5 (2017)","سامسونگ Galaxy J5 Prime","سامسونگ Galaxy J5 Prime (2017)","سامسونگ Galaxy J6","سامسونگ Galaxy J6+","سامسونگ Galaxy J7","سامسونگ Galaxy J7 (2016)","سامسونگ Galaxy J7 (2017)","سامسونگ Galaxy J7 (2018)","سامسونگ Galaxy J7 Duo","سامسونگ Galaxy J7 Max","سامسونگ Galaxy J7 Nxt","سامسونگ Galaxy J7 Prime","سامسونگ Galaxy J7 Prime 2","سامسونگ Galaxy J7 Pro","سامسونگ Galaxy J8","سامسونگ Galaxy K zoom","سامسونگ Galaxy Light","سامسونگ Galaxy M01","سامسونگ Galaxy M01 Core","سامسونگ Galaxy M01s","سامسونگ Galaxy M02","سامسونگ Galaxy M02s","سامسونگ Galaxy M10","سامسونگ Galaxy M10s","سامسونگ Galaxy M11","سامسونگ Galaxy M12 (India)","سامسونگ Galaxy M20","سامسونگ Galaxy M21","سامسونگ Galaxy M21s","سامسونگ Galaxy M30","سامسونگ Galaxy M30s","سامسونگ Galaxy M31","سامسونگ Galaxy M31 Prime","سامسونگ Galaxy M31s","سامسونگ Galaxy M40","سامسونگ Galaxy M42 5G","سامسونگ Galaxy M51","سامسونگ Galaxy M62","سامسونگ Galaxy Mega 2","سامسونگ Galaxy Mega 5.8 I9150","سامسونگ Galaxy Mega 6.3 I9200","سامسونگ Galaxy Mini S5570","سامسونگ Galaxy Music Duos S6012","سامسونگ Galaxy Music S6010","سامسونگ Galaxy Note10","سامسونگ Galaxy Note10+","سامسونگ Galaxy Note10 5G","سامسونگ Galaxy Note10+ 5G","سامسونگ Galaxy Note10 Lite","سامسونگ Galaxy Note20","سامسونگ Galaxy Note20 5G","سامسونگ Galaxy Note20 Ultra","سامسونگ Galaxy Note20 Ultra 5G","سامسونگ Galaxy Note 3","سامسونگ Galaxy Note 3 Neo","سامسونگ Galaxy Note 3 Neo Duos","سامسونگ Galaxy Note 4","سامسونگ Galaxy Note 4 Duos","سامسونگ Galaxy Note 4 (USA)","سامسونگ Galaxy Note5","سامسونگ Galaxy Note5 Duos","سامسونگ Galaxy Note5 (USA)","سامسونگ Galaxy Note7","سامسونگ Galaxy Note7 (USA)","سامسونگ Galaxy Note8","سامسونگ Galaxy Note 8.0","سامسونگ Galaxy Note9","سامسونگ Galaxy Note Edge","سامسونگ Galaxy Note FE","سامسونگ Galaxy Note II CDMA","سامسونگ Galaxy Note Pro 12.2 3G","سامسونگ Galaxy Note T879","سامسونگ Galaxy On5","سامسونگ Galaxy On5 (2016)","سامسونگ Galaxy On5 Pro","سامسونگ Galaxy On6","سامسونگ Galaxy On7","سامسونگ Galaxy On7 (2016)","سامسونگ Galaxy On7 Pro","سامسونگ Galaxy On8","سامسونگ Galaxy Pocket Neo S5310","سامسونگ Galaxy Pocket plus S5301","سامسونگ Galaxy Pop Plus S5570i","سامسونگ Galaxy Pop SHV-E220","سامسونگ Galaxy Premier I9260","سامسونگ Galaxy Prevail 2","سامسونگ Galaxy Quantum 2","سامسونگ Galaxy Reverb M950","سامسونگ Galaxy Round G910S","سامسونگ Galaxy Rugby Pro I547","سامسونگ Galaxy Rush M830","سامسونگ Galaxy S10","سامسونگ Galaxy S10+","سامسونگ Galaxy S10 5G","سامسونگ Galaxy S10e","سامسونگ Galaxy S10 Lite","سامسونگ Galaxy S20","سامسونگ Galaxy S20+","سامسونگ Galaxy S20 5G","سامسونگ Galaxy S20+ 5G","سامسونگ Galaxy S20 FE","سامسونگ Galaxy S20 FE 5G","سامسونگ Galaxy S20 Ultra","سامسونگ Galaxy S20 Ultra 5G","سامسونگ Galaxy S21","سامسونگ Galaxy S21 5G","سامسونگ Galaxy S21+ 5G","سامسونگ Galaxy S21 Ultra 5G","سامسونگ Galaxy S4 Active LTE-A","سامسونگ Galaxy S4 CDMA","سامسونگ Galaxy S4 mini I9195I","سامسونگ Galaxy S4 zoom","سامسونگ Galaxy S5","سامسونگ Galaxy S5 Active","سامسونگ Galaxy S5 Duos","سامسونگ Galaxy S5 LTE-A G901F","سامسونگ Galaxy S5 LTE-A G906S","سامسونگ Galaxy S5 mini","سامسونگ Galaxy S5 mini Duos","سامسونگ Galaxy S5 Neo","سامسونگ Galaxy S5 (octa-core)","سامسونگ Galaxy S5 Plus","سامسونگ Galaxy S5 Sport","سامسونگ Galaxy S5 (USA)","سامسونگ Galaxy S6","سامسونگ Galaxy S6 active","سامسونگ Galaxy S6 Duos","سامسونگ Galaxy S6 edge","سامسونگ Galaxy S6 edge+","سامسونگ Galaxy S6 edge+ Duos","سامسونگ Galaxy S6 Plus","سامسونگ Galaxy S6 (USA)","سامسونگ Galaxy S7","سامسونگ Galaxy S7 active","سامسونگ Galaxy S7 edge","سامسونگ Galaxy S8","سامسونگ Galaxy S8+","سامسونگ Galaxy S8 Active","سامسونگ Galaxy S9","سامسونگ Galaxy S9+","سامسونگ Galaxy S9 Active","سامسونگ Galaxy S Duos 2 S7582","سامسونگ Galaxy S Duos 3","سامسونگ Galaxy S Duos S7562","سامسونگ Galaxy S II TV","سامسونگ Galaxy S Light Luxury","سامسونگ Galaxy S Relay 4G T699","سامسونگ Galaxy Star 2","سامسونگ Galaxy Star 2 Plus","سامسونگ Galaxy Star Pro S7260","سامسونگ Galaxy Star S5280","سامسونگ Galaxy Star Trios S5283","سامسونگ Galaxy Stellar 4G I200","سامسونگ Galaxy Stratosphere II I415","سامسونگ Galaxy Trend II Duos S7572","سامسونگ Galaxy V","سامسونگ Galaxy Victory 4G LTE L300","سامسونگ Galaxy View","سامسونگ Galaxy View2","سامسونگ Galaxy V Plus","سامسونگ Galaxy Win I8550","سامسونگ Galaxy Win Pro G3812","سامسونگ Galaxy Xcover 3","سامسونگ Galaxy Xcover 3 G389F","سامسونگ Galaxy Xcover 4","سامسونگ Galaxy Xcover 4s","سامسونگ Galaxy Xcover 5","سامسونگ Galaxy Xcover FieldPro","سامسونگ Galaxy Xcover Pro","سامسونگ Galaxy Young 2","سامسونگ Galaxy Young S6310","سامسونگ Galaxy Z Flip","سامسونگ Galaxy Z Flip 5G","سامسونگ Galaxy Z Fold 2 5G","سامسونگ Gravity Q T289","سامسونگ I8190 Galaxy S III mini","سامسونگ I8200 Galaxy S III mini VE","سامسونگ I9000 Galaxy S","سامسونگ I9105 Galaxy S II Plus","سامسونگ I9190 Galaxy S4 mini","سامسونگ I9230 Galaxy Golden","سامسونگ I9295 Galaxy S4 Active","سامسونگ I9301I Galaxy S3 Neo","سامسونگ I9305 Galaxy S III","سامسونگ I9502 Galaxy S4","سامسونگ I9506 Galaxy S4","سامسونگ S7710 Galaxy Xcover 2","سامسونگ Xcover 550","سامسونگ Z1","سامسونگ Z2","سامسونگ Z3","سامسونگ Z3 Corporate","سامسونگ Z4","سایر مدل‌های سامسونگ"]
+          },
+          {
+            "name":"شارپ",
+            "code":"",
+            "type":["شارپ Aquos Crystal","شارپ Aquos Crystal 2","شارپ Aquos R2 compact","شارپ Aquos S2","شارپ Aquos S3","شارپ Aquos S3 High","شارپ Aquos S3 mini","شارپ Aquos V","شارپ Aquos Xx","شارپ Aquos Zero","شارپ Aquos Zero 2","شارپ MS1","شارپ SH530U","شارپ Z2","شارپ Z3","سایر مدل‌های شارپ"]
+          },
+          {
+            "name":"سونی",
+            "code":"",
+            "type":["سونی Xperia 1","سونی Xperia 10","سونی Xperia 10 II","سونی Xperia 10 III","سونی Xperia 10 Plus","سونی Xperia 1 II","سونی Xperia 1 III","سونی Xperia 5","سونی Xperia 5 II","سونی Xperia 5 III","سونی Xperia 5 Plus","سونی Xperia C","سونی Xperia C3","سونی Xperia C3 Dual","سونی Xperia C4","سونی Xperia C4 Dual","سونی Xperia C5 Ultra","سونی Xperia C5 Ultra Dual","سونی Xperia C670X","سونی Xperia E1","سونی Xperia E1 dual","سونی Xperia E3","سونی Xperia E3 Dual","سونی Xperia E4","سونی Xperia E4 Dual","سونی Xperia E4g","سونی Xperia E4g Dual","سونی Xperia E5","سونی Xperia E dual","سونی Xperia H8541","سونی Xperia ion LTE","سونی Xperia J","سونی Xperia L","سونی Xperia L1","سونی Xperia L2","سونی Xperia L3","سونی Xperia L4","سونی Xperia M","سونی Xperia M2","سونی Xperia M2 Aqua","سونی Xperia M2 dual","سونی Xperia M5","سونی Xperia M5 Dual","سونی Xperia M Ultra","سونی Xperia neo L","سونی Xperia Pro","سونی Xperia R1 (Plus)","سونی Xperia SP","سونی Xperia T2 Ultra","سونی Xperia T2 Ultra dual","سونی Xperia T3","سونی Xperia T LTE","سونی Xperia TX","سونی Xperia V","سونی Xperia XA","سونی Xperia XA1","سونی Xperia XA1 Plus","سونی Xperia XA1 Ultra","سونی Xperia XA2","سونی Xperia XA2 Plus","سونی Xperia XA2 Ultra","سونی Xperia XA Dual","سونی Xperia XA Ultra","سونی Xperia X Compact","سونی Xperia X Ultra","سونی Xperia XZ","سونی Xperia XZ1","سونی Xperia XZ1 Compact","سونی Xperia XZ2","سونی Xperia XZ2 Compact","سونی Xperia XZ2 Premium","سونی Xperia XZ3","سونی Xperia XZ Premium","سونی Xperia XZs","سونی Xperia Z","سونی Xperia Z1","سونی Xperia Z1 Compact","سونی Xperia Z1s","سونی Xperia Z2","سونی Xperia Z2a","سونی Xperia Z3","سونی Xperia Z3+","سونی Xperia Z3 Compact","سونی Xperia Z3 Dual","سونی Xperia Z3+ dual","سونی Xperia Z3v","سونی Xperia Z4 Compact","سونی Xperia Z4 Ultra","سونی Xperia Z4v","سونی Xperia Z5","سونی Xperia Z5 Compact","سونی Xperia Z5 Dual","سونی Xperia Z5 Premium","سونی Xperia Z5 Premium Dual","سونی Xperia ZL","سونی Xperia ZR","سونی Xperia Z Ultra","سایر مدل‌های سونی"                  ]
+          },
+          {
+            "name":"سونی اریکسون",
+            "code":"",
+            "type":["سونی اریکسون Ericsson Xperia Arc S","سونی اریکسون Ericsson Xperia neo V","سونی اریکسون Ericsson Xperia PLAY","سونی اریکسون Ericsson Xperia pro","سونی اریکسون Ericsson Xperia ray","سونی اریکسون Ericsson Xperia X10","سونی اریکسون Ericsson Xperia X8","سایر مدل‌های سونی اریکسون"]
+          },
+          {
+            "name":"ویوو",
+            "code":"",
+            "type":["ویوو iQOO 3 5G","ویوو iQOO 5 5G","ویوو iQOO 5 Pro 5G","ویوو iQOO 7","ویوو iQOO Neo","ویوو iQOO Neo3 5G","ویوو iQOO Neo5","ویوو iQOO Neo 855","ویوو iQOO Neo 855 Racing","ویوو iQOO Pro","ویوو iQOO Pro 5G","ویوو iQOO U1","ویوو iQOO U1x","ویوو iQOO U3","ویوو iQOO U3x","ویوو iQOO Z1","ویوو iQOO Z1x","ویوو iQOO Z3","ویوو NEX 3","ویوو NEX 3 5G","ویوو NEX 3S 5G","ویوو NEX A","ویوو NEX Dual Display","ویوو NEX S","ویوو S1","ویوو S1 Prime","ویوو S1 Pro","ویوو S5","ویوو S6 5G","ویوو S9","ویوو S9e","ویوو U10","ویوو U20","ویوو U3","ویوو V1","ویوو V11 (V11 Pro)","ویوو V15","ویوو V15 Pro","ویوو V17","ویوو V17 Neo","ویوو V17 Pro","ویوو V19","ویوو V19 Neo","ویوو V1 Max","ویوو V3","ویوو V3Max","ویوو V5","ویوو V5 Lite (vivo 1609)","ویوو V5 Plus","ویوو V5s","ویوو V7","ویوو V7+","ویوو V9","ویوو V9 6GB","ویوو V9 Youth","ویوو X20","ویوو X20 Plus","ویوو X20 Plus UD","ویوو X21i","ویوو X21 UD","ویوو X23","ویوو X27","ویوو X27 Pro","ویوو X30","ویوو X30 Pro","ویوو X3S","ویوو X5","ویوو X50","ویوو X50 5G","ویوو X50e","ویوو X50 Lite","ویوو X50 Pro","ویوو X50 Pro+","ویوو X51 5G","ویوو X5Max","ویوو X5Max+","ویوو X5Pro","ویوو X6","ویوو X60","ویوو X60 Pro","ویوو X60 Pro+","ویوو X60t","ویوو X6Plus","ویوو X6S","ویوو X6S Plus","ویوو X7","ویوو X7 Plus","ویوو X9","ویوو X9 Plus","ویوو X9s","ویوو X9s Plus","ویوو Xplay3S","ویوو Xplay5","ویوو Xplay5 Elite","ویوو Xplay6","ویوو Xplay7","ویوو Xshot","ویوو Y11","ویوو Y11 (2019)","ویوو Y11s","ویوو Y12","ویوو Y12i","ویوو Y12s","ویوو Y15","ویوو Y15 (2013)","ویوو Y15S (2015)","ویوو Y17","ویوو Y19","ویوو Y20","ویوو Y20 2021","ویوو Y20A","ویوو Y20G","ویوو Y20i","ویوو Y20s","ویوو Y22","ویوو Y25","ویوو Y27","ویوو Y28","ویوو Y30","ویوو Y30G","ویوو Y31","ویوو Y31 (2015)","ویوو Y31s","ویوو Y35","ویوو Y37","ویوو Y3 Standard","ویوو Y50","ویوو Y51","ویوو Y51s","ویوو Y55s","ویوو Y65","ویوو Y67","ویوو Y69","ویوو Y70","ویوو Y70s","ویوو Y71","ویوو Y71i","ویوو Y72 5G","ویوو Y81","ویوو Y81i","ویوو Y90","ویوو Y91i","ویوو Y91i (India)","ویوو Y93","ویوو Y93 (Mediatek)","ویوو Y93s","ویوو Y95","ویوو Y9s","ویوو Z1","ویوو Z1i","ویوو Z1 Lite","ویوو Z1Pro","ویوو Z1x","ویوو Z3","ویوو Z3i","ویوو Z3x","ویوو Z5i","ویوو Z5x","ویوو Z5x (2020)","ویوو Z6 5G","سایر مدل‌های ویوو"]
+          },
+          {
+            "name":"شیائومی",
+            "code":"",
+            "type":["شیائومی Black Shark","شیائومی Black Shark 2","شیائومی Black Shark 2 Pro","شیائومی Black Shark 3","شیائومی Black Shark 3 Pro","شیائومی Black Shark 3S","شیائومی Black Shark 4","شیائومی Black Shark 4 Pro","شیائومی Black Shark Helo","شیائومی Mi 10 5G","شیائومی Mi 10i 5G","شیائومی Mi 10 Lite 5G","شیائومی Mi 10 Pro 5G","شیائومی Mi 10S","شیائومی Mi 10T 5G","شیائومی Mi 10T Lite 5G","شیائومی Mi 10T Pro 5G","شیائومی Mi 10 Ultra","شیائومی Mi 10 Youth 5G","شیائومی Mi 11","شیائومی Mi 11i","شیائومی Mi 11 Lite","شیائومی Mi 11 Lite 5G","شیائومی Mi 11 Pro","شیائومی Mi 11 Ultra","شیائومی Mi 11X","شیائومی Mi 11X Pro","شیائومی Mi 1S","شیائومی Mi 2","شیائومی Mi 2A","شیائومی Mi 2S","شیائومی Mi 3","شیائومی Mi 4","شیائومی Mi 4c","شیائومی Mi 4i","شیائومی Mi 4 LTE","شیائومی Mi 4s","شیائومی Mi 5c","شیائومی Mi 5s","شیائومی Mi 5s Plus","شیائومی Mi 6","شیائومی Mi 6c","شیائومی Mi 6 Plus","شیائومی Mi 8","شیائومی Mi 8 Explorer","شیائومی Mi 8 Lite","شیائومی Mi 8 Pro","شیائومی Mi 8 SE","شیائومی Mi 9","شیائومی Mi 9 Explorer","شیائومی Mi 9 Lite","شیائومی Mi 9 Pro","شیائومی Mi 9 Pro 5G","شیائومی Mi 9 SE","شیائومی Mi 9T","شیائومی Mi 9T Pro","شیائومی Mi A1 (Mi 5X)","شیائومی Mi A2 Lite (Redmi 6 Pro)","شیائومی Mi A2 (Mi 6X)","شیائومی Mi A3","شیائومی Mi CC9","شیائومی Mi CC9e","شیائومی Mi CC9 Pro","شیائومی Mi Max 2","شیائومی Mi Max 3","شیائومی Mi Max 4","شیائومی Mi Max 4 Pro","شیائومی Mi Mix","شیائومی Mi Mix 2","شیائومی Mi Mix 2S","شیائومی Mi Mix 3","شیائومی Mi Mix 3 5G","شیائومی Mi Mix Alpha","شیائومی Mi Mix Fold","شیائومی Mi Note","شیائومی Mi Note 10","شیائومی Mi Note 10 Lite","شیائومی Mi Note 10 Pro","شیائومی Mi Note 2","شیائومی Mi Note 3","شیائومی Mi Note Plus","شیائومی Mi Note Pro","شیائومی Mi Play","شیائومی Poco C3","شیائومی Poco F2 Pro","شیائومی Poco F3","شیائومی Poco M2","شیائومی Poco M2 Pro","شیائومی Poco M3","شیائومی Poco M3 Pro 5G","شیائومی Pocophone F1","شیائومی Poco X2","شیائومی Poco X3","شیائومی Poco X3 NFC","شیائومی Poco X3 Pro","شیائومی Redmi 10X 4G","شیائومی Redmi 10X 5G","شیائومی Redmi 10X Pro 5G","شیائومی Redmi 1S","شیائومی Redmi 2","شیائومی Redmi 20X","شیائومی Redmi 2A","شیائومی Redmi 2 Prime","شیائومی Redmi 2 Pro","شیائومی Redmi 3","شیائومی Redmi 3 Pro","شیائومی Redmi 3s","شیائومی Redmi 3s Prime","شیائومی Redmi 3x","شیائومی Redmi 4 (4X)","شیائومی Redmi 4A","شیائومی Redmi 4 (China)","شیائومی Redmi 4 Prime","شیائومی Redmi 5","شیائومی Redmi 5A","شیائومی Redmi 5 Plus (Redmi Note 5)","شیائومی Redmi 6","شیائومی Redmi 6A","شیائومی Redmi 7A","شیائومی Redmi 8","شیائومی Redmi 8A","شیائومی Redmi 8A Dual","شیائومی Redmi 8A Pro","شیائومی Redmi 9","شیائومی Redmi 9A","شیائومی Redmi 9AT","شیائومی Redmi 9C","شیائومی Redmi 9C NFC","شیائومی Redmi 9i","شیائومی Redmi 9 (India)","شیائومی Redmi 9 Power","شیائومی Redmi 9 Prime","شیائومی Redmi 9T","شیائومی Redmi Go","شیائومی Redmi K20 Pro Premium","شیائومی Redmi K30","شیائومی Redmi K30 5G","شیائومی Redmi K30 5G Racing","شیائومی Redmi K30i 5G","شیائومی Redmi K30 Pro","شیائومی Redmi K30 Pro Zoom","شیائومی Redmi K30S","شیائومی Redmi K30 Ultra","شیائومی Redmi K40","شیائومی Redmi K40 Pro","شیائومی Redmi K40 Pro+","شیائومی Redmi Note 10","شیائومی Redmi Note 10 5G","شیائومی Redmi Note 10 Pro","شیائومی Redmi Note 10 Pro Max","شیائومی Redmi Note 10S","شیائومی Redmi Note 3 (MediaTek)","شیائومی Redmi Note 4","شیائومی Redmi Note 4G","شیائومی Redmi Note 4X","شیائومی Redmi Note 5 AI Dual Camera","شیائومی Redmi Note 5 Pro","شیائومی Redmi Note 6 Pro","شیائومی Redmi Note 7","شیائومی Redmi Note 7 Pro","شیائومی Redmi Note 7S","شیائومی Redmi Note 8","شیائومی Redmi Note 8 Pro","شیائومی Redmi Note 8T","شیائومی Redmi Note 9","شیائومی Redmi Note 9 4G","شیائومی Redmi Note 9 5G","شیائومی Redmi Note 9 Pro","شیائومی Redmi Note 9 Pro 5G","شیائومی Redmi Note 9 Pro (India)","شیائومی Redmi Note 9 Pro Max","شیائومی Redmi Note 9S","شیائومی Redmi Note 9T","شیائومی Redmi Note Prime","شیائومی Redmi Pro 2","شیائومی Redmi S2 (Redmi Y2)","شیائومی Redmi Y1 Lite","شیائومی Redmi Y1 (Note 5A)","شیائومی Redmi Y3","سایر مدل‌های شیائومی"]
+          },
+          {
+            "name":"یوتا",
+            "code":"",
+            "type":["یوتا YotaPhone","یوتا YotaPhone 2","یوتا YotaPhone 3","سایر مدل‌های یوتا"]
+           },
+          {
+            "name":"زد تی ای",
+            "code":"",
+            "type":["زد تی ای Anthem 4G","زد تی ای Avid 4G","زد تی ای Avid Plus","زد تی ای Axon 10 Pro","زد تی ای Axon 10 Pro 5G","زد تی ای Axon 10s Pro 5G","زد تی ای Axon 11 4G","زد تی ای Axon 11 5G","زد تی ای Axon 20 4G","زد تی ای Axon 20 5G","زد تی ای Axon 20 5G Extreme","زد تی ای Axon 30 Pro 5G","زد تی ای Axon 30 Ultra 5G","زد تی ای Axon 7","زد تی ای Axon 7 mini","زد تی ای Axon 7s","زد تی ای Axon 9 Pro","زد تی ای Axon Elite","زد تی ای Axon Lux","زد تی ای Axon M","زد تی ای Axon Max","زد تی ای Axon mini","زد تی ای Axon Pro","زد تی ای Blade 10 Prime","زد تی ای Blade 20 Pro 5G","زد تی ای Blade A2","زد تی ای Blade A2 Plus","زد تی ای Blade A3","زد تی ای Blade A3 (2019)","زد تی ای Blade A410","زد تی ای Blade A452","زد تی ای Blade A460","زد تی ای Blade A512","زد تی ای Blade A520","زد تی ای Blade A6","زد تی ای Blade A601","زد تی ای Blade A610","زد تی ای Blade A7","زد تی ای Blade A7 Prime","زد تی ای Blade A7s 2020","زد تی ای Blade A7 Vita","زد تی ای Blade A910","زد تی ای Blade Apex 3","زد تی ای Blade C V807","زد تی ای Blade D6","زد تی ای Blade Force","زد تی ای Blade G","زد تی ای Blade G2","زد تی ای Blade G Lux","زد تی ای Blade G V880G","زد تی ای Blade III","زد تی ای Blade L110 (A110)","زد تی ای Blade L2","زد تی ای Blade L3","زد تی ای Blade L3 Plus","زد تی ای Blade L5 Plus","زد تی ای Blade L8","زد تی ای Blade Max View","زد تی ای Blade Q","زد تی ای Blade Qlux 4G","زد تی ای Blade Q Maxi","زد تی ای Blade Q Mini","زد تی ای Blade Q Pro","زد تی ای Blade S6","زد تی ای Blade S6 Plus","زد تی ای Blade S7","زد تی ای Blade V10","زد تی ای Blade V10 Vita","زد تی ای Blade V20","زد تی ای Blade V7","زد تی ای Blade V7 Lite","زد تی ای Blade V7 Max","زد تی ای Blade V7 Plus","زد تی ای Blade V8","زد تی ای Blade V8 Lite","زد تی ای Blade V8 Mini","زد تی ای Blade V8 Pro","زد تی ای Blade V9","زد تی ای Blade V9 Vita","زد تی ای Blade Vec 3G","زد تی ای Blade Vec 4G","زد تی ای Blade V Plus","زد تی ای Blade X","زد تی ای Blade X1 5G","زد تی ای Blade X3","زد تی ای Blade X5","زد تی ای Blade X9","زد تی ای Boost Max+","زد تی ای Grand Era U895","زد تی ای Grand Memo II LTE","زد تی ای Grand S","زد تی ای Grand S3","زد تی ای Grand S II","زد تی ای Grand S II S291","زد تی ای Grand S Pro","زد تی ای Grand X2","زد تی ای Grand X 3","زد تی ای Grand X4","زد تی ای Grand X IN","زد تی ای Grand Xmax","زد تی ای Grand X Max+","زد تی ای Grand X Max 2","زد تی ای Grand X Plus Z826","زد تی ای Grand X Pro","زد تی ای Grand X Quad V987","زد تی ای Groove X501","زد تی ای Hawkeye","زد تی ای Iconic Phablet","زد تی ای Imperial II","زد تی ای Kis 3","زد تی ای Kis 3 Max","زد تی ای Kis III V790","زد تی ای Maven","زد تی ای Maven 2","زد تی ای Max XL","زد تی ای nubia M2","زد تی ای nubia M2 lite","زد تی ای nubia M2 Play","زد تی ای nubia My Prague","زد تی ای nubia N1","زد تی ای nubia N1 lite","زد تی ای nubia N2","زد تی ای nubia N3","زد تی ای nubia Play","زد تی ای nubia Prague S","زد تی ای nubia Red Magic","زد تی ای nubia Red Magic 3","زد تی ای nubia Red Magic 3s","زد تی ای nubia Red Magic 5G","زد تی ای nubia Red Magic 5G Lite","زد تی ای nubia Red Magic 5S","زد تی ای nubia Red Magic 6","زد تی ای nubia Red Magic 6 Pro","زد تی ای nubia Red Magic Mars","زد تی ای nubia V18","زد تی ای nubia X","زد تی ای nubia X 5G","زد تی ای nubia X6","زد تی ای nubia Z11","زد تی ای nubia Z11 Max","زد تی ای nubia Z11 mini","زد تی ای nubia Z11 mini S","زد تی ای nubia Z17","زد تی ای nubia Z17 lite","زد تی ای nubia Z17 mini","زد تی ای nubia Z17 miniS","زد تی ای nubia Z17s","زد تی ای nubia Z18","زد تی ای nubia Z18 mini","زد تی ای nubia Z20","زد تی ای nubia Z5S mini NX403A","زد تی ای nubia Z5S mini NX405H","زد تی ای nubia Z7","زد تی ای nubia Z7 Max","زد تی ای nubia Z7 mini","زد تی ای nubia Z9 Max","زد تی ای nubia Z9 mini","زد تی ای Obsidian","زد تی ای Open C","زد تی ای Open II","زد تی ای Open L","زد تی ای Redbull V5 V9180","زد تی ای Sonata 2","زد تی ای Sonata 4G","زد تی ای Speed","زد تی ای Star 1","زد تی ای Star 2","زد تی ای Tempo Go","زد تی ای Tempo X","زد تی ای V5 Lux","زد تی ای V887","زد تی ای V889M","زد تی ای Warp 7","زد تی ای Warp Sequent","زد تی ای Zinger","زد تی ای Zmax","زد تی ای Zmax 2","زد تی ای Zmax Pro","سایر مدل‌های زد تی ای"]
+          },
+          {
+            "name":"سایر",
+            "code":"",
+            "type":["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]
+          }
+        ],
+    "status":["نو","در حد نو","کار کرده","نیازمند تعمیر"],
+    "simNumber":["1","2","3 وبیشتر"],
+    "esalatBrand":["اصل","غیر اصل"],
+    "Rom":["512 مگا بایت","1 گیگا بایت","2 گیگا بایت","3 گیگا بایت","4 گیگا بایت","8 گیگا بایت","13 گیگا بایت","19 گیگا بایت","20 گیگا بایت","32 گیگا بایت","64 گیگا بایت","128 گیگا بایت","265 گیگا بایت","512 گیگا بایت","1 ترابایت"],
+    "Ram":["512 مگا بایت","768 مگابایت","1 گیگا بایت","1.5 گیگا بایت","2 گیگا بایت","3 گیگا بایت","4 گیگا بایت","6 گیگا بایت","8 گیگا بایت","10 گیگا بایت","12 گیگا بایت","16 گیگا بایت","18 گیگا بایت","32 گیگا بایت"],
+      "sellType":["نقدی","قسطی","نقدی و قسطی"],
+      "viewMobile":["دارد","ندارد"],
+      "moaveze":["دارد","ندارد"],
+      "img_url": [],
+      "imadiate": "فوری",
+      "mobile": "",
+      "codemeli": "",
+      "title": "",
+      "explation": ""
+    },
+    {
+        "id_catogery": 3,
+        "id_group": 1,
+      "name": "تبلت",
+      "code": 2,
+      "city": "",
+      "minprice": [
+          "100 هزار",
+          "250 هزار",
+          "500 هزار",
+          "800 هزار",
+          "1 میلیون",
+          "2 میلیون",
+          "3 میلیون",
+          "5 میلیون",
+          "7 میلیون و 500 هزار",
+          "10 میلیون",
+          "20 میلیون"
+        ],
+        "maxprice": [
+          "100 هزار",
+          "250 هزار",
+          "500 هزار",
+          "800 هزار",
+          "1 میلیون",
+          "2 میلیون",
+          "3 میلیون",
+          "5 میلیون",
+          "7 میلیون و 500 هزار",
+          "10 میلیون",
+          "20 میلیون"
+        ],
+        "price": "",
+        "builder":["Samsung:سامسونگ","Apple:اپل","HTC:اچ تی سی","Sony ericsone:سونی اریکسون","Nokia:نوکیا","Sony:سونی","LG:ال جی","Motorola:موتورولا","Huoawei:هوآوی","Blackbery:بلک بری","Aser:ایسر","Asuse:ایسوز","Dell:دل","Lenovo:لنوو","Amazon:آمازون","Farasoo:فراسو","ZTE:زدتی ای","ViewSonic:ویو سونیک","MSI:ام اس آی","Honor:آنر","Smart:اسمارت","GLX:جی ال ایکس","GPlus:جی پلاس","Xiaomi:شیائومی","Google:گوگل","Microsoft:میکروسافت","Hyundai:هیوندای","OnePlus:وان پلاس","غیره"],
+    "status":["نو","در حد نو","کار کرده","نیازمند تعمیر"],
+    "simSuport":["دارد","ندارد"],
+      "sellType":["نقدی","قسطی","نقدی و قسطی"],
+      "viewMobile":["دارد","ندارد"],
+      "moaveze":["دارد","ندارد"],
+      "img_url": [],
+      "imadiate": "فوری",
+      "mobile": "",
+      "codemeli": "",
+      "title": "",
+      "explation": ""
+    },
+    {
+        "id_catogery": 3,
+        "id_group": 1,
+      "name": "لوازم جانبی موبایل و تبلت",
+      "code": 3,
+      "city": "",
+      "minprice": [
+          "100 هزار",
+          "250 هزار",
+          "500 هزار",
+          "800 هزار",
+          "1 میلیون",
+          "2 میلیون",
+          "3 میلیون",
+          "5 میلیون",
+          "7 میلیون و 500 هزار",
+          "10 میلیون",
+          "20 میلیون"
+        ],
+        "maxprice": [
+          "100 هزار",
+          "250 هزار",
+          "500 هزار",
+          "800 هزار",
+          "1 میلیون",
+          "2 میلیون",
+          "3 میلیون",
+          "5 میلیون",
+          "7 میلیون و 500 هزار",
+          "10 میلیون",
+          "20 میلیون"
+        ],
+        "price": "",
+    "status":["نو","در حد نو","کار کرده","نیازمند تعمیر"],
+      "viewMobile":["دارد","ندارد"],
+      "moaveze":["دارد","ندارد"],
+      "img_url": [],
+      "imadiate": "فوری",
+      "mobile": "",
+      "codemeli": "",
+      "title": "",
+      "explation": ""
+    },
+    {
+        "id_catogery": 3,
+        "id_group": 1,
+      "name": "سیم‌کارت",
+      "code": 4,
+      "city": "",
+      "minprice": [
+          "100 هزار",
+          "250 هزار",
+          "500 هزار",
+          "800 هزار",
+          "1 میلیون",
+          "2 میلیون",
+          "3 میلیون",
+          "5 میلیون",
+          "7 میلیون و 500 هزار",
+          "10 میلیون",
+          "20 میلیون"
+        ],
+        "maxprice": [
+          "100 هزار",
+          "250 هزار",
+          "500 هزار",
+          "800 هزار",
+          "1 میلیون",
+          "2 میلیون",
+          "3 میلیون",
+          "5 میلیون",
+          "7 میلیون و 500 هزار",
+          "10 میلیون",
+          "20 میلیون"
+        ],
+        "price": "",
+    "status":["نو","در حد نو","کار کرده","نیازمند تعمیر"],
+    "simType":["رایتل","ایرانسل","همراه اول"],
+      "viewMobile":["دارد","ندارد"],
+      "moaveze":["دارد","ندارد"],
+      "img_url": [],
+      "imadiate": "فوری",
+      "mobile": "",
+      "codemeli": "",
+      "title": "",
+      "explation": ""
+    },
+    {
+        "id_catogery": 3,
+        "id_group": 1,
+      "name": "متفرقه",
+      "code": 5,
+      "city": "",
+        "price": "",
+    "status":["نو","در حد نو","کار کرده","نیازمند تعمیر"],
+      "viewMobile":["دارد","ندارد"],
+      "moaveze":["دارد","ندارد"],
+      "img_url": [],
+      "imadiate": "فوری",
+      "mobile": "",
+      "codemeli": "",
+      "title": "",
+      "explation": ""
+    }
+  ]

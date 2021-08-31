@@ -1,0 +1,53 @@
+[
+  {
+    "id_catogery": 7,
+    "id": 1,
+    "name": "بلیط"
+  },
+  {
+    "id_catogery": 7,
+    "id": 2,
+    "name": "تور و چارتر"
+  },
+
+  {
+    "id_catogery": 7,
+    "id": 3,
+    "name": "کتاب و مجله"
+  },
+  {
+    "id_catogery": 7,
+    "id": 4,
+    "name": "دوچرخه/اسکیت/اسکوتر"
+  },
+  {
+    "id_catogery": 7,
+    "id": 5,
+    "name": "حیوانات"
+  },
+  {
+    "id_catogery": 7,
+    "id": 6,
+    "name": "کلکسیون و سرگرمی"
+  },
+  {
+    "id_catogery": 7,
+    "id": 7,
+    "name": "آلات موسیقی"
+  },
+  {
+    "id_catogery": 7,
+    "id": 8,
+    "name": "ورزش و تناسب اندام"
+  },
+  {
+    "id_catogery": 7,
+    "id": 9,
+    "name": "اسباب بازی"
+  },
+  {
+    "id_catogery": 7,
+    "id": 10,
+    "name": "متفرقه"
+  }
+]
