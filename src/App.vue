@@ -1,20 +1,46 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="container-fluid p-0 bg-wight">
+    <top-header />
+    <side-header />
+    <div id="nav">
+      
+    </div>
+    <router-view />
+    <footer-section />
   </div>
-  <router-view />
 </template>
+<script>
+import TopHeader from "./components/header/TopHeader.vue";
+import SideHeader from "./components/header/SideHeader.vue";
+import FooterSection from "./components/footer/FooterSection.vue";
+
+export default {
+  components: { TopHeader, SideHeader, FooterSection },
+  setup() {},
+};
+</script>
 
 <style>
+@font-face {
+  font-family: pixelboy-BHoma;
+  src: url("../public/fonts/pixelboy-BHoma.eot");
+  src: url("../public/fonts/pixelboy-BHoma.eot?#iefix")
+      format("pixelboy-BHoma-opentype"),
+    url("../public/fonts/pixelboy-BHoma.woff") format("woff"),
+    url("../public/fonts/pixelboy-BHoma.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: pixelboy-BHoma, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: right;
   color: #2c3e50;
 }
-
+.bg-wight {
+  background: #fff;
+}
 #nav {
   padding: 30px;
 }
@@ -26,5 +52,12 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+#app a {
+  text-decoration: none;
+  color: gray;
+}
+#app a:hover {
+  color: #000;
 }
 </style>

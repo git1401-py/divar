@@ -1,42 +1,52 @@
 [
   {
     "id": 1,
-    "title": "املاک"
+    "title": "املاک",
+    "path":"melk/amlak.json"
   },
   {
     "id": 2,
-    "title": "وسایل نقلیه"
+    "title": "وسایل نقلیه",
+    "path":"vehicles/vehicle.json"
   },
   {
     "id": 3,
-    "title": "لوازم الکتریکی"
+    "title": "لوازم الکتریکی",
+    "path":"electrisite/electriki.json"
   },
   {
     "id": 4,
-    "title": "مربوط به خانه"
+    "title": "مربوط به خانه",
+    "path":"house/home.json"
   },
   {
     "id": 5,
-    "title": "خدمات"
+    "title": "خدمات",
+    "path":"khadamats/khadamat.json"
   },
   {
     "id": 6,
-    "title": "وسایل شخصی"
+    "title": "وسایل شخصی",
+    "path":"persionalItems/persionalItem.json"
   },
   {
     "id": 7,
-    "title": "سرگرمی و فراعت"
+    "title": "سرگرمی و فراعت",
+    "path":"sargarmi/sargarmi.json"
   },
   {
     "id": 8,
-    "title": "اجتماعی"
+    "title": "اجتماعی",
+    "path":"social/social.json"
   },
   {
     "id": 9,
-    "title": "برای کسب و کار"
+    "title": "برای کسب و کار",
+    "path":"kasbvakar/kasbvakar.json"
   },
   {
     "id": 10,
-    "title": "استخدام و کاریابی"
+    "title": "استخدام و کاریابی",
+    "path":"estekhdam/estekhdam.json"
   }
 ]
