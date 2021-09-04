@@ -2,16 +2,22 @@
   {
     "id_catogery": 8,
     "id": 1,
-    "name": "رویداد"
+    "name": "رویداد",
+    "subItem":"",
+    "path":"social/roidad.json"
   },
   {
     "id_catogery": 8,
     "id": 2,
-    "name": "داوطلبانه"
+    "name": "داوطلبانه",
+    "subItem":"",
+    "path":"social/davtalabane.json"
   },
   {
     "id_catogery": 8,
     "id": 3,
-    "name": "گم شده ها"
+    "name": "گم شده ها",
+    "subItem":"",
+    "path":"social/gomshodeha.json"
   }
 ]

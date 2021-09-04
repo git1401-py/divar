@@ -1,0 +1,100 @@
+[
+  {
+    "group_name": "",
+    "group_item_name": "",
+    "group_item_code": "",
+    "mobile_types": "",
+    "simNumber": "",
+    "esalatBrand": "",
+    "Rom": "",
+    "mobile_Ram": "",
+    "Mobile_builder": "",
+    "simSuport": "",
+    "simType": "",
+    "sellType":"",
+
+    "pc_builder": "",
+    "HDD":"",
+      "pc_Ram":"",
+      "cpu":"",
+
+      "typeHamkari":"",
+      "dorkari":"",
+      "typePardakht":"",
+      "timekar": "",
+      "bime":"",
+      "sabeghe":"",
+
+      "building_types": "",
+      "house_types": "",
+      "fornither_types": "",
+
+      "tazin_types": "",
+      "baft": "",
+      "jenseBody": "",
+      "jenseRokesh": "",
+      "numberNeshiman": "",
+      "zemanat": "",
+
+      "khadamat_link":"",
+      "vadie_melk": "",
+      "ejare_melk": "",
+      "vadie_ejare_melk":"",
+      "spaceFrom_melk": "",
+      "spaceTo_melk": "",
+      "fitfor_melk": "",
+      "room_melk": "",
+      "allroof_melk": "",
+      "roof_melk": "",
+      "vahedinroof_melk": "",
+      "jahatbuilding_melk": "",
+      "bazsazi_melk": "",
+      "balkon_melk": "",
+      "jensekaf_melk": "",
+      "sevicebehdashti_melk": "",
+      "sarmaiesh_melk": "",
+      "garmaieshi_melk": "",
+      "boilwater_melk": "",
+      "lift_melk": "",
+      "parking_melk": "",
+      "anbar_melk": "",
+      "adviser_melk": "",
+
+      "araieshi_types": "",
+      "child_jens":"",
+      "child_tolidi": "",
+
+      "personalitem_type": "",
+      "personalitem_darRagMokhtalef": "",
+      "personalitem_jens": "",
+      "personalitem_tolidi": "",
+      "personalitem_jenskala": "",
+
+      "vehicle_type":"",
+      "yearsofbuildfrom":"",
+      "yearsofbuildto":"",
+      "yearsofbuild":"",
+      "color":"",
+      "karkard":"",
+
+
+
+
+
+    "adviser": "",
+
+
+    "city": "",
+    "price": "",
+    "minprice": "",
+    "maxprice": "",
+    "status": ["نو", "در حد نو", "کار کرده", "نیازمند تعمیر"],
+    "viewMobile": ["دارد", "ندارد"],
+    "img_url": [],
+    "imadiate": "فوری",
+    "mobile": "",
+    "codemeli": "",
+    "title": "",
+    "explation": ""
+  }
+]

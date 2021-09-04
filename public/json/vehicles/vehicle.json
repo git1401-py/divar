@@ -2,26 +2,36 @@
   {
     "id_catogery": 2,
     "id": 1,
-    "name": "خودرو"
+    "name": "خودرو",
+    "subItem":"",
+    "path":"vehicles/khodro.json"
   },
   {
     "id_catogery": 2,
     "id": 2,
-    "name": "قطعات یدکی و لوازم جانبی خودرو"
+    "name": "قطعات یدکی و لوازم جانبی خودرو",
+    "subItem":"no",
+    "path":"vehicles/ghataateyadaki.json"
   },
   {
     "id_catogery": 2,
     "id": 3,
-    "name": "موتور سیکلت و لوازم جانبی"
+    "name": "موتور سیکلت و لوازم جانبی",
+    "subItem":"no",
+    "path":"vehicles/motor.json"
   },
   {
     "id_catogery": 2,
     "id": 4,
-    "name": "قایق . لوازم جانبی"
+    "name": "قایق . لوازم جانبی",
+    "subItem":"no",
+    "path":"vehicles/ghaiegh.json"
   },
   {
     "id_catogery": 2,
     "id": 5,
-    "name": "همه آگهی های وسایل نقلیه"
+    "name": "همه آگهی های وسایل نقلیه",
+    "subItem":"no",
+    "path":"vehicles/vehicle.json"
   }
 ]

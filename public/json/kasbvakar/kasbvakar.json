@@ -2,16 +2,21 @@
   {
     "id_catogery": 9,
     "id": 1,
-    "name": "تجهیزات و ماشین آلات"
+    "name": "تجهیزات و ماشین آلات",
+    "subItem":"",
+    "path":"kasbvakar/kasbvakar.json"
   },
   {
     "id_catogery": 9,
     "id": 2,
-    "name": "عمده فروشی"
+    "name": "عمده فروشی",
+    "subItem":"no",
+    "path":"kasbvakar/omdeFroshi.json"
   },
   {
     "id_catogery": 9,
     "id": 3,
-    "name": "متفرقه"
+    "name": "متفرقه",
+    "path":"kasbvakar/kasbvakar.json"
   }
 ]

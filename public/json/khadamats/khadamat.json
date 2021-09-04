@@ -2,56 +2,78 @@
   {
     "id_catogery": 5,
     "id": 1,
-    "name": "موتور و ماشین"
+    "name": "موتور و ماشین",
+    "subItem":"no",
+    "path":"khadamats/motor.json"
   },
   {
     "id_catogery": 5,
     "id": 2,
-    "name": "پذیرایی/مراسم"
+    "name": "پذیرایی/مراسم",
+    "subItem":"no",
+    "path":"khadamats/pazirai.json"
   },
   {
     "id_catogery": 5,
     "id": 3,
-    "name": "خدمات رایانه ای و موبایل"
+    "name": "خدمات رایانه ای و موبایل",
+    "subItem":"",
+    "path":"khadamats/mobile.json"
   },
   {
     "id_catogery": 5,
     "id": 4,
-    "name": "مالی/ حسابداری/بیمه"
+    "name": "مالی/ حسابداری/بیمه",
+    "subItem":"no",
+    "path":"khadamats/mali.json"
   },
   {
     "id_catogery": 5,
     "id": 5,
-    "name": "حمل و نقل"
+    "name": "حمل و نقل",
+    "subItem":"no",
+    "path":"khadamats/hamlvaNaghl.json"
   },
   {
     "id_catogery": 5,
     "id": 6,
-    "name": "پیشه و مهارت"
+    "name": "پیشه و مهارت",
+    "subItem":"no",
+    "path":"khadamats/pishevaMaharat.json"
   },
   {
     "id_catogery": 5,
     "id": 7,
-    "name": "آرایشگری و زیبایی"
+    "name": "آرایشگری و زیبایی",
+    "subItem":"no",
+    "path":"khadamats/araiesh.json"
   },
   {
     "id_catogery": 5,
     "id": 8,
-    "name": "سرگرمی"
+    "name": "سرگرمی",
+    "subItem":"no",
+    "path":"khadamats/sargarmi.json"
   },
   {
     "id_catogery": 5,
     "id": 9,
-    "name": "نظافت"
+    "name": "نظافت",
+    "subItem":"no",
+    "path":"khadamats/nezafat.json"
   },
   {
     "id_catogery": 5,
     "id": 10,
-    "name": "باغبانی و درختکاری"
+    "name": "باغبانی و درختکاری",
+    "subItem":"no",
+    "path":"khadamats/baghbani.json"
   },
   {
     "id_catogery": 5,
     "id": 11,
-    "name": "آموزشی"
+    "name": "آموزشی",
+    "subItem":"",
+    "path":"khadamats/amozeshi.json"
   }
 ]

@@ -1,85 +1,71 @@
 <template>
-  <div class="bg-danger" style="width: 300px; height: 100vh">
-    <ul class="bg-success">
+  <div class="" style="width: 300px; height: 100vh">
+    <ul class="">
       دسته‌بندی‌ها
       <div class="" v-if="display" @click="allTitle">
         <span class="titles">همهٔ آگهی‌ها</span>
       </div>
       <template v-for="title in titles" :key="title.id">
-        <div v-if="displayItam == '' || displayItam == title.id">
-          <li
-            class="p-0 disp"
-            :id="title.id"
-            @click="fetchItems(title.path, title.id)"
-            style="cursor: pointer"
-          >
-            {{ title.title }}
-          </li>
-          <ul v-if="display">
-            <li v-for="item in items" :key="item.id">{{ item.name }}</li>
-            {{
-              items
-            }}
-          </ul>
-        </div>
+        <sub-items
+          :displayItam="displayItam"
+          :display="display"
+          :title="title"
+          @dis="dis"
+          @disItam="disItam"
+          @disDitails="disDitails"
+        />
       </template>
     </ul>
+    <item-details v-if="displayDitails || displayItemDitails" />
   </div>
 </template>
 
 <script>
 import { computed, ref } from "@vue/reactivity";
 import { useStore } from "vuex";
-import { onMounted, onUpdated, watch } from "@vue/runtime-core";
+import SubItems from "./SubItems.vue";
+import { provide } from "@vue/runtime-core";
+import ItemDetails from "./ItemDetails.vue";
 
 export default {
+  components: { SubItems, ItemDetails },
   setup() {
     const display = ref(false);
     const displayItam = ref("");
+    const displayDitails = ref(false);
+    const displayItemDitails = ref(false);
+    provide("displayDitails", displayDitails);
+    provide("displayItemDitails", displayItemDitails);
     const store = useStore();
     fetchTitles();
-    fetchDefaultItem();
     const titles = computed(() => store.getters["titles/allTitles"]);
-    const items = computed(() => store.getters["items/allItems"]);
 
-    console.log(display.value);
     async function fetchTitles() {
       await store.dispatch("titles/fetchTitles");
     }
-    onMounted(() => {});
-    onUpdated(() => {
-      items.value = computed(() => store.getters["items/allItems"]);
-    });
-    watch(() => {});
-    async function fetchDefaultItem() {
-      await store.dispatch("items/fetchItems", "melk/amlak.json");
-    }
-    async function fetchItems(path, id) {
-      items.value = [];
-      displayItam.value = id;
-      await store.dispatch("items/fetchItems", path);
-      console.log(id);
-      display.value = true;
-    }
+
     function allTitle() {
       displayItam.value = "";
       display.value = false;
-      items.value = [
-        {
-          id: 1,
-          name: "",
-        },
-      ];
-      //   document.getElementsByClassName("disp").classList.remove("non-display");
-      //   document.getElementsByClassName("disp").classList.remove("activeItem");
+    }
+    function disItam(id) {
+      displayItam.value = id;
+    }
+    function dis(con) {
+      display.value = con;
+    }
+    function disDitails(con) {
+      displayDitails.value = con;
     }
     return {
       titles,
-      fetchItems,
-      items,
       display,
-      allTitle,
       displayItam,
+      allTitle,
+displayDitails,displayItemDitails,
+      disItam,
+      dis,
+      disDitails,
     };
   },
 };
@@ -101,10 +87,18 @@ li {
   cursor: pointer;
 }
 .titles:hover,
+.item:hover,
 li:hover {
-  color: #000;
+  color: #222;
 }
 .activeItem {
-  color: #000;
+  color: #222;
+}
+.item a {
+  padding-right: 20px;
+}
+.item a.router-link-exact-active {
+  color: rgb(207, 19, 19) !important;
+  border-right: 1px solid rgb(207, 19, 19);
 }
 </style>

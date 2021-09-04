@@ -2,52 +2,82 @@
   {
     "id_catogery": 7,
     "id": 1,
-    "name": "بلیط"
+    "name": "بلیط",
+    "subItem":"",
+    "path":"sargarmi/blit.json"
+
   },
   {
     "id_catogery": 7,
     "id": 2,
-    "name": "تور و چارتر"
+    "name": "تور و چارتر",
+    "subItem":"no",
+    "path":"sargarmi/torvaChador.json"
+
   },
 
   {
     "id_catogery": 7,
     "id": 3,
-    "name": "کتاب و مجله"
+    "name": "کتاب و مجله",
+    "subItem":"",
+    "path":"sargarmi/books.json"
+
   },
   {
     "id_catogery": 7,
     "id": 4,
-    "name": "دوچرخه/اسکیت/اسکوتر"
+    "name": "دوچرخه/اسکیت/اسکوتر",
+    "subItem":"no",
+    "path":"sargarmi/docharkhe.json"
+
   },
   {
     "id_catogery": 7,
     "id": 5,
-    "name": "حیوانات"
+    "name": "حیوانات",
+    "subItem":"",
+    "path":"sargarmi/animel.json"
+
   },
   {
     "id_catogery": 7,
     "id": 6,
-    "name": "کلکسیون و سرگرمی"
+    "name": "کلکسیون و سرگرمی",
+    "subItem":"",
+    "path":"sargarmi/kolekson.json"
+
   },
   {
     "id_catogery": 7,
     "id": 7,
-    "name": "آلات موسیقی"
+    "name": "آلات موسیقی",
+    "subItem":"",
+    "path":"sargarmi/music.json"
+
   },
   {
     "id_catogery": 7,
     "id": 8,
-    "name": "ورزش و تناسب اندام"
+    "name": "ورزش و تناسب اندام",
+    "subItem":"",
+    "path":"sargarmi/sargarmi.json"
+
   },
   {
     "id_catogery": 7,
     "id": 9,
-    "name": "اسباب بازی"
+    "name": "اسباب بازی",
+    "subItem":"no",
+    "path":"sargarmi/toys.json"
+
   },
   {
     "id_catogery": 7,
     "id": 10,
-    "name": "متفرقه"
+    "name": "متفرقه",
+    "subItem":"no",
+    "path":"sargarmi/varzesh.json"
+
   }
 ]

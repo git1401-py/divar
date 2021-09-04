@@ -2,31 +2,55 @@
   {
     "id_catogery": 3,
     "id": 1,
-    "name": "موبایل و تبلت"
+    "name": "موبایل و تبلت",
+    "subItem":"",
+     "type":[],
+    "path":"electrisite/mobilevaTablet.json"
+
   },
   {
     "id_catogery": 3,
     "id": 2,
-    "name": "رایانه"
+    "name": "رایانه",
+    "subItem":"",
+     "type":[],
+    "path":"electrisite/raiane.json"
+
   },
   {
     "id_catogery": 3,
     "id": 3,
-    "name": "کنسول، بازی ویدئویی و آنلاین"
+    "name": "کنسول، بازی ویدئویی و آنلاین",
+    "subItem":"no",
+    "type":["کنسول و دسته","بازی","اکانت","غیره"],
+    "path":"electrisite/cosoleBazi.json"
+
   },
   {
     "id_catogery": 3,
     "id": 4,
-    "name": "صوتی و تصویری"
+    "name": "صوتی و تصویری",
+    "subItem":"",
+     "type":[],
+    "path":"electrisite/soti.json"
+
   },
   {
     "id_catogery": 3,
     "id": 5,
-    "name": "تلفن رومیزی"
+    "name": "تلفن رومیزی",
+    "subItem":"no",
+     "type":[],
+    "path":"electrisite/tell.json"
+
   },
   {
     "id_catogery": 3,
     "id": 6,
-    "name": "متفرقه"
+    "name": "متفرقه",
+    "subItem":"",
+     "type":[],
+    "path":"electrisite/electriki.json"
+
   }
 ]

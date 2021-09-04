@@ -1,0 +1,14 @@
+[
+  {
+    "city": "",
+    "price": "",
+    "status": ["نو", "در حد نو", "کار کرده", "نیازمند تعمیر"],
+    "viewMobile": ["دارد", "ندارد"],
+    "img_url": [],
+    "imadiate": "فوری",
+    "mobile": "",
+    "codemeli": "",
+    "title": "",
+    "explation": ""
+  }
+]

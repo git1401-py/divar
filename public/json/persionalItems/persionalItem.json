@@ -2,31 +2,49 @@
   {
     "id_catogery": 6,
     "id": 1,
-    "name": "کیف،کفش و لباس"
+    "name": "کیف،کفش و لباس",
+    "subItem":"",
+    "path":"persionalItems/kifvaKafsh.json"
+
   },
   {
     "id_catogery": 6,
     "id": 2,
-    "name": "تزئینی"
+    "name": "تزئینی",
+    "subItem":"",
+    "path":"persionalItems/tazin.json"
+
   },
   {
     "id_catogery": 6,
     "id": 3,
-    "name": "آرایشی، بهداشتی و درمانی"
+    "name": "آرایشی، بهداشتی و درمانی",
+    "subItem":"no",
+    "path":"persionalItems/araieshi.json"
+
   },
   {
     "id_catogery": 6,
     "id": 4,
-    "name": "وسایل بچه و اسباب بازی"
+    "name": "وسایل بچه و اسباب بازی",
+    "subItem":"",
+    "path":"persionalItems/child.json"
+
   },
   {
     "id_catogery": 6,
     "id": 5,
-    "name": "لوازم التحریر"
+    "name": "لوازم التحریر",
+    "subItem":"no",
+    "path":"persionalItems/lavazemTahrir.json"
+
   },
   {
     "id_catogery": 6,
     "id": 6,
-    "name": "متفرقه"
+    "name": "متفرقه",
+    "subItem":"",
+    "path":"persionalItems/persionalItem.json"
+
   }
 ]

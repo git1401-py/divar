@@ -2,31 +2,43 @@
   {
     "id_catogery": 1,
     "id": 1,
-    "name": "فروش مسکونی"
+    "name": "فروش مسکونی",
+    "subItem":"",
+    "path":"melk/sellMelk.json"
   },
   {
     "id_catogery": 1,
     "id": 2,
-    "name": "اجاره مسکونی"
+    "name": "اجاره مسکونی",
+    "subItem":"",
+    "path":"melk/ejareMelk.json"
   },
   {
     "id_catogery": 1,
     "id": 3,
-    "name": "فروش اداری و تجاری"
+    "name": "فروش اداری و تجاری",
+    "subItem":"",
+    "path":"melk/sellTejari.json"
   },
   {
     "id_catogery": 1,
     "id": 4,
-    "name": "اجاره اداری و تجاری"
+    "name": "اجاره اداری و تجاری",
+    "subItem":"",
+    "path":"melk/ejareTejari.json"
   },
   {
     "id_catogery": 1,
     "id": 5,
-    "name": "اجاره کوتاه مدت"
+    "name": "اجاره کوتاه مدت",
+    "subItem":"",
+    "path":"melk/littletimeEjare.json"
   },
   {
     "id_catogery": 1,
     "id": 6,
-    "name": "پروژه های ساخت و ساز"
+    "name": "پروژه های ساخت و ساز",
+    "subItem":"",
+    "path":"melk/buildingProject.json"
   }
 ]
