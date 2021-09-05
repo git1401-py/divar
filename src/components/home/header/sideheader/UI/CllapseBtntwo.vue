@@ -1,27 +1,28 @@
 <template>
-  <div class="">
+  <div class="px-4">
     <p class="d-flex justify-content-between align-items-center">
+      <span v-show="false">{{ (ID = "#" + id) }}</span>
       <a
-        class="w-100 pe-4"
+        class="w-100"
         data-bs-toggle="collapse"
-        href="#collapseExample"
+        :href="ID"
         role="button"
         aria-expanded="false"
         aria-controls="collapseExample"
         @click="toggleDelete"
       >
         <font-awesome-icon
-        v-if="showDelete"
+          v-if="showDelete"
           class=""
           :icon="['fa', 'chevron-up']"
           style="width: 10px; color: #000"
         />
         <font-awesome-icon
-        v-if="!showDelete"
+          v-if="!showDelete"
           class=""
           :icon="['fa', 'chevron-down']"
           style="width: 10px; color: #000"
-        /><span class="p-1 pe-sm-3">قیمت</span>
+        /><span class="p-1 pe-sm-3">{{ price_items[0] }}</span>
       </a>
       <span
         v-if="price && showDelete"
@@ -30,12 +31,12 @@
         >حذف</span
       >
       <span
-      v-if="price && !showDelete"
+        v-if="price && !showDelete"
         class="bg-danger"
-        style="margin-left:10px; width: 8px; height: 8px; border-radius: 50%"
+        style="margin-left: 10px; width: 8px; height: 8px; border-radius: 50%"
       ></span>
     </p>
-    <div class="collapse position-relative text-secondary" id="collapseExample">
+    <div class="collapse position-relative text-secondary" :id="id">
       <div
         class="
           p-3
@@ -45,7 +46,7 @@
           position-relative
         "
       >
-        <div class="ps-5">حداقل</div>
+        <div class="ps-5">{{ price_items[1] }}</div>
         <select
           class="form-select form-select-sm text-secondary py-2 pe-4"
           aria-label=".form-select-sm example"
@@ -53,9 +54,9 @@
           v-model="minprice"
         >
           <option value="" selected>مثلا 70،000،000</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <template v-for="money in marks" :key="money">
+            <option class="text-start" :value="money">{{ money }}</option>
+          </template>
         </select>
         <div
           v-if="minprice"
@@ -80,7 +81,7 @@
           justify-content-between
         "
       >
-        <div class="ps-5">حداکثر</div>
+        <div class="ps-5">{{ price_items[2] }}</div>
         <select
           class="form-select form-select-sm text-secondary py-2 pe-4"
           aria-label=".form-select-sm example"
@@ -88,9 +89,9 @@
           v-model="maxprice"
         >
           <option value="" selected>مثلا 70،000،000</option>
-          <option class="text-start" value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <template v-for="money in marks" :key="money">
+            <option class="text-start" :value="money">{{ money }}</option>
+          </template>
         </select>
         <div
           v-if="maxprice"
@@ -107,11 +108,13 @@
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { ref } from "@vue/reactivity";
 import { watch } from "@vue/runtime-core";
+import {} from "vuex";
 
 export default {
   components: { FontAwesomeIcon },
-
-  setup() {
+  props: ["price_items", "marks", "id"],
+  setup(props, { emit }) {
+    const ID = ref("");
     const showDelete = ref(false);
     const price = ref(false);
     const minprice = ref("");
@@ -123,10 +126,12 @@ export default {
     watch(minprice, () => {
       if (minprice.value == "") price.value = false;
       else price.value = true;
+      emit("minp", minprice.value);
     });
     watch(maxprice, () => {
       if (maxprice.value == "") price.value = false;
       else price.value = true;
+      emit("maxp", maxprice.value);
     });
     function cleardataSection() {
       minprice.value = "";
@@ -137,13 +142,15 @@ export default {
       showDelete.value = !showDelete.value;
     }
     return {
+      ID,
       minprice,
       maxprice,
       price,
       cleardata,
       cleardataSection,
       toggleDelete,
-      showDelete
+      showDelete,
+      ...props,
     };
   },
 };
@@ -154,12 +161,12 @@ select:hover {
   border: 1px solid #222 !important;
 }
 .close-select {
-  background-position: calc(100% - 30px) 14px, calc(100% - 10px) 14px, 100% 0;
+  background-position: calc(95% - 30px) 14px, calc(100% - 10px) 14px, 100% 0;
   background-size: 10px 10px, 10px 10px;
   background-repeat: no-repeat;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding-right: 50px !important;
+  padding-right: 60px !important;
   color: #000 !important;
 }
 .close {

@@ -1,21 +1,17 @@
 <template>
   <div class="container-fluid p-0 bg-wight">
     <top-header />
-    <side-header />
-    <div id="nav">
-      
-    </div>
+    
     <router-view />
     <footer-section />
   </div>
 </template>
 <script>
 import TopHeader from "./components/header/TopHeader.vue";
-import SideHeader from "./components/header/SideHeader.vue";
 import FooterSection from "./components/footer/FooterSection.vue";
 
 export default {
-  components: { TopHeader, SideHeader, FooterSection },
+  components: { TopHeader, FooterSection },
   setup() {},
 };
 </script>

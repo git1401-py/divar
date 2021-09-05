@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex w-100 p-0" style="border-bottom: 2px solid lightgray">
+  <div class="d-flex position-fixed top-0 end-0 w-100 p-0" style="border-bottom: 2px solid lightgray;background:#fff;z-index:10">
     <div class="py-2" style=""></div>
 
     <div

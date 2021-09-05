@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2" style="width: 300px; height: 100vh">
+  <div id="header" class="p-2 position-absolute  end-0" style="width: 350px; height: 100vh;top:70px;z-index:3"  :class="{'bottom':fixedsideheader}">
     <form action="">
       <ul class="">
         دسته‌بندی‌ها
@@ -23,20 +23,22 @@
       <hr />
       <item-details v-if="displayDitails || displayItemDitails" />
     </form>
+    <div class="position-sticky w-100 h-25 bg-success"></div>
   </div>
 </template>
 
 <script>
 import { computed, ref } from "@vue/reactivity";
 import { useStore } from "vuex";
-import SubItems from "./SubItems.vue";
 import { provide } from "@vue/runtime-core";
+import SubItems from "./SubItems.vue";
 import ItemDetails from "./ItemDetails.vue";
-import BottomSection from "./bottom/BottomSection.vue";
+import BottomSection from "../bottom/BottomSection.vue";
 
 export default {
   components: { SubItems, ItemDetails , BottomSection},
   setup() {
+    const fixedsideheader = ref(false);
     const display = ref(false);
     const displayItam = ref("");
     const displayDitails = ref(false);
@@ -46,7 +48,8 @@ export default {
     const store = useStore();
     fetchTitles();
     const titles = computed(() => store.getters["titles/allTitles"]);
-
+    if(window.scrollY == 100){fixedsideheader.value = true;}
+    else{fixedsideheader.value = false;}
     async function fetchTitles() {
       await store.dispatch("titles/fetchTitles");
     }
@@ -65,6 +68,7 @@ export default {
       displayDitails.value = con;
     }
     return {
+      fixedsideheader,
       titles,
       display,
       displayItam,
@@ -82,6 +86,9 @@ export default {
 <style scoped>
 ul li {
   list-style-type: circle;
+}
+.bottom{
+  bottom: 0;
 }
 .display {
   display: block;
