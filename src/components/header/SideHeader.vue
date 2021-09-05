@@ -18,58 +18,8 @@
         </template>
       </ul>
       <hr />
-      <div class="">
-        <p>
-          <a
-            class="w-100"
-            data-bs-toggle="collapse"
-            href="#collapseExample"
-            role="button"
-            aria-expanded="false"
-            aria-controls="collapseExample"
-          >
-            قیمت
-          </a>
-        </p>
-        <div
-          class="collapse position-relative text-secondary"
-          id="collapseExample"
-        >
-          <div class="p-3 d-flex align-items-center justify-content-between">
-            <div class="ps-5">حداقل</div>
-            <select
-              class="form-select form-select-sm text-secondary py-2 pe-4"
-              style="direction: ltr"
-              aria-label=".form-select-sm example"
-            >
-              <option selected>مثلا 70،000،000 تومان</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <div
-            class="position-absolute d-flex flex-column"
-            style="top: 45px; right: 30px"
-          >
-            <span style="height: 5px">.</span><span style="height: 5px">.</span
-            ><span style="height: 5px">.</span>
-          </div>
-          <div class="p-3 d-flex align-items-center justify-content-between">
-            <div class="ps-5">حداکثر</div>
-            <select
-              class="form-select form-select-sm text-secondary py-2 pe-4"
-              style="direction: ltr"
-              aria-label=".form-select-sm example"
-            >
-              <option selected>مثلا 70،000،000 تومان</option>
-              <option class="text-start" value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-      </div>
+      <bottom-section />
+     
       <hr />
       <item-details v-if="displayDitails || displayItemDitails" />
     </form>
@@ -82,9 +32,10 @@ import { useStore } from "vuex";
 import SubItems from "./SubItems.vue";
 import { provide } from "@vue/runtime-core";
 import ItemDetails from "./ItemDetails.vue";
+import BottomSection from "./bottom/BottomSection.vue";
 
 export default {
-  components: { SubItems, ItemDetails },
+  components: { SubItems, ItemDetails , BottomSection},
   setup() {
     const display = ref(false);
     const displayItam = ref("");
@@ -158,4 +109,5 @@ li:hover {
   color: rgb(207, 19, 19) !important;
   border-right: 1px solid rgb(207, 19, 19);
 }
+
 </style>

@@ -17,12 +17,14 @@ import {
   faShoppingCart,
   faChevronLeft,
   faChevronRight,
+  faChevronDown,
+  faChevronUp,
   faSearch,
   faUserFriends,
   faComments,
   faMobile,
   faLocationArrow,
-  faUser,
+  faUser
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
@@ -41,6 +43,8 @@ library.add(
   faShoppingCart,
   faChevronLeft,
   faChevronRight,
+  faChevronDown,
+  faChevronUp,
   faSearchengin,
   faSearch,
   faUserFriends,
