@@ -22,7 +22,7 @@
           class=""
           :icon="['fa', 'chevron-down']"
           style="width: 10px; color: #000"
-        /><span class="p-1 pe-sm-3">{{ price_items[0] }}</span>
+        /><span class="p-1 pe-sm-3">آگهی دهنده</span>
       </a>
       <span
         v-if="price && showDelete"
@@ -46,59 +46,30 @@
           position-relative
         "
       >
-        <div class="ps-5">{{ price_items[1] }}</div>
-        <select
-          class="form-select form-select-sm text-secondary py-2 pe-4"
-          aria-label=".form-select-sm example"
-          :class="{ 'close-select': minprice }"
-          v-model="minprice"
-        >
-          <option value="" selected>مثلا {{ exm }}</option>
-          <template v-for="money in marks" :key="money">
-            <option class="text-start" :value="money">{{ money }}</option>
-          </template>
-        </select>
-        <div
-          v-if="minprice"
-          class="position-absolute close"
-          @click="cleardata('minprice')"
-        ></div>
-        <div class="position-absolute toman">{{ txt }}</div>
-      </div>
-      <div
-        class="position-absolute d-flex flex-column"
-        style="top: 45px; right: 30px"
-      >
-        <span style="height: 5px">.</span><span style="height: 5px">.</span
-        ><span style="height: 5px">.</span>
-      </div>
-      <div
-        class="
-          p-3
-          d-flex
-          align-items-center
-          position-relative
-          justify-content-between
-        "
-      >
-        <div class="ps-5">{{ price_items[2] }}</div>
-        <select
-          class="form-select form-select-sm text-secondary py-2 pe-4"
-          aria-label=".form-select-sm example"
-          :class="{ 'close-select': maxprice }"
-          v-model="maxprice"
-        >
-          <option value="" selected>مثلا {{ exm }}</option>
-          <template v-for="money in marks" :key="money">
-            <option class="text-start" :value="money">{{ money }}</option>
-          </template>
-        </select>
-        <div
-          v-if="maxprice"
-          class="position-absolute close"
-          @click="cleardata('maxprice')"
-        ></div>
-        <div class="position-absolute toman">{{ txt }}</div>
+        <label
+          style="width: 33.3%"
+          @click="adv('همه')"
+          :class="{ 'active': activeH }"
+          class="advinput"
+          value="همه"
+        >همه</label>
+          
+        <label
+          style="width: 33.3%"
+          @click="adv('شخصی')"
+          :class="{ 'active': activeS }"
+          class="advinput"
+          value="شخصی"
+        >شخصی</label>
+          
+        <label
+          style="width: 33.3%"
+          @click="adv('مشاور املاک')"
+          :class="{ 'active': activeM }"
+          class="advinput"
+          value="مشاور املاک"
+        >مشاور املاک</label>
+          
       </div>
     </div>
   </div>
@@ -112,45 +83,62 @@ import {} from "vuex";
 
 export default {
   components: { FontAwesomeIcon },
-  props: ["price_items", "marks", "id", "txt", "exm"],
+  props: ["id"],
   setup(props, { emit }) {
     const ID = ref("");
     const showDelete = ref(false);
     const price = ref(false);
-    const minprice = ref("");
-    const maxprice = ref("");
-    function cleardata(data) {
-      if (data == "minprice") minprice.value = "";
-      if (data == "maxprice") maxprice.value = "";
+    const activeH = ref(false);
+    const activeS = ref(false);
+    const activeM = ref(false);
+    const adver = ref("");
+
+    watch(adver, () => {
+      if (adver.value == "") price.value = false;
+      else price.value = true;
+      emit("adviser", adver.value);
+    });
+    function adv(persion) {
+      adver.value = persion;
+      emit("adviser", persion);
+      if (persion == "همه") {
+        activeS.value = false;
+        activeM.value = false;
+        activeH.value = true;
+      }
+      if (persion == "شخصی") {
+        activeM.value = false;
+        activeH.value = false;
+        activeS.value = true;
+      }
+      if (persion == "مشاور املاک") {
+        activeS.value = false;
+        activeH.value = false;
+        activeM.value = true;
+      }
     }
-    watch(minprice, () => {
-      if (minprice.value == "") price.value = false;
-      else price.value = true;
-      emit("minp", minprice.value);
-    });
-    watch(maxprice, () => {
-      if (maxprice.value == "") price.value = false;
-      else price.value = true;
-      emit("maxp", maxprice.value);
-    });
     function cleardataSection() {
-      minprice.value = "";
-      maxprice.value = "";
+      adver.value = "";
       price.value = false;
+      activeS.value = false;
+        activeH.value = false;
+        activeM.value = false;
     }
     function toggleDelete() {
       showDelete.value = !showDelete.value;
     }
     return {
       ID,
-      minprice,
-      maxprice,
+      adver,
+      adv,
       price,
-      cleardata,
       cleardataSection,
       toggleDelete,
       showDelete,
       ...props,
+      activeH,
+      activeM,
+      activeS
     };
   },
 };
@@ -204,5 +192,18 @@ select:hover {
 }
 .delete:hover {
   background: lightpink;
+}
+.advinput {
+  width: 33.3%;
+  border: 1px solid lightgray;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
+  text-align: center;
+}
+.active {
+  border: 1px solid tomato;
+  color: tomato;
+  background: rgb(241, 228, 230);
 }
 </style>

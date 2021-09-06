@@ -4,7 +4,7 @@
       :class="{ activeItem: display }"
       class="p-0 disp"
       :id="title.id"
-      @click="fetchItems(title.path, title.id)"
+      @click="fetchItems(title.path, title.id,title.title)"
       style="cursor: pointer"
     >
       {{ title.title }}
@@ -27,13 +27,14 @@
 <script>
 import { computed, ref } from "@vue/reactivity";
 import { useStore } from "vuex";
-import { onUpdated, watch } from "@vue/runtime-core";
+import { inject, onUpdated, watch } from "@vue/runtime-core";
 import SubItem from "./SubItem.vue";
 
 export default {
   components: { SubItem },
   props: ["title", "displayItam", "display"],
   setup(props, { emit }) {
+    const info = inject("info");
     const displaySub = ref(false);
     const displaySubitam = ref("");
     const store = useStore();
@@ -48,7 +49,8 @@ export default {
       await store.dispatch("items/fetchItems", "melk/amlak.json");
     }
 
-    async function fetchItems(path, id) {
+    async function fetchItems(path, id , name) {
+      info.group_name = name;
       items.value = [];
       await store.dispatch("items/fetchItems", path);
       console.log(id);

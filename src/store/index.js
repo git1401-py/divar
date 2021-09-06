@@ -29,6 +29,7 @@ import pishevaMaharat from "./modules/khadamats/pishevaMaharat.js";
 import sargarmi from "./modules/khadamats/sargarmi.js";
 import tellKhadamat from "./modules/khadamats/tell.js";
 import buildingProject from "./modules/melk/buildingProject.js";
+import melkDetails from "./modules/melk/melkDetails.js";
 import ejareMelk from "./modules/melk/ejareMelk.js";
 import ejareTejari from "./modules/melk/ejareTejari.js";
 import littletimeEjare from "./modules/melk/littletimeEjare.js";
@@ -90,6 +91,9 @@ export default createStore({
     sargarmi,
     tellKhadamat,
     buildingProject,
+
+    melkDetails,
+
     ejareMelk,
     ejareTejari,
     littletimeEjare,

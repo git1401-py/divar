@@ -1,5 +1,10 @@
 <template>
-  <div id="header" class="p-2 position-absolute  end-0" style="width: 350px; height: 100vh;top:70px;z-index:3"  :class="{'bottom':fixedsideheader}">
+  <div
+    id="style-2"
+    class="p-2 scrollable position-fixed end-0"
+    style="width: 350px; height: 88vh; top: 70px; z-index: 3"
+    :class="{ bottom: fixedsideheader }"
+  >
     <form action="">
       <ul class="">
         دسته‌بندی‌ها
@@ -7,6 +12,7 @@
           <span class="titles">همهٔ آگهی‌ها</span>
         </div>
         <template v-for="title in titles" :key="title.id">
+          
           <sub-items
             :displayItam="displayItam"
             :display="display"
@@ -19,25 +25,26 @@
       </ul>
       <hr />
       <bottom-section />
-     
+
       <hr />
       <item-details v-if="displayDitails || displayItemDitails" />
     </form>
-    <div class="position-sticky w-100 h-25 bg-success"></div>
   </div>
 </template>
 
 <script>
 import { computed, ref } from "@vue/reactivity";
 import { useStore } from "vuex";
-import { provide } from "@vue/runtime-core";
+import {  inject, provide } from "@vue/runtime-core";
 import SubItems from "./SubItems.vue";
 import ItemDetails from "./ItemDetails.vue";
 import BottomSection from "../bottom/BottomSection.vue";
 
 export default {
-  components: { SubItems, ItemDetails , BottomSection},
+  components: { SubItems, ItemDetails, BottomSection },
   setup() {
+    
+
     const fixedsideheader = ref(false);
     const display = ref(false);
     const displayItam = ref("");
@@ -48,13 +55,17 @@ export default {
     const store = useStore();
     fetchTitles();
     const titles = computed(() => store.getters["titles/allTitles"]);
-    if(window.scrollY == 100){fixedsideheader.value = true;}
-    else{fixedsideheader.value = false;}
+    if (window.scrollY == 100) {
+      fixedsideheader.value = true;
+    } else {
+      fixedsideheader.value = false;
+    }
     async function fetchTitles() {
       await store.dispatch("titles/fetchTitles");
     }
-
+const info = inject("info");
     function allTitle() {
+      info.group_name = "";
       displayItam.value = "";
       display.value = false;
     }
@@ -87,8 +98,20 @@ export default {
 ul li {
   list-style-type: circle;
 }
-.bottom{
+.bottom {
   bottom: 0;
+}
+.scrollable {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(7, 31, 7, 0.1) #e0e0e0;
+  /* scrollbar-color: #6969dd #e0e0e0;
+   scrollbar-color: auto | dark | light | <color>;
+  scrollbar-width: auto | thin | none;
+    scrollbar-gutter: [ auto | [ stable | always ] && both? && force? ] */
+}
+.scrollable:hover {
+  scrollbar-color: rgba(7, 31, 7, 0.6) #e0e0e0;
 }
 .display {
   display: block;
@@ -116,5 +139,4 @@ li:hover {
   color: rgb(207, 19, 19) !important;
   border-right: 1px solid rgb(207, 19, 19);
 }
-
 </style>

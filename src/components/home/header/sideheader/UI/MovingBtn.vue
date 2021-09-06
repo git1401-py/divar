@@ -5,28 +5,19 @@
     @click="btnSelect"
   >
     <span>{{ title }}</span>
-    <div
-      class=""
-      :class="{
-        'btn-container-selected': conValue,
-        'btn-container': !conValue,
-      }"
-    >
+    <div v-if="conValue" class="btn-container-selected">
+      <div></div>
+    </div>
+    <div v-if="!conValue" class="btn-container">
       <div></div>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
 export default {
-  props: ["title","conValue"],
+  props: ["title", "conValue"],
   setup(props, { emit }) {
-    const con = ref(false);
-
-    console.log(con);
-    console.log(props.conValue);
-
     function btnSelect() {
       emit("conFn");
     }
@@ -47,7 +38,7 @@ export default {
   width: 35px;
   height: 20px;
   background: lightgray;
-  transition: all 0.5s;
+  transition: all 0.5s !important;
   border-radius: 50px;
 }
 
