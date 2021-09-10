@@ -1,136 +1,43 @@
 [
   {
     "name": "تزئینی و آقار هنری",
-    "code": 1,
-    "type": ["آینه", "ساعت", "قاب و تابلو", "مجسمه و اشیا دکوری", "عیره"],
-    "baft": [],
-    "jenseBody": [],
-    "jenseRokesh": [],
-    "numberNeshiman":[],
-    "zemanat": []
+    "code": 1
   },
   {
     "name": "لوازم روشنایی",
-    "code": 2,
-    "type": [
-      "لوستر و چراغ آویز",
-      "آباژور",
-      "چراغ خواب",
-      "ریسه و چراغ تزیینی",
-      "چراغ پارکی، حیاطی و باغی",
-      "گلید و پریز",
-      "لایت بورد و بک لایت(تابلو نوری)",
-      "سنسور و کلید هوشمند روشنایی",
-      "لامپ و چراغ",
-      "کابل و سیم برق"
-    ],
-    "baft": [],
-    "jenseBody": [],
-    "jenseRokesh": [],
-    "numberNeshiman":[],
-    "zemanat": []
+    "code": 2
   },
   {
     "name": "میز و صندلی",
-    "code": 3,
-    "type":[],
-    "baft": [],
-    "jenseBody": [],
-    "jenseRokesh": [],
-    "numberNeshiman":[],
-    "zemanat": []
+    "code": 3
   },
   {
     "name": "فرش و گلیم",
-    "code": 4,
-    "type": [
-      "فرش",
-      "تابلو فرش",
-      "گلیم",
-      "جاجیم",
-      "گبه",
-      "گلیم فرش",
-      "نمد فرش",
-      "فرش",
-      "موکت",
-      "روفرشی",
-      "پادری و کناره",
-      "سایر"
-    ],
-    "baft": ["دست بافت", "ماشینی"],
-    "jenseBody": [],
-    "jenseRokesh": [],
-    "numberNeshiman":[],
-    "zemanat": []
+    "code": 4
   },
   {
     "name": "کمد و بوفه",
-    "code": 5,
-    "type":[],
-    "baft": [],
-    "jenseBody": [],
-    "jenseRokesh": [],
-    "numberNeshiman":[],
-    "zemanat": []
+    "code": 5
   },
   {
     "name": "پرده و رومیزی",
-    "code": 6,
-    "type":[],
-    "baft": [],
-    "jenseBody": [],
-    "jenseRokesh": [],
-    "numberNeshiman":[],
-    "zemanat": []
+    "code": 6
   },
   {
     "name": "تخت و اتاق خواب",
-    "code": 7,
-    "type":[],
-    "baft": [],
-    "jenseBody": [],
-    "jenseRokesh": [],
-    "numberNeshiman":[],
-    "zemanat": []
+    "code": 7
   },
   {
     "name": "مبلمان و صندلی راحتی",
-    "code": 8,
-    "type": ["راحتی", "کلاسیک و استیل", "سایر"],
-    "baft": [],
-    "jenseBody": ["چوب", "استیل", "ام دی اف", "فلز", "سایر"],
-    "jenseRokesh": ["پارچه", "چرم", "سایر"],
-    "numberNeshiman": [
-      "1 نفره",
-      "2 نفره",
-      "3 نفره",
-      "4 نفره",
-      "5 نفره",
-      "6 نفره",
-      "7 نفره",
-      "8 نفره",
-      "9 نفره"
-    ],
-    "zemanat": ["دارد", "ندارد"]
+    "code": 8
+    
   },
   {
     "name": "میز تلویزیون و وسایل سیستم پخش",
-    "code": 9,
-    "type":[],
-    "baft": [],
-    "jenseBody": [],
-    "jenseRokesh": [],
-    "numberNeshiman":[],
-    "zemanat": []
+    "code": 9
   },
   {
     "name": "همه آگهی های وسایل و تزئینات خانه",
-    "code": 10,
-    "type":[],
-    "baft": [],
-    "jenseBody": [],
-    "jenseRokesh": [],
-    "numberNeshiman":[],
-    "zemanat": []
+    "code": 10
   }
 ]

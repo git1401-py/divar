@@ -10,7 +10,7 @@
   {
     "id_catogery": 7,
     "id": 2,
-    "name": "تور و چارتر",
+    "name": "تور و چادر",
     "subItem":"no",
     "path":"sargarmi/torvaChador.json"
 
@@ -61,7 +61,7 @@
     "id": 8,
     "name": "ورزش و تناسب اندام",
     "subItem":"",
-    "path":"sargarmi/sargarmi.json"
+    "path":"sargarmi/varzesh.json"
 
   },
   {

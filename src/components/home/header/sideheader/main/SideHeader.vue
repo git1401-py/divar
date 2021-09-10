@@ -12,7 +12,6 @@
           <span class="titles">همهٔ آگهی‌ها</span>
         </div>
         <template v-for="title in titles" :key="title.id">
-          
           <sub-items
             :displayItam="displayItam"
             :display="display"
@@ -25,9 +24,6 @@
       </ul>
       <hr />
       <bottom-section />
-
-      <hr />
-      <item-details v-if="displayDitails || displayItemDitails" />
     </form>
   </div>
 </template>
@@ -35,16 +31,15 @@
 <script>
 import { computed, ref } from "@vue/reactivity";
 import { useStore } from "vuex";
-import {  inject, provide } from "@vue/runtime-core";
+import { inject, provide } from "@vue/runtime-core";
 import SubItems from "./SubItems.vue";
-import ItemDetails from "./ItemDetails.vue";
 import BottomSection from "../bottom/BottomSection.vue";
+import useClear from "./useClear.js";
+
 
 export default {
-  components: { SubItems, ItemDetails, BottomSection },
+  components: { SubItems, BottomSection },
   setup() {
-    
-
     const fixedsideheader = ref(false);
     const display = ref(false);
     const displayItam = ref("");
@@ -63,9 +58,16 @@ export default {
     async function fetchTitles() {
       await store.dispatch("titles/fetchTitles");
     }
-const info = inject("info");
+    const info = inject("info");
     function allTitle() {
       info.group_name = "";
+      info.group_item_name = "";
+      info.group_subitem_name = "";
+
+      info.khadamat_link = "";
+
+    useClear(info);
+
       displayItam.value = "";
       display.value = false;
     }

@@ -22,7 +22,7 @@
           class=""
           :icon="['fa', 'chevron-down']"
           style="width: 10px; color: #000"
-        /><span class="p-1 pe-sm-3">{{ price_items[0] }}</span>
+        /><span class="p-1 pe-sm-3">{{ data_items }}</span>
       </a>
       <span
         v-if="price && showDelete"
@@ -46,25 +46,26 @@
           position-relative
         "
       >
-        <div class="ps-5">{{ price_items[1] }}</div>
+        
         <select
           class="form-select form-select-sm text-secondary py-2 pe-4"
           aria-label=".form-select-sm example"
-          :class="{ 'close-select': minprice }"
-          v-model="minprice"
+          :class="{ 'close-select': data }"
+          v-model="data"
         >
-          <option value="" selected>مثلا {{ exm }}</option>
+          <option value="" selected disabled> {{ exm }}</option>
           <template v-for="money in marks" :key="money">
             <option class="text-start" :value="money">{{ money }}</option>
           </template>
         </select>
         <div
-          v-if="minprice"
+          v-if="data"
           class="position-absolute close"
-          @click="cleardata('minprice')"
+          @click="cleardata()"
         ></div>
         <div class="position-absolute toman">{{ txt }}</div>
       </div>
+      
     </div>
   </div>
 </template>
@@ -77,30 +78,23 @@ import {} from "vuex";
 
 export default {
   components: { FontAwesomeIcon },
-  props: ["price_items", "marks", "id", "txt", "exm"],
+  props: ["data_items", "marks", "id", "txt", "exm"],
   setup(props, { emit }) {
     const ID = ref("");
     const showDelete = ref(false);
     const price = ref(false);
-    const minprice = ref("");
-    const maxprice = ref("");
-    function cleardata(data) {
-      if (data == "minprice") minprice.value = "";
-      if (data == "maxprice") maxprice.value = "";
+    const data = ref("");
+    function cleardata() {
+      data.value = "";
     }
-    watch(minprice, () => {
-      if (minprice.value == "") price.value = false;
+    watch(data, () => {
+      if (data.value == "") price.value = false;
       else price.value = true;
-      emit("minp", minprice.value);
+      emit("dataFn", data.value);
     });
-    watch(maxprice, () => {
-      if (maxprice.value == "") price.value = false;
-      else price.value = true;
-      emit("maxp", maxprice.value);
-    });
+   
     function cleardataSection() {
-      minprice.value = "";
-      maxprice.value = "";
+      data.value = "";
       price.value = false;
     }
     function toggleDelete() {
@@ -108,8 +102,7 @@ export default {
     }
     return {
       ID,
-      minprice,
-      maxprice,
+      data,
       price,
       cleardata,
       cleardataSection,
@@ -136,7 +129,7 @@ select:hover {
 }
 .close {
   top: 42%;
-  right: 110px;
+  right: 24px;
   cursor: pointer;
   color: #aaa;
   border-radius: 30px;

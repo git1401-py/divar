@@ -1,0 +1,425 @@
+<template>
+  <div class="container-fluid">
+    <div class="row position-relative">
+      <main-section>
+        <template v-slot:main>
+          minprice:{{ info.minprice }}<br />
+          minprice:{{ minprice }}<br />
+          maxprice:{{ info.maxprice }}<br />
+          min_vadie_melk:{{ info.min_vadie_melk }}<br />
+          max_vadie_melk:{{ info.max_vadie_melk }}<br />
+          
+          <!-- {{ info.subItem }}<br /> -->
+          group_name:{{ info.group_name }}<br />
+          group_item_name:{{ info.group_item_name }}<br />
+          group_subitem_name:{{ info.group_subitem_name }}<br />
+          spaceFrom_melk:{{ info.spaceFrom_melk }}<br />
+          spaceTo_melk:{{ info.spaceTo_melk }}<br />
+          adviser_melk:{{ info.adviser_melk }}<br />
+          yearsofbuild:{{ info.yearsofbuild }}<br />
+          just_img:{{ info.just_img }}<br />
+          just_imediate:{{ info.just_imediate }}<br />
+          del_tavafoghi:{{ info.del_tavafoghi }}<br />
+          tormajazi:{{ info.tormajazi }}<br />
+          room_melk:{{ info.room_melk }}<br />
+          lift_melk:{{ info.lift_melk }}<br />
+          parking_melk:{{ info.parking_melk }}<br />
+          anbar_melk:{{ info.anbar_melk }}<br />
+        </template>
+      </main-section>
+    </div>
+  </div>
+  <side-header />
+
+  <main-section> </main-section>
+</template>
+
+<script>
+import { computed, reactive, ref } from "@vue/reactivity";
+import SideHeader from "../components/home/header/sideheader/main/SideHeader.vue";
+import MainSection from "../components/home/mainsection/MainSection.vue";
+import { provide } from "@vue/runtime-core";
+export default {
+  name: "Home",
+  components: {
+    SideHeader,
+    MainSection,
+  },
+  setup() {
+    const info = reactive({
+      type_item: "",
+      pathing_module: "",
+      subItem: {},
+
+      group_name: "",
+      group_item_name: "",
+      group_subitem_name: "",
+      group_item_code: "",
+      mobile_types: "",
+      simNumber: "",
+      esalatBrand: "",
+      Rom: "",
+      mobile_Ram: "",
+      Mobile_builder: "",
+      simSuport: "",
+      simType: "",
+      sellType: "",
+
+      pc_builder: "",
+      HDD: "",
+      pc_Ram: "",
+      cpu: "",
+
+      typeHamkari: "",
+      dorkari: "",
+      typePardakht: "",
+      timekar: "",
+      bime: "",
+      sabeghe: "",
+
+      building_types: "",
+      house_types: "",
+      fornither_types: "",
+
+      tazin_types: "",
+      baft: "",
+      jenseBody: "",
+      jenseRokesh: "",
+      numberNeshiman: "",
+      zemanat: "",
+
+      khadamat_link: "",
+      spaceFrom_melk: "",
+      spaceTo_melk: "",
+      fitfor_melk: "",
+      room_melk: "",
+      allroof_melk: "",
+      roof_melk: "",
+      vahedinroof_melk: "",
+      jahatbuilding_melk: "",
+      bazsazi_melk: "",
+      balkon_melk: "",
+      jensekaf_melk: "",
+      sevicebehdashti_melk: "",
+      sarmaiesh_melk: "",
+      garmaieshi_melk: "",
+      boilwater_melk: "",
+      lift_melk: false,
+      parking_melk: false,
+      anbar_melk: false,
+      adviser_melk: "",
+
+      araieshi_types: "",
+      child_jens: "",
+      child_tolidi: "",
+
+      personalitem_type: "",
+      personalitem_darRagMokhtalef: "",
+      personalitem_jens: "",
+      personalitem_tolidi: "",
+      personalitem_jenskala: "",
+
+      vehicle_type: "",
+      yearsofbuildfrom: "",
+      yearsofbuildto: "",
+      yearsofbuild: "",
+      color: "",
+      karkard: "",
+
+      adviser: "",
+
+      city: "",
+      price: "",
+      minprice: "",
+      maxprice: "",
+      min_vadie_melk: "",
+      max_vadie_melk: "",
+      min_ejare_melk: "",
+      max_ejare_melk: "",
+      vadie_ejare_melk: "",
+      min_vadie_tejari: "",
+      max_vadie_tejari: "",
+      min_ejare_tejari: "",
+      max_ejare_tejari: "",
+      status: ["نو", "در حد نو", "کار کرده", "نیازمند تعمیر"],
+      viewMobile: ["دارد", "ندارد"],
+      just_img: false,
+      just_imediate: false,
+      del_tavafoghi: false,
+      tormajazi: false,
+      mobile: "",
+      codemeli: "",
+      title: "",
+      explation: "",
+    });
+    const miliard = ref(0);
+    const milion = ref(0);
+    const hezar = ref(0);
+
+    provide("info", info);
+    const maxprice = computed(() => {
+      miliard.value = 0;
+      milion.value = 0;
+      hezar.value = 0;
+      if (info.maxprice.split(" ")[1] == "میلیارد") {
+        miliard.value = parseInt(info.maxprice.split(" ")[0]) * 1000000000;
+        if (info.maxprice.split(" ")[4]) {
+          if (info.maxprice.split(" ")[4] == "میلیون")
+            milion.value = parseInt(info.maxprice.split(" ")[3]) * 1000000;
+        }
+        return miliard.value + milion.value;
+      } else if (info.maxprice.split(" ")[1] == "میلیون") {
+        milion.value = parseInt(info.maxprice.split(" ")[0]) * 1000000;
+        if (info.maxprice.split(" ")[4]) {
+          if (info.maxprice.split(" ")[4] == "هزار")
+            hezar.value = parseInt(info.maxprice.split(" ")[3]) * 1000;
+        }
+        return milion.value + hezar.value;
+      } else if (info.maxprice.split(" ")[1] == "هزار") {
+        hezar.value = parseInt(info.maxprice.split(" ")[0]) * 1000;
+        return hezar.value;
+      } else {
+        return 0;
+      }
+    });
+    const minprice = computed(() => {
+      miliard.value = 0;
+      milion.value = 0;
+      hezar.value = 0;
+      if (info.minprice.split(" ")[1] == "میلیارد") {
+        miliard.value = parseInt(info.minprice.split(" ")[0]) * 1000000000;
+        if (info.minprice.split(" ")[4]) {
+          if (info.minprice.split(" ")[4] == "میلیون")
+            milion.value = parseInt(info.minprice.split(" ")[3]) * 1000000;
+        }
+        return miliard.value + milion.value;
+      } else if (info.minprice.split(" ")[1] == "میلیون") {
+        milion.value = parseInt(info.minprice.split(" ")[0]) * 1000000;
+        if (info.minprice.split(" ")[4]) {
+          if (info.minprice.split(" ")[4] == "هزار")
+            hezar.value = parseInt(info.minprice.split(" ")[3]) * 1000;
+        }
+        return milion.value + hezar.value;
+      } else if (info.minprice.split(" ")[1] == "هزار") {
+        hezar.value = parseInt(info.minprice.split(" ")[0]) * 1000;
+        return hezar.value;
+      } else {
+        return 0;
+      }
+    });
+    // const min_vadie_melk = computed(() => {
+    //   miliard.value = 0;
+    //   milion.value = 0;
+    //   hezar.value = 0;
+    //   if (info.min_vadie_melk.split(" ")[1] == "میلیارد") {
+    //     miliard.value = parseInt(info.min_vadie_melk.split(" ")[0]) * 1000000000;
+    //     if (info.min_vadie_melk.split(" ")[4]) {
+    //       if (info.min_vadie_melk.split(" ")[4] == "میلیون")
+    //         milion.value = parseInt(info.min_vadie_melk.split(" ")[3]) * 1000000;
+    //     }
+    //     return miliard.value + milion.value;
+    //   } else if (info.min_vadie_melk.split(" ")[1] == "میلیون") {
+    //     milion.value = parseInt(info.min_vadie_melk.split(" ")[0]) * 1000000;
+    //     if (info.min_vadie_melk.split(" ")[4]) {
+    //       if (info.min_vadie_melk.split(" ")[4] == "هزار")
+    //         hezar.value = parseInt(info.min_vadie_melk.split(" ")[3]) * 1000;
+    //     }
+    //     return milion.value + hezar.value;
+    //   } else if (info.min_vadie_melk.split(" ")[1] == "هزار") {
+    //     hezar.value = parseInt(info.min_vadie_melk.split(" ")[0]) * 1000;
+    //     return hezar.value;
+    //   } else {
+    //     return 0;
+    //   }
+    // });
+    // const max_vadie_melk = computed(() => {
+    //   miliard.value = 0;
+    //   milion.value = 0;
+    //   hezar.value = 0;
+    //   if (info.max_vadie_melk.split(" ")[1] == "میلیارد") {
+    //     miliard.value = parseInt(info.max_vadie_melk.split(" ")[0]) * 1000000000;
+    //     if (info.max_vadie_melk.split(" ")[4]) {
+    //       if (info.max_vadie_melk.split(" ")[4] == "میلیون")
+    //         milion.value = parseInt(info.max_vadie_melk.split(" ")[3]) * 1000000;
+    //     }
+    //     return miliard.value + milion.value;
+    //   } else if (info.max_vadie_melk.split(" ")[1] == "میلیون") {
+    //     milion.value = parseInt(info.max_vadie_melk.split(" ")[0]) * 1000000;
+    //     if (info.max_vadie_melk.split(" ")[4]) {
+    //       if (info.max_vadie_melk.split(" ")[4] == "هزار")
+    //         hezar.value = parseInt(info.max_vadie_melk.split(" ")[3]) * 1000;
+    //     }
+    //     return milion.value + hezar.value;
+    //   } else if (info.max_vadie_melk.split(" ")[1] == "هزار") {
+    //     hezar.value = parseInt(info.max_vadie_melk.split(" ")[0]) * 1000;
+    //     return hezar.value;
+    //   } else {
+    //     return 0;
+    //   }
+    // });
+    // const min_ejare_melk = computed(() => {
+    //   miliard.value = 0;
+    //   milion.value = 0;
+    //   hezar.value = 0;
+    //   if (info.min_ejare_melk.split(" ")[1] == "میلیارد") {
+    //     miliard.value = parseInt(info.min_ejare_melk.split(" ")[0]) * 1000000000;
+    //     if (info.min_ejare_melk.split(" ")[4]) {
+    //       if (info.min_ejare_melk.split(" ")[4] == "میلیون")
+    //         milion.value = parseInt(info.min_ejare_melk.split(" ")[3]) * 1000000;
+    //     }
+    //     return miliard.value + milion.value;
+    //   } else if (info.min_ejare_melk.split(" ")[1] == "میلیون") {
+    //     milion.value = parseInt(info.min_ejare_melk.split(" ")[0]) * 1000000;
+    //     if (info.min_ejare_melk.split(" ")[4]) {
+    //       if (info.min_ejare_melk.split(" ")[4] == "هزار")
+    //         hezar.value = parseInt(info.min_ejare_melk.split(" ")[3]) * 1000;
+    //     }
+    //     return milion.value + hezar.value;
+    //   } else if (info.min_ejare_melk.split(" ")[1] == "هزار") {
+    //     hezar.value = parseInt(info.min_ejare_melk.split(" ")[0]) * 1000;
+    //     return hezar.value;
+    //   } else {
+    //     return 0;
+    //   }
+    // });
+    // const max_ejare_melk = computed(() => {
+    //   miliard.value = 0;
+    //   milion.value = 0;
+    //   hezar.value = 0;
+    //   if (info.max_ejare_melk.split(" ")[1] == "میلیارد") {
+    //     miliard.value = parseInt(info.max_ejare_melk.split(" ")[0]) * 1000000000;
+    //     if (info.max_ejare_melk.split(" ")[4]) {
+    //       if (info.max_ejare_melk.split(" ")[4] == "میلیون")
+    //         milion.value = parseInt(info.minprice.split(" ")[3]) * 1000000;
+    //     }
+    //     return miliard.value + milion.value;
+    //   } else if (info.max_ejare_melk.split(" ")[1] == "میلیون") {
+    //     milion.value = parseInt(info.max_ejare_melk.split(" ")[0]) * 1000000;
+    //     if (info.max_ejare_melk.split(" ")[4]) {
+    //       if (info.max_ejare_melk.split(" ")[4] == "هزار")
+    //         hezar.value = parseInt(info.max_ejare_melk.split(" ")[3]) * 1000;
+    //     }
+    //     return milion.value + hezar.value;
+    //   } else if (info.max_ejare_melk.split(" ")[1] == "هزار") {
+    //     hezar.value = parseInt(info.max_ejare_melk.split(" ")[0]) * 1000;
+    //     return hezar.value;
+    //   } else {
+    //     return 0;
+    //   }
+    // });
+    // const min_vadie_tejari = computed(() => {
+    //   miliard.value = 0;
+    //   milion.value = 0;
+    //   hezar.value = 0;
+    //   if (info.min_vadie_tejari.split(" ")[1] == "میلیارد") {
+    //     miliard.value = parseInt(info.min_vadie_tejari.split(" ")[0]) * 1000000000;
+    //     if (info.min_vadie_tejari.split(" ")[4]) {
+    //       if (info.min_vadie_tejari.split(" ")[4] == "میلیون")
+    //         milion.value = parseInt(info.min_vadie_tejari.split(" ")[3]) * 1000000;
+    //     }
+    //     return miliard.value + milion.value;
+    //   } else if (info.min_vadie_tejari.split(" ")[1] == "میلیون") {
+    //     milion.value = parseInt(info.min_vadie_tejari.split(" ")[0]) * 1000000;
+    //     if (info.min_vadie_tejari.split(" ")[4]) {
+    //       if (info.min_vadie_tejari.split(" ")[4] == "هزار")
+    //         hezar.value = parseInt(info.min_vadie_tejari.split(" ")[3]) * 1000;
+    //     }
+    //     return milion.value + hezar.value;
+    //   } else if (info.min_vadie_tejari.split(" ")[1] == "هزار") {
+    //     hezar.value = parseInt(info.min_vadie_tejari.split(" ")[0]) * 1000;
+    //     return hezar.value;
+    //   } else {
+    //     return 0;
+    //   }
+    // });
+    // const max_vadie_tejari = computed(() => {
+    //   miliard.value = 0;
+    //   milion.value = 0;
+    //   hezar.value = 0;
+    //   if (info.max_vadie_tejari.split(" ")[1] == "میلیارد") {
+    //     miliard.value = parseInt(info.max_vadie_tejari.split(" ")[0]) * 1000000000;
+    //     if (info.max_vadie_tejari.split(" ")[4]) {
+    //       if (info.max_vadie_tejari.split(" ")[4] == "میلیون")
+    //         milion.value = parseInt(info.minprice.split(" ")[3]) * 1000000;
+    //     }
+    //     return miliard.value + milion.value;
+    //   } else if (info.max_vadie_tejari.split(" ")[1] == "میلیون") {
+    //     milion.value = parseInt(info.max_vadie_tejari.split(" ")[0]) * 1000000;
+    //     if (info.max_vadie_tejari.split(" ")[4]) {
+    //       if (info.max_vadie_tejari.split(" ")[4] == "هزار")
+    //         hezar.value = parseInt(info.max_vadie_tejari.split(" ")[3]) * 1000;
+    //     }
+    //     return milion.value + hezar.value;
+    //   } else if (info.max_vadie_tejari.split(" ")[1] == "هزار") {
+    //     hezar.value = parseInt(info.max_vadie_tejari.split(" ")[0]) * 1000;
+    //     return hezar.value;
+    //   } else {
+    //     return 0;
+    //   }
+    // });
+    // const min_ejare_tejari = computed(() => {
+    //   miliard.value = 0;
+    //   milion.value = 0;
+    //   hezar.value = 0;
+    //   if (info.min_ejare_tejari.split(" ")[1] == "میلیارد") {
+    //     miliard.value = parseInt(info.min_ejare_tejari.split(" ")[0]) * 1000000000;
+    //     if (info.min_ejare_tejari.split(" ")[4]) {
+    //       if (info.min_ejare_tejari.split(" ")[4] == "میلیون")
+    //         milion.value = parseInt(info.min_ejare_tejari.split(" ")[3]) * 1000000;
+    //     }
+    //     return miliard.value + milion.value;
+    //   } else if (info.min_ejare_tejari.split(" ")[1] == "میلیون") {
+    //     milion.value = parseInt(info.min_ejare_tejari.split(" ")[0]) * 1000000;
+    //     if (info.min_ejare_tejari.split(" ")[4]) {
+    //       if (info.min_ejare_tejari.split(" ")[4] == "هزار")
+    //         hezar.value = parseInt(info.min_ejare_tejari.split(" ")[3]) * 1000;
+    //     }
+    //     return milion.value + hezar.value;
+    //   } else if (info.min_ejare_tejari.split(" ")[1] == "هزار") {
+    //     hezar.value = parseInt(info.min_ejare_tejari.split(" ")[0]) * 1000;
+    //     return hezar.value;
+    //   } else {
+    //     return 0;
+    //   }
+    // });
+    // const max_ejare_tejari = computed(() => {
+    //   miliard.value = 0;
+    //   milion.value = 0;
+    //   hezar.value = 0;
+    //   if (info.max_ejare_tejari.split(" ")[1] == "میلیارد") {
+    //     miliard.value = parseInt(info.max_ejare_tejari.split(" ")[0]) * 1000000000;
+    //     if (info.max_ejare_tejari.split(" ")[4]) {
+    //       if (info.max_ejare_tejari.split(" ")[4] == "میلیون")
+    //         milion.value = parseInt(info.minprice.split(" ")[3]) * 1000000;
+    //     }
+    //     return miliard.value + milion.value;
+    //   } else if (info.max_ejare_tejari.split(" ")[1] == "میلیون") {
+    //     milion.value = parseInt(info.max_ejare_tejari.split(" ")[0]) * 1000000;
+    //     if (info.max_ejare_tejari.split(" ")[4]) {
+    //       if (info.max_ejare_tejari.split(" ")[4] == "هزار")
+    //         hezar.value = parseInt(info.max_ejare_tejari.split(" ")[3]) * 1000;
+    //     }
+    //     return milion.value + hezar.value;
+    //   } else if (info.max_ejare_tejari.split(" ")[1] == "هزار") {
+    //     hezar.value = parseInt(info.max_ejare_tejari.split(" ")[0]) * 1000;
+    //     return hezar.value;
+    //   } else {
+    //     return 0;
+    //   }
+    // });
+    info.minprice = minprice.value;
+    info.maxprice = maxprice.value;
+    // info.min_vadie_melk = min_vadie_melk.value;
+    // info.max_vadie_melk = max_vadie_melk.value;
+    // info.min_ejare_melk = min_ejare_melk.value;
+    // info.max_ejare_melk = max_ejare_melk.value;
+    // info.min_vadie_tejari = min_vadie_tejari.value;
+    // info.max_vadie_tejari = max_vadie_tejari.value;
+    // info.min_ejare_tejari = min_ejare_tejari.value;
+    // info.min_ejare_tejari = min_ejare_tejari.value;
+    // info.max_ejare_tejari = max_ejare_tejari.value;
+
+    return { info ,};
+  },
+};
+</script>

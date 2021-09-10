@@ -53,7 +53,7 @@
           :class="{ 'close-select': minprice }"
           v-model="minprice"
         >
-          <option value="" selected>مثلا {{ exm }}</option>
+          <option value="" selected disabled>مثلا {{ exm }}</option>
           <template v-for="money in marks" :key="money">
             <option class="text-start" :value="money">{{ money }}</option>
           </template>
@@ -88,7 +88,7 @@
           :class="{ 'close-select': maxprice }"
           v-model="maxprice"
         >
-          <option value="" selected>مثلا {{ exm }}</option>
+          <option value="" selected disabled>مثلا {{ exm }}</option>
           <template v-for="money in marks" :key="money">
             <option class="text-start" :value="money">{{ money }}</option>
           </template>

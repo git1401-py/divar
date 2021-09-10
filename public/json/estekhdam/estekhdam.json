@@ -1,83 +1,71 @@
 [
   {
-    "id_catogery": 10,
     "id": 1,
     "name": "اداری و مدیریت",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 2,
     "name": "سرایداری و نظافت",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 3,
     "name": "معماری، عمران و ساختمانی",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 4,
     "name": "خدمات فروشگاه و رستوران",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 5,
     "name": "رایانه و فناوری اطلاعات",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 6,
     "name": "مالی و حسابداری و حقوقی",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 7,
     "name": "بازاریابی و فروش",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 8,
     "name": "صنعتی و فنی و مهندسی",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 9,
     "name": "آموزشی",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 10,
     "name": "حمل و نقل",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 11,
     "name": "درمانی و زیبایی و بهداشتی",
     "path":"estekhdam/details.json",
     "subItem":"no"
   },
   {
-    "id_catogery": 10,
     "id": 12,
     "name": "هنری و رسانه",
     "path":"estekhdam/details.json",
@@ -85,7 +73,6 @@
   },
   {
     "id": 13,
-    "name": "متفرقه",
     "path":"estekhdam/details.json",
     "subItem":"no"
   }

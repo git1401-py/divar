@@ -17,7 +17,6 @@ const items = {
   },
   actions: {
     async fetchItems({ commit }, path) {
-      console.log("id", path);
       const res = await axios.get(`./json/${path}`, {
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
@@ -25,7 +24,6 @@ const items = {
           Accept: "application/json",
         },
       });
-      console.log("res");
       commit("setItems", res.data);
     },
   },

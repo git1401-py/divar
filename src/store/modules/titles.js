@@ -25,7 +25,6 @@ const titles = {
           Accept: "application/json",
         },
       });
-      console.log("res");
       commit("setTitles", res.data);
     },
   },

@@ -4,7 +4,7 @@
     class="px-4 d-flex align-items-center justify-content-between div-container"
     @click="btnSelect"
   >
-    <span>{{ title }}</span>
+    <span class="txt-color">{{ title }}</span>
     <div v-if="conValue" class="btn-container-selected">
       <div></div>
     </div>
@@ -33,6 +33,13 @@ export default {
 .div-container {
   cursor: pointer;
 }
+.txt-color {
+  color: gray;
+}
+.txt-color:hover {
+  color: #000;
+}
+
 .btn-container {
   position: relative;
   width: 35px;

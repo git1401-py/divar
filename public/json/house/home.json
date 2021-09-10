@@ -1,24 +1,20 @@
 [
   {
-    "id_catogery": 4,
     "id": 1,
     "name": "وسایل و تزئینات خانه",
     "path":"house/tazin.json"
   },
   {
-    "id_catogery": 4,
     "id": 2,
     "name": "وسایل آشپزخانه",
     "path":"house/fornither.json"
   },
   {
-    "id_catogery": 4,
     "id": 3,
     "name": "ابزار",
     "path":"house/devices.json"
   },
   {
-    "id_catogery": 4,
     "id": 4,
     "name": "ساختمان و حیاط",
     "path":"house/building.json"

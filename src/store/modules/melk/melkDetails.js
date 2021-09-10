@@ -16,8 +16,7 @@ const melkDetails = {
     },
   },
   actions: {
-    async fetchMelkDetails({ commit }, path) {
-      console.log("id", path);
+    async fetchMelkDetails({ commit }) {
       const res = await axios.get("./json/melk/sellMelkD.json", {
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
@@ -25,7 +24,6 @@ const melkDetails = {
           Accept: "application/json",
         },
       });
-      console.log("res");
       commit("setmelkDetails", res.data);
     },
   },

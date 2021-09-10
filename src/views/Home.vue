@@ -3,19 +3,46 @@
     <div class="row position-relative">
       <main-section>
         <template v-slot:main>
-          {{ minprice }}<br />
+          {{ info.maxprice }}<br />
+          قیمت:
+          {{ minprice }}--
           {{ maxprice }}<br />
-          {{ info.just_img }}<br />
-          {{ info.just_imediate }}<br />
-          {{ info.subItem }}<br />
-          {{ info.group_name }}<br />
-          {{ info.group_item_name }}<br />
-          {{ info.group_subitem_name }}<br />
-          {{ info.spaceFrom_melk }}<br />
-          {{ info.spaceTo_melk }}<br />
-          {{ info.adviser_melk }}<br />
-          {{ info.del_tavafoghi }}<br />
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          ویعه ملک : {{ min_vadie_melk }}--
+          ویعه ملک : {{ max_vadie_melk }}<br />
+          اجاره ملک : {{ min_ejare_melk }}--
+          اجاره ملک : {{ max_ejare_melk }}<br />
+          ودیعه تجاری : {{ min_vadie_tejari }}--
+          ودیعه تجاری : {{ max_vadie_tejari }}<br />
+          اجاره تجاری : {{ min_ejare_tejari }}--
+          اجاره تجاری : {{ max_ejare_tejari }}<br />
+          <!-- {{ info.subItem }}<br /> -->
+          group_name:{{ info.group_name }}<br />
+          group_item_name:{{ info.group_item_name }}<br />
+          group_subitem_name:{{ info.group_subitem_name }}<br />
+          spaceFrom_melk:{{ info.spaceFrom_melk }}<br />
+          spaceTo_melk:{{ info.spaceTo_melk }}<br />
+          آگهی دهنده:{{ info.adviser_melk }}<br />
+          سال ساخت:{{ info.yearsofbuild }}<br />
+          minroof_melk:{{ info.minroof_melk }}<br />
+          maxroof_melk:{{ info.maxroof_melk }}<br />
+
+          عکس دار:{{ info.just_img }}<br />
+          فوری:{{ info.just_imediate }}<br />
+          حذف توافقی:{{ info.del_tavafoghi }}<br />
+          تور مجازی:{{ info.tormajazi }}<br />
+          اتاق:{{ info.room_melk }}<br />
+          آسانسور:{{ info.lift_melk }}<br />
+          پارکینگ:{{ info.parking_melk }}<br />
+          انبار:{{ info.anbar_melk }}<br />
+          بالکن:{{ info.balkon_melk }}<br />
+          مجرد:{{ info.just_single }}<br />
+          سند ادازی:{{ info.sanad_edari }}<br />
+          فقط تایید شده ها:{{ info.taeed_shode }}<br />
+          نوع آگهی:{{ info.type_adv }}<br />
+          معاوضه:{{ info.moaveze }}<br />
+          برند موتور:{{ info.brande_motor }}<br />
+          سال ساخت:{{ info.minyearsofbuild_vehicle }}<br />
+          سال ساخت:{{ info.maxyearsofbuild_vehicle }}<br />
         </template>
       </main-section>
     </div>
@@ -30,6 +57,7 @@ import { computed, reactive, ref } from "@vue/reactivity";
 import SideHeader from "../components/home/header/sideheader/main/SideHeader.vue";
 import MainSection from "../components/home/mainsection/MainSection.vue";
 import { provide } from "@vue/runtime-core";
+// import {useNumber} from "../components/home/js/useNumber.js"
 export default {
   name: "Home",
   components: {
@@ -46,91 +74,132 @@ export default {
       group_item_name: "",
       group_subitem_name: "",
       group_item_code: "",
-      mobile_types: "",
-      simNumber: "",
-      esalatBrand: "",
-      Rom: "",
-      mobile_Ram: "",
-      Mobile_builder: "",
-      simSuport: "",
-      simType: "",
-      sellType: "",
-
-      pc_builder: "",
-      HDD: "",
-      pc_Ram: "",
-      cpu: "",
-
-      typeHamkari: "",
-      dorkari: "",
-      typePardakht: "",
-      timekar: "",
-      bime: "",
-      sabeghe: "",
-
-      building_types: "",
-      house_types: "",
-      fornither_types: "",
-
-      tazin_types: "",
-      baft: "",
-      jenseBody: "",
-      jenseRokesh: "",
-      numberNeshiman: "",
-      zemanat: "",
+      
 
       khadamat_link: "",
-      vadie_melk: "",
-      ejare_melk: "",
-      vadie_ejare_melk: "",
+
+      // electrisite
+      type_mobile:"",
+      brand_mobile:"",
+      builder_tablet:"",
+      type_console:"",
+      simNumber:"",
+      esalatBrand:"",
+      Rom_mobile:"",
+      Ram_mobile:"",
+      sellType:"",
+      simType:"",
+      builder_pc:"",
+      HDD_pc:"",
+      Ram_pc:"",
+      cpu_pc:"",
+      color_electric: "",
+
+      // estekhdam
+      typeHamkari:"",
+      dorkari:"",
+      typePardakht:"",
+      timekar:"",
+      bime:"",
+      sabeghe:"",
+      sarbazi:"",
+
+      // house
+      type_building_system:"",
+      type_device:"",
+      type_fornither_zarf:"",
+      type_fornither_iakh:"",
+      type_fornither_gaz:"",
+      type_fornither_lebas:"",
+      type_taziv_tazini:"",
+      type_tazin_nor:"",
+      type_tazin_farsh:"",
+      baft:"",
+      type_tazin_sandali:"",
+      jenseBody:"",
+      jenseRokesh:"",
+      numberNeshiman:"",
+      zemanat:"",
+
+      // persional
+      type_araiesh:"",
+      jens_adalt:"",
+      jens_child:"",
+      type_kif:"",
+      type_clothes:"",
+      type_watch:"",
+      type_javaher:"",
+      type_badalijat:"",
+      jenskala_javaher:"",
+      darRagMokhtalef:"",
+      tolidi:"",
+
+      // vihicle
+      type_order_vehicle: "",
+      color_vehicle: "",
+      karkard: "",
+      type_adv:"",
+      moaveze:"",
+      brande_motor:"",
+      brande_savari:"",
+      minyearsofbuild_vehicle:"",
+      maxyearsofbuild_vehicle:"",
+      motor_vehicle:"",
+      shasi_vehicle:"",
+      body_vehicle:"",
+      bime3_vehicle:"",
+      sanad_vehicle:"",
+      girbox_vehicle:"",
+      sellType_vehicle:"",
+      with_zemanat:false,
+
+      
+      // melk
+      yearsofbuild:"",
       spaceFrom_melk: "",
       spaceTo_melk: "",
-      fitfor_melk: "",
       room_melk: "",
       allroof_melk: "",
-      roof_melk: "",
+      minroof_melk: "",
+      maxroof_melk: "",
       vahedinroof_melk: "",
       jahatbuilding_melk: "",
       bazsazi_melk: "",
-      balkon_melk: "",
       jensekaf_melk: "",
       sevicebehdashti_melk: "",
       sarmaiesh_melk: "",
       garmaieshi_melk: "",
       boilwater_melk: "",
-      lift_melk: "",
-      parking_melk: "",
-      anbar_melk: "",
+      balkon_melk: false,
+      lift_melk: false,
+      parking_melk: false,
+      anbar_melk: false,
+      taeed_shode: false,
       adviser_melk: "",
+      sanad_edari:"",
 
-      araieshi_types: "",
-      child_jens: "",
-      child_tolidi: "",
-
-      personalitem_type: "",
-      personalitem_darRagMokhtalef: "",
-      personalitem_jens: "",
-      personalitem_tolidi: "",
-      personalitem_jenskala: "",
-
-      vehicle_type: "",
-      yearsofbuildfrom: "",
-      yearsofbuildto: "",
-      yearsofbuild: "",
-      color: "",
-      karkard: "",
 
       adviser: "",
-
       city: "",
       price: "",
       minprice: "",
       maxprice: "",
-      status: ["نو", "در حد نو", "کار کرده", "نیازمند تعمیر"],
-      viewMobile: ["دارد", "ندارد"],
+      min_vadie_melk: "",
+      max_vadie_melk: "",
+      min_ejare_melk: "",
+      max_ejare_melk: "",
+      vadie_ejare_melk: "",
+      min_vadie_tejari: "",
+      max_vadie_tejari: "",
+      min_ejare_tejari: "",
+      max_ejare_tejari: "",
+      status: "",
+      viewMobile: "",
       just_img: false,
       just_imediate: false,
       del_tavafoghi: false,
+      tormajazi: false,
+      just_single: false,
       mobile: "",
       codemeli: "",
       title: "",
@@ -139,60 +208,69 @@ export default {
     const miliard = ref(0);
     const milion = ref(0);
     const hezar = ref(0);
-
+    // const maxprice = ref(0);
+    const sectionsInfo = reactive({
+      adver: "",
+      data: "",
+      minprice: "",
+      maxprice: "",
+    });
+    provide("sectionsInfo", sectionsInfo);
     provide("info", info);
-    const maxprice = computed(() => {
-      miliard.value = 0;
-      milion.value = 0;
-      hezar.value = 0;
-      if (info.maxprice.split(" ")[1] == "میلیارد") {
-        miliard.value = parseInt(info.maxprice.split(" ")[0]) * 1000000000;
-        if (info.maxprice.split(" ")[4]) {
-          if (info.maxprice.split(" ")[4] == "میلیون")
-            milion.value = parseInt(info.maxprice.split(" ")[3]) * 1000000;
-        }
-        return miliard.value + milion.value;
-      } else if (info.maxprice.split(" ")[1] == "میلیون") {
-        milion.value = parseInt(info.maxprice.split(" ")[0]) * 1000000;
-        if (info.maxprice.split(" ")[4]) {
-          if (info.maxprice.split(" ")[4] == "هزار")
-            hezar.value = parseInt(info.maxprice.split(" ")[3]) * 1000;
-        }
-        return milion.value + hezar.value;
-      } else if (info.maxprice.split(" ")[1] == "هزار") {
-        hezar.value = parseInt(info.maxprice.split(" ")[0]) * 1000;
-        return hezar.value;
-      } else {
-        return 0;
-      }
-    });
-    const minprice = computed(() => {
-      miliard.value = 0;
-      milion.value = 0;
-      hezar.value = 0;
-      if (info.minprice.split(" ")[1] == "میلیارد") {
-        miliard.value = parseInt(info.minprice.split(" ")[0]) * 1000000000;
-        if (info.minprice.split(" ")[4]) {
-          if (info.minprice.split(" ")[4] == "میلیون")
-            milion.value = parseInt(info.minprice.split(" ")[3]) * 1000000;
-        }
-        return miliard.value + milion.value;
-      } else if (info.minprice.split(" ")[1] == "میلیون") {
-        milion.value = parseInt(info.minprice.split(" ")[0]) * 1000000;
-        if (info.minprice.split(" ")[4]) {
-          if (info.minprice.split(" ")[4] == "هزار")
-            hezar.value = parseInt(info.minprice.split(" ")[3]) * 1000;
-        }
-        return milion.value + hezar.value;
-      } else if (info.minprice.split(" ")[1] == "هزار") {
-        hezar.value = parseInt(info.minprice.split(" ")[0]) * 1000;
-        return hezar.value;
-      } else {
-        return 0;
-      }
-    });
+    const maxprice = computed(() => calNumber(info.maxprice));
+    const minprice = computed(() => calNumber(info.minprice));
+    const min_vadie_melk = computed(() => calNumber(info.min_vadie_melk));
+    const max_vadie_melk = computed(() => calNumber(info.max_vadie_melk));
+    const min_ejare_melk = computed(() => calNumber(info.min_ejare_melk));
+    const max_ejare_melk = computed(() => calNumber(info.max_ejare_melk));
+    const min_vadie_tejari = computed(() => calNumber(info.min_vadie_tejari));
+    const max_vadie_tejari = computed(() => calNumber(info.max_vadie_tejari));
+    const min_ejare_tejari = computed(() => calNumber(info.min_ejare_tejari));
+    const max_ejare_tejari = computed(() => calNumber(info.max_ejare_tejari));
 
-    return { info, maxprice, minprice };
+    function calNumber(str) {
+      // const miliard = ref(0);
+      // const milion = ref(0);
+      // const hezar = ref(0);
+
+      miliard.value = 0;
+      milion.value = 0;
+      hezar.value = 0;
+      if (str.split(" ")[1] == "میلیارد") {
+        miliard.value = parseInt(str.split(" ")[0]) * 1000000000;
+        if (str.split(" ")[4]) {
+          if (str.split(" ")[4] == "میلیون")
+            milion.value = parseInt(str.split(" ")[3]) * 1000000;
+        }
+        return miliard.value + milion.value;
+      } else if (str.split(" ")[1] == "میلیون") {
+        milion.value = parseInt(str.split(" ")[0]) * 1000000;
+        if (str.split(" ")[4]) {
+          if (str.split(" ")[4] == "هزار")
+            hezar.value = parseInt(str.split(" ")[3]) * 1000;
+        }
+        return milion.value + hezar.value;
+      } else if (str.split(" ")[1] == "هزار") {
+        hezar.value = parseInt(str.split(" ")[0]) * 1000;
+        return hezar.value;
+      } else {
+        return 0;
+      }
+    }
+
+    return {
+      info,
+      maxprice,
+      minprice,
+      min_vadie_melk,
+      max_vadie_melk,
+      min_ejare_melk,
+      max_ejare_melk,
+      min_vadie_tejari,
+      max_vadie_tejari,
+      min_ejare_tejari,
+      max_ejare_tejari,
+    };
   },
 };
 </script>
