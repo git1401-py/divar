@@ -48,7 +48,7 @@
 
           <router-link to="/" class="pe-1"> پشتیبانی</router-link>
           <span class="m-0 me-sm-2">
-            <router-link to="/" class="btn btn-danger text-light"
+            <router-link to="/order" class="btn btn-danger text-light"
               >ثبت آگهی</router-link
             ></span
           >

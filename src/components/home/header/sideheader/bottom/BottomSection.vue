@@ -1,15 +1,15 @@
 <template>
   <div class="small">
-    <melk-section v-if="group_name == 'املاک'" />
-    <vehicles-section v-if="group_name == 'وسایل نقلیه'" />
-    <electrisite-section v-if="group_name == 'لوازم الکتریکی'" />
-    <house-section v-if="group_name == 'مربوط به خانه'" />
-    <khadamats-section v-if="group_name == 'خدمات'" />
-    <persional-section v-if="group_name == 'وسایل شخصی'" />
-    <sargarmi-section v-if="group_name == 'سرگرمی و فراعت'" />
-    <social-section v-if="group_name == 'اجتماعی'" />
-    <kasbvakar-section v-if="group_name == 'برای کسب و کار'" />
-    <estekhdam-section v-if="group_name == 'استخدام و کاریابی'" />
+    <div v-if="group_name == 'املاک'" ><melk-section /></div>
+    <div v-if="group_name == 'وسایل نقلیه'" ><vehicles-section /></div>
+    <div v-if="group_name == 'لوازم الکتریکی'" ><electrisite-section /></div>
+    <div v-if="group_name == 'مربوط به خانه'" ><house-section /></div>
+    <div v-if="group_name == 'خدمات'"><khadamats-section  /></div>
+    <div v-if="group_name == 'وسایل شخصی'" ><persional-section /></div>
+    <div v-if="group_name == 'سرگرمی و فراعت'" ><sargarmi-section /></div>
+    <div v-if="group_name == 'اجتماعی'"><social-section /></div>
+    <div v-if="group_name == 'برای کسب و کار'"><kasbvakar-section /></div>
+    <div v-if="group_name == 'استخدام و کاریابی'"><estekhdam-section /></div>
     <cllapse-btntwo
       v-if="group_name == ''"
       :price_items="price_items"

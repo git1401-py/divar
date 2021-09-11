@@ -22,7 +22,7 @@
           class=""
           :icon="['fa', 'chevron-down']"
           style="width: 10px; color: #000"
-        /><span class="p-1 pe-sm-3">{{ data_items }}</span>
+        /><span class="p-1 pe-sm-3">آگهی دهنده</span>
       </a>
       <span
         v-if="price && showDelete"
@@ -46,69 +46,99 @@
           position-relative
         "
       >
-        
-        <select
-          class="form-select form-select-sm text-secondary py-2 pe-4"
-          aria-label=".form-select-sm example"
-          :class="{ 'close-select': data }"
-          v-model="data"
-        >
-          <option value="" selected disabled> {{ exm }}</option>
-          <template v-for="money in marks" :key="money">
-            <option class="text-start" :value="money">{{ money }}</option>
-          </template>
-        </select>
-        <div
-          v-if="data"
-          class="position-absolute close"
-          @click="cleardata()"
-        ></div>
-        <div class="position-absolute toman">{{ txt }}</div>
+        <label
+          style="width: 33.3%"
+          @click="adv('همه')"
+          :class="{ 'active': activeH }"
+          class="advinput"
+          value="همه"
+        >همه</label>
+          
+        <label
+          style="width: 33.3%"
+          @click="adv('شخصی')"
+          :class="{ 'active': activeS }"
+          class="advinput"
+          value="شخصی"
+        >شخصی</label>
+          
+        <label
+          style="width: 33.3%"
+          @click="adv('مشاور املاک')"
+          :class="{ 'active': activeM }"
+          class="advinput"
+          value="مشاور املاک"
+        >مشاور املاک</label>
+          
       </div>
-      
     </div>
   </div>
 </template>
 
 <script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"; 
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { ref } from "@vue/reactivity";
 import { watch } from "@vue/runtime-core";
 import {} from "vuex";
 
 export default {
   components: { FontAwesomeIcon },
-  props: ["data_items", "marks", "id", "txt", "exm"],
+  props: ["id"],
   setup(props, { emit }) {
     const ID = ref("");
     const showDelete = ref(false);
     const price = ref(false);
-    const data = ref("");
-    function cleardata() {
-      data.value = "";
-    }
-    watch(data, () => {
-      if (data.value == "") price.value = false;
+    const activeH = ref(false);
+    const activeS = ref(false);
+    const activeM = ref(false);
+    const adver = ref("");
+
+    watch(adver, () => {
+      if (adver.value == "") price.value = false;
       else price.value = true;
-      emit("dataFn", data.value);
+      emit("adviser", adver.value);
     });
-   
+    function adv(persion) {
+      adver.value = persion;
+      emit("adviser", persion);
+      if (persion == "همه") {
+        activeS.value = false;
+        activeM.value = false;
+        activeH.value = true;
+      }
+      if (persion == "شخصی") {
+        activeM.value = false;
+        activeH.value = false;
+        activeS.value = true;
+      }
+      if (persion == "مشاور املاک") {
+        activeS.value = false;
+        activeH.value = false;
+        activeM.value = true;
+      }
+    }
     function cleardataSection() {
-      data.value = "";
+      adver.value = "";
       price.value = false;
+      activeS.value = false;
+        activeH.value = false;
+        activeM.value = false;
     }
     function toggleDelete() {
       showDelete.value = !showDelete.value;
     }
     return {
       ID,
-      data,
+      adver,
+      adv,
       price,
-      cleardata,
       cleardataSection,
       toggleDelete,
       showDelete,
       ...props,
+      activeH,
+      activeM,
+      activeS
     };
   },
 };
@@ -129,7 +159,7 @@ select:hover {
 }
 .close {
   top: 42%;
-  right: 24px;
+  right: 110px;
   cursor: pointer;
   color: #aaa;
   border-radius: 30px;
@@ -162,5 +192,18 @@ select:hover {
 }
 .delete:hover {
   background: lightpink;
+}
+.advinput {
+  width: 33.3%;
+  border: 1px solid lightgray;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
+  text-align: center;
+}
+.active {
+  border: 1px solid tomato;
+  color: tomato;
+  background: rgb(241, 228, 230);
 }
 </style>

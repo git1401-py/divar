@@ -60,7 +60,7 @@ async function fetchDefaultItems() {
     }
     watch(pathing_module,()=>{
       info.subItem = computed(() => store.getters[pathing_module.value]);
-    })
+    }) 
 const a = ref("");
 
     async function fetchItems(path, id, name) {

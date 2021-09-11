@@ -74,56 +74,56 @@ export default {
     CllapseBtnone,
   },
   setup() {
-    const info = inject("info");
-    const group_item_name = computed(() => info.group_item_name);
+    const order_data = inject("order_data");
+    const group_item_name = computed(() => order_data.group_item_name);
 
-    const typeHamkariMarks = computed(() => info.subItem.typeHamkari);
+    const typeHamkariMarks = computed(() => order_data.subItem.typeHamkari);
     const typeHamkari_items = ref("نوع همکاری");
 
-    const timekarMarks = computed(() => info.subItem.timekar);
+    const timekarMarks = computed(() => order_data.subItem.timekar);
     const timekar_items = ref("ساعات کاری");
 
-    const typePardakhtMarks = computed(() => info.subItem.typePardakht);
+    const typePardakhtMarks = computed(() => order_data.subItem.typePardakht);
     const typePardakht_items = ref("شیوه پرداخت");
 
-    const bimeMarks = computed(() => info.subItem.bime);
+    const bimeMarks = computed(() => order_data.subItem.bime);
     const bime_items = ref("بیمه");
 
-    const dorkariMarks = computed(() => info.subItem.dorkari);
+    const dorkariMarks = computed(() => order_data.subItem.dorkari);
     const dorkari_items = ref("امکان دورکاری");
 
-    const sabegheMarks = computed(() => info.subItem.sabeghe);
+    const sabegheMarks = computed(() => order_data.subItem.sabeghe);
     const sabeghe_items = ref("سابقه مورد نیاز");
 
-    const sarbaziMarks = computed(() => info.subItem.sarbazi);
+    const sarbaziMarks = computed(() => order_data.subItem.sarbazi);
     const sarbazi_items = ref("پایان خدمت/معافیت");
 
     function typeHamkariFn(typeHamkari) {
-      info.typeHamkari = typeHamkari;
+      order_data.typeHamkari = typeHamkari;
     }
 
     function timekarFn(timekar) {
-      info.timekar = timekar;
+      order_data.timekar = timekar;
     }
 
     function typePardakhtFn(typePardakht) {
-      info.typePardakht = typePardakht;
+      order_data.typePardakht = typePardakht;
     }
 
     function bimeFn(bime) {
-      info.bime = bime;
+      order_data.bime = bime;
     }
 
     function dorkariFn(dorkari) {
-      info.dorkari = dorkari;
+      order_data.dorkari = dorkari;
     }
 
     function sabegheFn(sabeghe) {
-      info.sabeghe = sabeghe;
+      order_data.sabeghe = sabeghe;
     }
 
     function sarbaziFn(sarbazi) {
-      info.sarbazi = sarbazi;
+      order_data.sarbazi = sarbazi;
     }
     return {
       typeHamkariMarks,

@@ -42,20 +42,20 @@ export default {
   components: {
   },
   setup() {
-     const info = inject("info");
-    const group_item_name = computed(() => info.group_item_name);
-    const house_priceMarks = computed(() => info.subItem.kasb_price);
+     const order_data = inject("order_data");
+    const group_item_name = computed(() => order_data.group_item_name);
+    const house_priceMarks = computed(() => order_data.subItem.kasb_price);
     const house_price_items = ref(["قیمت", "حداقل", "حداکثر"]);
-    const statusMarks = computed(() => info.subItem.status);
+    const statusMarks = computed(() => order_data.subItem.status);
     const status_items = ref("وضعیت کالا");
 
     const moavezeMarks = ["نمایش فقط معاوضه ها", "حذف معاوشه ها"];
     const moaveze_items = ref("نمایش  معاوضه ها");
 
-    const del_tavafoghi = computed(() => info.del_tavafoghi);
+    const del_tavafoghi = computed(() => order_data.del_tavafoghi);
 
     function conTavafoghiFn() {
-      info.del_tavafoghi = !info.del_tavafoghi;
+      order_data.del_tavafoghi = !order_data.del_tavafoghi;
     }
     /*
 vadie_melk: "",
@@ -65,17 +65,17 @@ vadie_melk: "",
       ejare_tejari: "",
  */
     function minp(minprice) {
-      info.minprice = minprice;
+      order_data.minprice = minprice;
     }
     function maxp(maxprice) {
-      info.maxprice = maxprice;
+      order_data.maxprice = maxprice;
     }
 
     function statusFn(status) {
-      info.status = status;
+      order_data.status = status;
     }
     function moavezeFn(moaveze) {
-      info.moaveze = moaveze;
+      order_data.moaveze = moaveze;
     }
     return {
 

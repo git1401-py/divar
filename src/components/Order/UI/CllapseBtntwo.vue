@@ -22,7 +22,7 @@
           class=""
           :icon="['fa', 'chevron-down']"
           style="width: 10px; color: #000"
-        /><span class="p-1 pe-sm-3">{{ data_items }}</span>
+        /><span class="p-1 pe-sm-3">{{ price_items[0] }}</span>
       </a>
       <span
         v-if="price && showDelete"
@@ -46,55 +46,96 @@
           position-relative
         "
       >
-        
+        <div class="ps-5">{{ price_items[1] }}</div>
         <select
           class="form-select form-select-sm text-secondary py-2 pe-4"
           aria-label=".form-select-sm example"
-          :class="{ 'close-select': data }"
-          v-model="data"
+          :class="{ 'close-select': minprice }"
+          v-model="minprice"
         >
-          <option value="" selected disabled> {{ exm }}</option>
+          <option value="" selected disabled>مثلا {{ exm }}</option>
           <template v-for="money in marks" :key="money">
             <option class="text-start" :value="money">{{ money }}</option>
           </template>
         </select>
         <div
-          v-if="data"
+          v-if="minprice"
           class="position-absolute close"
-          @click="cleardata()"
+          @click="cleardata('minprice')"
         ></div>
         <div class="position-absolute toman">{{ txt }}</div>
       </div>
-      
+      <div
+        class="position-absolute d-flex flex-column"
+        style="top: 45px; right: 30px"
+      >
+        <span style="height: 5px">.</span><span style="height: 5px">.</span
+        ><span style="height: 5px">.</span>
+      </div>
+      <div
+        class="
+          p-3
+          d-flex
+          align-items-center
+          position-relative
+          justify-content-between
+        "
+      >
+        <div class="ps-5">{{ price_items[2] }}</div>
+        <select
+          class="form-select form-select-sm text-secondary py-2 pe-4"
+          aria-label=".form-select-sm example"
+          :class="{ 'close-select': maxprice }"
+          v-model="maxprice"
+        >
+          <option value="" selected disabled>مثلا {{ exm }}</option>
+          <template v-for="money in marks" :key="money">
+            <option class="text-start" :value="money">{{ money }}</option>
+          </template>
+        </select>
+        <div
+          v-if="maxprice"
+          class="position-absolute close"
+          @click="cleardata('maxprice')"
+        ></div>
+        <div class="position-absolute toman">{{ txt }}</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"; 
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { ref } from "@vue/reactivity";
 import { watch } from "@vue/runtime-core";
 import {} from "vuex";
 
 export default {
   components: { FontAwesomeIcon },
-  props: ["data_items", "marks", "id", "txt", "exm"],
+  props: ["price_items", "marks", "id", "txt", "exm"],
   setup(props, { emit }) {
     const ID = ref("");
     const showDelete = ref(false);
     const price = ref(false);
-    const data = ref("");
-    function cleardata() {
-      data.value = "";
+    const minprice = ref("");
+    const maxprice = ref("");
+    function cleardata(data) {
+      if (data == "minprice") minprice.value = "";
+      if (data == "maxprice") maxprice.value = "";
     }
-    watch(data, () => {
-      if (data.value == "") price.value = false;
+    watch(minprice, () => {
+      if (minprice.value == "") price.value = false;
       else price.value = true;
-      emit("dataFn", data.value);
+      emit("minp", minprice.value);
     });
-   
+    watch(maxprice, () => {
+      if (maxprice.value == "") price.value = false;
+      else price.value = true;
+      emit("maxp", maxprice.value);
+    });
     function cleardataSection() {
-      data.value = "";
+      minprice.value = "";
+      maxprice.value = "";
       price.value = false;
     }
     function toggleDelete() {
@@ -102,7 +143,8 @@ export default {
     }
     return {
       ID,
-      data,
+      minprice,
+      maxprice,
       price,
       cleardata,
       cleardataSection,
@@ -129,7 +171,7 @@ select:hover {
 }
 .close {
   top: 42%;
-  right: 24px;
+  right: 110px;
   cursor: pointer;
   color: #aaa;
   border-radius: 30px;
