@@ -68,34 +68,9 @@
       <input type="checkbox" class="form-check-input" value="chat" checked v-model="order_data.chat">
       
     </div>
+    
     <div class="mt-5">
-
-      <span class="fw-bold">عنوان آگهی</span>
-      <p class="text-muted py-1">
-          در عنوان آگهی به موارد مهمی مانند نوع ملک، متراژ و محله اشاره کنید.
-      </p>
-      <input
-        type="text"
-        class="input-group-text myinput"
-        placeholder="مثال: آپارتمان، 0 متر، ولیعصر"
-         v-model="order_data.title"
-      />
-    </div>
-    <div class="mt-5">
-
-      <span class="fw-bold">توضیحات آگهی</span>
-      <p class="text-muted py-1">
-          در توضیحات آگهی به مواردی مانند شرایط اجاره، جزئیات و ویژگی‌های قابل توجه، دسترسی‌های محلی و موقعیت قرارگیری ملک اشاره کنید.
-      </p>
-      <textarea
-        type="text"
-        class="input-group-text myinput"
-        placeholder="توضیحات را بنویسید"
-         v-model="order_data.explation"
-      ></textarea>
-    </div>
-    <div class="mt-5">
-        <button class="btn btn-outline-light py-3 text-dark ms-3 border-2" style="width:45%">انصراف</button>
+        <button class="btn btn-outline-light py-3 ms-3" style="width:45%;border:1px solid #000;color:#000;">انصراف</button>
         <button class="btn btn-danger py-3" style="width:45%">ارسال آگهی</button>
     </div>
   </div>
@@ -199,8 +174,8 @@ export default {
   background: rgb(241, 226, 229);
 }
 .myinput{
-    text-align: right;
+    text-align: right !important;
     width:100%;
-    background:#fff;
+    background:#fff !important;
 }
 </style>

@@ -33,12 +33,5 @@
     "subItem":"no",
     "path":"electrisite/tell.json"
 
-  },
-  {
-    "id": 6,
-    "name": "متفرقه",
-    "subItem":"",
-    "path":"electrisite/electriki.json"
-
   }
 ]

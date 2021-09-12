@@ -1,163 +1,132 @@
 <template>
-  <cllapse-btntwo
-    :price_items="sellMelkPrice_items"
-    :marks="sellMelkMarks"
-    @minp="minp"
-    @maxp="maxp"
-    id="sellMelk"
-    exm="اجاره تا"
-    txt="تومان"
-  />
-  <hr />
-  <cllapse-btntwo
-    :price_items="sellMelkSpace_items"
-    :marks="sellMelkSpaceMarks"
-    @minp="minS"
-    @maxp="maxS"
-    id="sellMelkSpace"
-    exm="100"
-    txt="متر"
-  />
+  <div class="mt-5">
+    <span class="fw-bold">متراژ</span>
+    <input
+      type="text"
+      class="input-group-text myinput"
+      placeholder="مثلا 1000 متر"
+      v-model="order_data.space"
+    />
+  </div>
+  <div v-if="order_data.space">
+      <splite-number :number="order_data.space" @getNember="getspace"/>
+      {{strspace}} متر
+    </div>
+  <div class="mt-5">
+    <div class="fw-bold mb-3">آگهی‌دهنده</div>
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="shakhsi"
+      name="adviser"
+      value="شخصی"
+      @input="order_data.adviser"
+    />
+    <label for="shakhsi" class="form-check-label mx-2">شخصی</label>
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="moshaver"
+      name="adviser"
+      value="مشاور املاک"
+      @input="order_data.adviser"
+    />
+    <label for="moshaver" class="form-check-label mx-2">مشاور املاک</label>
+  </div>
 
-  <hr />
-  <room id="rooms" :roomsValues="roomsValues" @roomFn="roomFn" />
+  <div class="mt-5">
+    <span class="fw-bold">اجاره روزانه </span>
+    <input
+      type="text"
+      class="input-group-text myinput"
+      placeholder="اجاره روزانه به تومان"
+      v-model="order_data.price"
+    />
+  </div>
+  <div v-if="order_data.price">
+      <splite-number :number="order_data.price" @getNember="getPrice"/>
+      {{strprice}} تومان
+    </div>
 
-  <hr />
-  <agahi id="adviserMelk" @adviser="adviser" />
-  <hr />
-  <moving-btn
-    :conValue="taeed_shode"
-    @conFn="conTaeed_shodeFn"
-    title="فقط تایید شده ها"
-  />
-
-  <div class="" v-if="group_subitem_name == 'آپارتمان و سوئیت'"></div>
-  <div class="" v-if="group_subitem_name == 'ویلا و باغ'"></div>
-  <div class="" v-if="group_subitem_name == 'دفتر کار و فضای آموزشی'"></div>
+  <div class="" v-if="group_subitem_name == 'آپارتمان و سوئیت'">
+    <div class="mt-5">
+      <span class="fw-bold">تعداد اتاق </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.room_melk"
+      >
+        <option value="" selected disabled></option>
+        <option class="text-start" value="0">بدون اتاق</option>
+        <option class="text-start" value="1">یک</option>
+        <option class="text-start" value="2">دو</option>
+        <option class="text-start" value="3">سه</option>
+        <option class="text-start" value="4">چهار</option>
+        <option class="text-start" value="5">پنج یا بیشتر</option>
+      </select>
+    </div>
+  </div>
+  <div class="" v-if="group_subitem_name == 'ویلا و باغ'">
+    <div class="mt-5">
+      <span class="fw-bold">تعداد اتاق </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.room_melk"
+      >
+        <option value="" selected disabled></option>
+        <option class="text-start" value="0">بدون اتاق</option>
+        <option class="text-start" value="1">یک</option>
+        <option class="text-start" value="2">دو</option>
+        <option class="text-start" value="3">سه</option>
+        <option class="text-start" value="4">چهار</option>
+        <option class="text-start" value="5">پنج یا بیشتر</option>
+      </select>
+    </div>
+  </div>
+  <div class="" v-if="group_subitem_name == 'دفتر کار و فضای آموزشی'">
+    <div class="mt-5">
+      <span class="fw-bold">تعداد اتاق </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.room_melk"
+      >
+        <option value="" selected disabled></option>
+        <option class="text-start" value="0">بدون اتاق</option>
+        <option class="text-start" value="1">یک</option>
+        <option class="text-start" value="2">دو</option>
+        <option class="text-start" value="3">سه</option>
+        <option class="text-start" value="4">چهار</option>
+        <option class="text-start" value="5">پنج یا بیشتر</option>
+      </select>
+    </div>
+  </div>
 </template>
 
 <script>
 import { computed, inject, ref } from "@vue/runtime-core";
-import CllapseBtntwo from "../../UI/CllapseBtntwo.vue";
-import Agahi from "../../UI/Agahi.vue";
-import Room from "../../UI/Room.vue";
-import MovingBtn from "../../UI/MovingBtn.vue";
+import SpliteNumber from "../../UI/SpliteNumber.vue"
+
 export default {
-  components: {
-    CllapseBtntwo,
-    Agahi,
-    MovingBtn,
-    Room,
-  },
+  components: {SpliteNumber},
   setup() {
     const order_data = inject("order_data");
     const group_subitem_name = computed(() => order_data.group_subitem_name);
-    const sellMelkMarks = computed(() => order_data.subItem.price_melk);
-
-    const sellMelkSpaceMarks = computed(() => order_data.subItem.space_sell_melk);
-    const sellMelkPrice_items = ref(["اجاره روزانه", "حداکثر", "حداقل"]);
-    const sellMelkSpace_items = ref(["متراژ", "از", "تا"]);
-    const roomsValues = ref(["بدون اتاق", "1", "2", "3", "4", "بیشتر از 4"]);
-    const taeed_shode = computed(() => order_data.taeed_shode);
-    const tormajazi = computed(() => order_data.tormajazi);
-    const yearsMarks = computed(() => order_data.subItem.yearsofbuild);
-    const years_items = ref(["سال ساخت بنا", "سال ساخت بنا ار انتخاب کنید"]);
-    const roofsMarks = computed(() => order_data.subItem.roof);
-    const roofs_items = ref(["طبقه", "حداقل", "حداکثر"]);
-    const lift_melk = computed(() => order_data.lift_melk);
-    const parking_melk = computed(() => order_data.parking_melk);
-    const anbar_melk = computed(() => order_data.anbar_melk);
-    const balkon_melk = computed(() => order_data.balkon_melk);
-
-    function conTormajaziFn() {
-      order_data.tormajazi = !order_data.tormajazi;
+    const strprice = ref("");
+    
+    function getPrice(num){
+      strprice.value = num;
     }
-    function conLift_melkFn() {
-      order_data.lift_melk = !order_data.lift_melk;
-    }
-    function conParking_melkFn() {
-      order_data.parking_melk = !order_data.parking_melk;
-    }
-    function conAnbar_melkFn() {
-      order_data.anbar_melk = !order_data.anbar_melk;
-    }
-    function conBalkon_melkFn() {
-      order_data.balkon_melk = !order_data.balkon_melk;
-    }
-    function conTaeed_shodeFn() {
-      order_data.balkon_melk = !order_data.balkon_melk;
-    }
-    /*
-vadie_melk: "",
-      ejare_melk: "",
-      vadie_ejare_melk: "",
-      vadie_tejari: "",
-      ejare_tejari: "",
- */
-    function minp(minprice) {
-      order_data.minprice = minprice;
-    }
-    function maxp(maxprice) {
-      order_data.maxprice = maxprice;
-    }
-    function minS(space) {
-      order_data.spaceFrom_melk = space;
-    }
-    function maxS(space) {
-      order_data.spaceTo_melk = space;
-    }
-    function adviser(adviser_melk) {
-      order_data.adviser_melk = adviser_melk;
-    }
-    function roomFn(room_melk) {
-      order_data.room_melk = room_melk;
-    }
-    function yearsofbuildFn(yearsofbuild) {
-      order_data.yearsofbuild = yearsofbuild;
-    }
-    function minRoof(roofs) {
-      order_data.minroof_melk = roofs;
-    }
-    function maxRoof(roofs) {
-      order_data.maxroof_melk = roofs;
-    }
-
+ const strspace = ref("");
+    function getspace(num){
+      strspace.value = num;
+    }  
     return {
       group_subitem_name,
-
-      sellMelkMarks,
-      sellMelkPrice_items,
-
-      sellMelkSpaceMarks,
-      sellMelkSpace_items,
-
-      yearsMarks,
-      years_items,
-      roofs_items,
-      roofsMarks,
-
-      minp,
-      maxp,
-      minS,
-      maxS,
-      minRoof,
-      maxRoof,
-      adviser,
-      taeed_shode,
-      conTaeed_shodeFn,
-      tormajazi,
-      conTormajaziFn,
-      roomsValues,
-      roomFn,
-      yearsofbuildFn,
-      lift_melk,
-      conLift_melkFn,
-      parking_melk,
-      conParking_melkFn,
-      anbar_melk,
-      conBalkon_melkFn,
-      balkon_melk,
-      conAnbar_melkFn,
+      order_data,
+      strprice,getPrice,
+      strspace,getspace
     };
   },
 };

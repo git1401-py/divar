@@ -26,12 +26,5 @@
     "name": "قایق و لوازم جانبی",
     "subItem":"no",
     "path":"vehicles/ghaiegh.json"
-  },
-  {
-    "id_catogery": 2,
-    "id": 5,
-    "name": "همه آگهی های وسایل نقلیه",
-    "subItem":"no",
-    "path":"vehicles/vehicle.json"
   }
 ]

@@ -1,239 +1,258 @@
 <template>
-  <cllapse-btntwo
-    :price_items="sellTejariPrice_items"
-    :marks="sellTejariMarks"
-    @minp="minp"
-    @maxp="maxp"
-    id="sellTejari"
-    exm="800,000,000"
-    txt="تومان"
-  />
-  <hr />
-  <cllapse-btntwo
-    :price_items="sellTejariSpace_items"
-    :marks="sellTejariSpaceMarks"
-    @minp="minS"
-    @maxp="maxS"
-    id="sellTejariSpace"
-    exm="100"
-    txt="متر"
-  />
+  <div class="mt-5">
+    <span class="fw-bold">متراژ</span>
+    <input
+      type="text"
+      class="input-group-text myinput"
+      placeholder="مثلا 1000 متر"
+      v-model="order_data.space"
+    />
+  </div>
+  <div v-if="order_data.space">
+      <splite-number :number="order_data.space" @getNember="getspace"/>
+      {{strspace}} متر
+    </div>
+  <div class="mt-5">
+    <span class="fw-bold">قیمت کل</span>
+    <input
+      type="text"
+      class="input-group-text myinput"
+      placeholder="قیمت به تومان"
+      v-model="order_data.price"
+    />
+  </div>
+  <div v-if="order_data.price">
+      <splite-number :number="order_data.price" @getNember="getPrice"/>
+      {{strprice}} تومان
+    </div>
+  <div class="mt-5">
+    <div class="fw-bold mb-3">آگهی‌دهنده</div>
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="shakhsi"
+      name="adviser"
+      value="شخصی"
+      @input="order_data.adviser"
+    />
+    <label for="shakhsi" class="form-check-label mx-2">شخصی</label>
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="moshaver"
+      name="adviser"
+      value="مشاور املاک"
+      @input="order_data.adviser"
+    />
+    <label for="moshaver" class="form-check-label mx-2">مشاور املاک</label>
+    </div>
+  <div class="mt-5">
+    <span class="fw-bold">سند اداری </span>
+    <select
+      class="form-select form-select-sm text-secondary py-2 pe-4"
+      aria-label=".form-select-sm example"
+      v-model="order_data.sanad_edari"
+    >
+      <option value="" selected disabled></option>
+      <option class="text-start" value="true">دارد</option>
+      <option class="text-start" value="false">ندارد</option>
+    </select>
+  </div>
 
-  <hr />
-  <agahi id="adviserMelk" @adviser="adviser" />
-  <hr />
-  <cllapse-btnone
-    :data_items="sanad_edari_items"
-    :marks="sanad_edariMarks"
-    @dataFn="sanad_edariFn"
-    id="sanad_edari"
-    exm="دارد یا ندارد"
-  />
-  <moving-btn
-    :conValue="del_tavafoghi"
-    @conFn="conTavafoghiFn"
-    title=" حذف توافقی ها"
-  />
   <div class="" v-if="group_subitem_name == 'دفتر کار،اتاق اداری و مطب'">
-    <hr />
-    <room id="rooms" :roomsValues="roomsValues" @roomFn="roomFn" />
-    <hr />
-    <cllapse-btnone
-      :data_items="years_items"
-      :marks="yearsMarks"
-      @dataFn="yearsofbuildFn"
-      id="yearsofbuildFn"
-      exm="100"
-    />
-    <hr />
-    <cllapse-btntwo
-      :price_items="roofs_items"
-      :marks="roofsMarks"
-      @minp="minRoof"
-      @maxp="maxRoof"
-      id="sellRroofs"
-      exm="2"
-      txt=""
-    />
-    <hr />
-    <moving-btn
-      :conValue="lift_melk"
-      @conFn="conLift_melkFn"
-      title="با آسانسور"
-    />
-    <hr />
-    <moving-btn
-      :conValue="parking_melk"
-      @conFn="conParking_melkFn"
-      title="با پارکینگ"
-    />
-    <hr />
-    <moving-btn
-      :conValue="anbar_melk"
-      @conFn="conAnbar_melkFn"
-      title="با انباری"
-    />
+    <div class="mt-5">
+      <span class="fw-bold">تعداد اتاق </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.room_melk"
+      >
+        <option value="" selected disabled></option>
+        <option class="text-start" value="0">بدون اتاق</option>
+        <option class="text-start" value="1">یک</option>
+        <option class="text-start" value="2">دو</option>
+        <option class="text-start" value="3">سه</option>
+        <option class="text-start" value="4">چهار</option>
+        <option class="text-start" value="5">پنج یا بیشتر</option>
+      </select>
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">سال ساخت </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.yearsofbuild"
+      >
+        <option value="" selected disabled></option>
+        <option
+          class="text-start"
+          v-for="year in yearsofbuild"
+          :key="year"
+          :value="year"
+        >
+          {{ year }}
+        </option>
+      </select>
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">طبقه </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.roof_melk"
+      >
+        <option value="" selected disabled></option>
+        <option
+          class="text-start"
+          v-for="roof in roofs"
+          :key="roof"
+          :value="roof"
+        >
+          {{ roof }}
+        </option>
+      </select>
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">آسانسور </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.lift_melk"
+      >
+        <option value="" selected disabled></option>
+        <option class="text-start" value="true">دارد</option>
+        <option class="text-start" value="false">ندارد</option>
+      </select>
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">پارکینگ </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.parking_melk"
+      >
+        <option value="" selected disabled></option>
+        <option class="text-start" value="true">دارد</option>
+        <option class="text-start" value="false">ندارد</option>
+      </select>
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">انباری </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.anbar_melk"
+      >
+        <option value="" selected disabled></option>
+        <option class="text-start" value="true">دارد</option>
+        <option class="text-start" value="false">ندارد</option>
+      </select>
+    </div>
   </div>
   <div class="" v-if="group_subitem_name == 'مغازه و غرفه'">
-    <hr />
-    <room id="rooms" :roomsValues="roomsValues" @roomFn="roomFn" />
-    <hr />
-    <cllapse-btnone
-      :data_items="years_items"
-      :marks="yearsMarks"
-      @dataFn="yearsofbuildFn"
-      id="yearsofbuildFn"
-      exm="100"
-    />
+    <div class="mt-5">
+      <span class="fw-bold">تعداد اتاق </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.room_melk"
+      >
+        <option value="" selected disabled></option>
+        <option class="text-start" value="0">بدون اتاق</option>
+        <option class="text-start" value="1">یک</option>
+        <option class="text-start" value="2">دو</option>
+        <option class="text-start" value="3">سه</option>
+        <option class="text-start" value="4">چهار</option>
+        <option class="text-start" value="5">پنج یا بیشتر</option>
+      </select>
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">سال ساخت </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.yearsofbuild"
+      >
+        <option value="" selected disabled></option>
+        <option
+          class="text-start"
+          v-for="year in yearsofbuild"
+          :key="year"
+          :value="year"
+        >
+          {{ year }}
+        </option>
+      </select>
+    </div>
   </div>
   <div class="" v-if="group_subitem_name == 'صنعتی، کشاورزی و تجاری'">
-    <hr />
-    <room id="rooms" :roomsValues="roomsValues" @roomFn="roomFn" />
-    <hr />
-    <cllapse-btnone
-      :data_items="years_items"
-      :marks="yearsMarks"
-      @dataFn="yearsofbuildFn"
-      id="yearsofbuildFn"
-      exm="100"
+    <div class="mt-5">
+      <span class="fw-bold">تعداد اتاق </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.room_melk"
+      >
+        <option value="" selected disabled></option>
+        <option class="text-start" value="0">بدون اتاق</option>
+        <option class="text-start" value="1">یک</option>
+        <option class="text-start" value="2">دو</option>
+        <option class="text-start" value="3">سه</option>
+        <option class="text-start" value="4">چهار</option>
+        <option class="text-start" value="5">پنج یا بیشتر</option>
+      </select>
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">سال ساخت </span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.yearsofbuild"
+      >
+        <option value="" selected disabled></option>
+        <option
+          class="text-start"
+          v-for="year in yearsofbuild"
+          :key="year"
+          :value="year"
+        >
+          {{ year }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="mt-5">
+    <span class="fw-bold">کد ملی (اختیاری)</span>
+    <p class="text-muted py-1">
+      در صورت مطابقت شماره‌ٔ موبایل با کد ملی، آگهی شما با نشان احراز هویت منتشر
+      خواهد شد.
+    </p>
+    <input
+      type="text"
+      class="input-group-text myinput"
+      placeholder="1234567890"
+      v-model="order_data.codemeli"
     />
   </div>
 </template>
 
 <script>
-import { computed, inject, ref } from "@vue/runtime-core";
-import CllapseBtntwo from "../../UI/CllapseBtntwo.vue";
-import CllapseBtnone from "../../UI/CllapseBtnone.vue";
-import Agahi from "../../UI/Agahi.vue";
-import Room from "../../UI/Room.vue";
-import MovingBtn from "../../UI/MovingBtn.vue";
+import { computed, inject } from "@vue/runtime-core";
+import SpliteNumber from "../../UI/SpliteNumber.vue"
+
 export default {
-  components: {
-    CllapseBtntwo,
-    CllapseBtnone,
-    Agahi,
-    MovingBtn,
-    Room,
-  },
+  components: {SpliteNumber},
   setup() {
     const order_data = inject("order_data");
     const group_subitem_name = computed(() => order_data.group_subitem_name);
-    const sellTejariMarks = computed(() => order_data.subItem.price_tejari);
-    const sellTejariPrice_items = ref(["قیمت کل", "حداقل", "حداکثر"]);
-
-    const sellTejariSpaceMarks = computed(() => order_data.subItem.space_sell_tejari);
-    const sellTejariSpace_items = ref(["متراژ", "از", "تا"]);
-    const roomsValues = ref(["بدون اتاق", "1", "2", "3", "4", "بیشتر از 4"]);
-    const del_tavafoghi = computed(() => order_data.del_tavafoghi);
-    const tormajazi = computed(() => order_data.tormajazi);
-    const yearsMarks = computed(() => order_data.subItem.yearsofbuild);
-    const years_items = ref("سال ساخت بنا");
-    const sanad_edariMarks = ["دارد", "ندارد"];
-    const sanad_edari_items = ref("سند اداری");
-    const roofsMarks = computed(() => order_data.subItem.roof);
-    const roofs_items = ref(["طبقه", "حداقل", "حداکثر"]);
-    const lift_melk = computed(() => order_data.lift_melk);
-    const parking_melk = computed(() => order_data.parking_melk);
-    const anbar_melk = computed(() => order_data.anbar_melk);
-    const balkon_melk = computed(() => order_data.balkon_melk);
-
-    function conTavafoghiFn() {
-      order_data.del_tavafoghi = !order_data.del_tavafoghi;
-    }
-    function conTormajaziFn() {
-      order_data.tormajazi = !order_data.tormajazi;
-    }
-    function conLift_melkFn() {
-      order_data.lift_melk = !order_data.lift_melk;
-    }
-    function conParking_melkFn() {
-      order_data.parking_melk = !order_data.parking_melk;
-    }
-    function conAnbar_melkFn() {
-      order_data.anbar_melk = !order_data.anbar_melk;
-    }
-    function conBalkon_melkFn() {
-      order_data.balkon_melk = !order_data.balkon_melk;
-    }
-    /*
-vadie_melk: "",
-      ejare_melk: "",
-      vadie_ejare_melk: "",
-      vadie_tejari: "",
-      ejare_tejari: "",
- */
-    function minp(minprice) {
-      order_data.minprice = minprice;
-    }
-    function maxp(maxprice) {
-      order_data.maxprice = maxprice;
-    }
-    function minS(space) {
-      order_data.spaceFrom_melk = space;
-    }
-    function maxS(space) {
-      order_data.spaceTo_melk = space;
-    }
-    function adviser(adviser_melk) {
-      order_data.adviser_melk = adviser_melk;
-    }
-    function roomFn(room_melk) {
-      order_data.room_melk = room_melk;
-    }
-    function yearsofbuildFn(yearsofbuild) {
-      order_data.yearsofbuild = yearsofbuild;
-    }
-    function sanad_edariFn(sanad_edari) {
-      order_data.sanad_edari = sanad_edari;
-    }
-    function minRoof(roofs) {
-      order_data.minroof_melk = roofs;
-    }
-    function maxRoof(roofs) {
-      order_data.maxroof_melk = roofs;
-    }
+    const yearsofbuild = computed(() => order_data.subItem.yearsofbuild);
+    const roofs = computed(() => order_data.subItem.roof);
 
     return {
       group_subitem_name,
-
-      sellTejariMarks,
-      sellTejariPrice_items,
-
-      sellTejariSpaceMarks,
-      sellTejariSpace_items,
-
-      yearsMarks,
-      years_items,
-
-      sanad_edariMarks,
-      sanad_edari_items,
-
-      roofs_items,
-      roofsMarks,
-
-      minp,
-      maxp,
-      minS,
-      maxS,
-      minRoof,
-      maxRoof,
-      adviser,
-      del_tavafoghi,
-      conTavafoghiFn,
-      tormajazi,
-      conTormajaziFn,
-      roomsValues,
-      roomFn,
-      yearsofbuildFn,
-      sanad_edariFn,
-      lift_melk,
-      conLift_melkFn,
-      parking_melk,
-      conParking_melkFn,
-      anbar_melk,
-      conBalkon_melkFn,
-      balkon_melk,
-      conAnbar_melkFn,
+      yearsofbuild,
+      roofs,
+      order_data,
     };
   },
 };

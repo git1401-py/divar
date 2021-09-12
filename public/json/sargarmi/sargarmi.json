@@ -71,13 +71,5 @@
     "subItem":"no",
     "path":"sargarmi/toys.json"
 
-  },
-  {
-    "id_catogery": 7,
-    "id": 10,
-    "name": "متفرقه",
-    "subItem":"no",
-    "path":"sargarmi/varzesh.json"
-
   }
 ]

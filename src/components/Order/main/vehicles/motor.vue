@@ -1,116 +1,101 @@
 <template>
-  <cllapse-btnone
-    :data_items="brande_motor_items"
-    :marks="brande_motorMarks"
-    @dataFn="brande_motorFn"
-    id="brande_motor"
-    exm="تعیین برند موتور"
-  />
-
-  <hr />
-  <cllapse-btntwo
-    :price_items="yearsofbuild_vehicle_items"
-    :marks="yearsofbuild_vehicleMarks"
-    @minp="minyearsofbuild_vehicle"
-    @maxp="maxyearsofbuild_vehicle"
-    id="yearsofbuild_vehicle"
-    exm="1393"
-    txt="تومان"
-  />
-
-  <hr />
-  <div class="" v-if="group_subitem_name == 'سواری'"></div>
-  <div class="" v-if="group_subitem_name == 'کلاسیک'"></div>
-  <div class="" v-if="group_subitem_name == 'اجاره ای'"></div>
-  <div class="" v-if="group_subitem_name == 'سنگین'"></div>
+  <div class="mt-5">
+    <div class="fw-bold mb-3">نوع آگهی</div>
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="foshi"
+      name="order_vehicle"
+      value="فروشی"
+      @input="order_data.type_order_vehicle"
+    />
+    <label for="foshi" class="form-check-label mx-2">فروشی</label>
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="ejarei"
+      name="order_vehicle"
+      value="اجاره ای"
+      @input="order_data.type_order_vehicle"
+    />
+    <label for="ejarei" class="form-check-label mx-2">اجاره ای</label>
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="darkhasti"
+      name="order_vehicle"
+      value="درخواستی"
+      @input="order_data.type_order_vehicle"
+    />
+    <label for="darkhasti" class="form-check-label mx-2">درخواستی</label>
+  </div>
+  <div class="mt-5">
+    <span class="fw-bold">کارکرد</span>
+    <input
+      type="number"
+      class="input-group-text myinput"
+      placeholder="مثلا 1000"
+      v-model="order_data.karkard"
+    />
+    <div v-if="order_data.karkard">
+      <splite-number :number="order_data.karkard" @getNember="getkarkard" />
+      {{ strkarkard }} کیلومتر
+    </div>
+  </div>
+  <div class="mt-5">
+    <span class="fw-bold">قیمت</span>
+    <input
+      type="text"
+      class="input-group-text myinput"
+      placeholder="قیمت به تومان"
+      v-model="order_data.price"
+    />
+  </div>
+  <div v-if="order_data.price">
+    <splite-number :number="order_data.price" @getNember="getPrice" />
+    {{ strprice }} تومان
+  </div>
+  <div class="mt-5">
+    <label for="moaveze" class="text-muted p-3">مایلم معاوضه کنم</label>
+    <input
+      id="moaveze"
+      type="checkbox"
+      class="form-check-input"
+      value="true"
+      checked
+      v-model="order_data.moaveze"
+    />
+  </div>
 </template>
 
 <script>
 import { computed, inject, ref } from "@vue/runtime-core";
-import CllapseBtntwo from "../../UI/CllapseBtntwo.vue";
-import CllapseBtnone from "../../UI/CllapseBtnone.vue";
+import SpliteNumber from "../../UI/SpliteNumber.vue";
+
 export default {
-  components: {
-    CllapseBtntwo,
-    CllapseBtnone,
-  },
+  SpliteNumber,
+  components: {},
   setup() {
     const order_data = inject("order_data");
     const group_subitem_name = computed(() => order_data.group_subitem_name);
-    const khodroMarks = computed(() => order_data.subItem.price);
-    const khodroPrice_items = ref(["قیمت", "حداقل", "حداکثر"]);
-    const type_advMarks = ["فروشی", "درخواستی"];
-    const type_adv_items = ref(["نوع آگهی", "فروشی یا درخواستی"]);
-    const brande_motorMarks = computed(() => order_data.subItem.brande_motor);
-    const brande_motor_items = ref("برند");
-    const yearsofbuild_vehicleMarks = computed(
-      () => order_data.subItem.yearsofbuild_vehicle
-    );
-    const yearsofbuild_vehicle_items = ref(["سال ساخت", "از", "تا"]);
 
+    const strprice = ref("");
+    function getPrice(num) {
+      strprice.value = num;
+    }
 
-    const del_tavafoghi = computed(() => order_data.del_tavafoghi);
-    const tormajazi = computed(() => order_data.tormajazi);
+     const strkarkard = ref("");
+    function getkarkard(num) {
+      strkarkard.value = num;
+    }
 
-    function conTavafoghiFn() {
-      order_data.del_tavafoghi = !order_data.del_tavafoghi;
-    }
-    function conTormajaziFn() {
-      order_data.tormajazi = !order_data.tormajazi;
-    }
-    /*
-vadie_melk: "",
-      ejare_melk: "",
-      vadie_ejare_melk: "",
-      vadie_tejari: "",
-      ejare_tejari: "",
- */
-    function minp(minprice) {
-      order_data.minprice = minprice;
-    }
-    function maxp(maxprice) {
-      order_data.maxprice = maxprice;
-    }
-    function minyearsofbuild_vehicle(yearsofbuild_vehicle) {
-      order_data.minyearsofbuild_vehicle = yearsofbuild_vehicle;
-    }
-    function maxyearsofbuild_vehicle(yearsofbuild_vehicle) {
-      order_data.maxyearsofbuild_vehicle = yearsofbuild_vehicle;
-    }
-    function adviser(adviser_melk) {
-      order_data.adviser_melk = adviser_melk;
-    }
-    function type_advFn(type_adv) {
-      order_data.type_adv = type_adv;
-    }
-    
-    function brande_motorFn(brande_motor) {
-      order_data.brande_motor = brande_motor;
-    }
     return {
       group_subitem_name,
 
-      khodroMarks,
-      khodroPrice_items,
-
-      minp,
-      maxp,
-      adviser,
-      del_tavafoghi,
-      conTavafoghiFn,
-      tormajazi,
-      conTormajaziFn,
-      type_advMarks,
-      type_adv_items,
-      type_advFn,
-
-      brande_motorMarks,
-      brande_motor_items,
-      brande_motorFn,
-      yearsofbuild_vehicleMarks,
-      yearsofbuild_vehicle_items,
-      maxyearsofbuild_vehicle,
-      minyearsofbuild_vehicle,
+      strprice,
+      getPrice,
+      strkarkard,
+      getkarkard
     };
   },
 };

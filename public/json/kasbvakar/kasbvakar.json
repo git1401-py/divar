@@ -12,11 +12,5 @@
     "name": "عمده فروشی",
     "subItem":"no",
     "path":"kasbvakar/omdeFroshi.json"
-  },
-  {
-    "id_catogery": 9,
-    "id": 3,
-    "name": "متفرقه",
-    "path":"kasbvakar/kasbvakar.json"
   }
 ]

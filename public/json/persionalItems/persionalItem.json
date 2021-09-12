@@ -38,13 +38,5 @@
     "subItem":"no",
     "path":"persionalItems/lavazemTahrir.json"
 
-  },
-  {
-    "id_catogery": 6,
-    "id": 6,
-    "name": "متفرقه",
-    "subItem":"",
-    "path":"persionalItems/persionalItem.json"
-
   }
 ]
