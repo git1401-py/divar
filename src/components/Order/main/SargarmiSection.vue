@@ -26,30 +26,29 @@
   <div class="" v-if="group_item_name == 'اسباب بازی'">
     <toys />
   </div>
-  <cllapse-btntwo
-    :price_items="sargarmi_price_items"
-    :marks="sargarmi_priceMarks"
-    @minp="minp"
-    @maxp="maxp"
-    id="sargarmi_price"
-    exm="100,000"
-    txt="تومان"
-  />
-
-  <hr />
-  <moving-btn
-    :conValue="del_tavafoghi"
-    @conFn="conTavafoghiFn"
-    title=" حذف توافقی ها"
-  />
-  <hr />
-  <cllapse-btnone
-    :data_items="moaveze_items"
-    :marks="moavezeMarks"
-    @dataFn="moavezeFn"
-    id="moaveze"
-    exm="نمایش معاوضه ها"
-  />
+  <div class="mt-5">
+    <span class="fw-bold">قیمت</span>
+    <input
+      type="text"
+      class="input-group-text myinput"
+      placeholder="قیمت به تومان"
+      v-model="order_data.price"
+    />
+  </div>
+  <div v-if="order_data.price">
+    <splite-number :number="order_data.price" @getNember="getPrice" />
+    {{ strprice }} تومان
+  </div>
+  <div class="mt-5">
+    <label for="moaveze" class="text-muted px-3">مایلم معاوضه کنم</label>
+    <input
+      id="moaveze"
+      type="checkbox"
+      class="form-check-input"
+      value="true"
+      v-model="order_data.moaveze"
+    />
+  </div>
 </template>
 
 <script>
@@ -64,9 +63,8 @@ import kolekson from "./sargarmi/kolekson.vue";
 import music from "./sargarmi/music.vue";
 import varzesh from "./sargarmi/varzesh.vue";
 import toys from "./sargarmi/toys.vue";
-import CllapseBtntwo from "../UI/CllapseBtntwo.vue";
-import CllapseBtnone from "../UI/CllapseBtnone.vue";
-import MovingBtn from "../UI/MovingBtn.vue";
+import SpliteNumber from "../UI/SpliteNumber"
+
 export default {
   components: {
     blit,
@@ -78,64 +76,20 @@ export default {
     music,
     varzesh,
     toys,
-CllapseBtntwo,
-    CllapseBtnone,
-    MovingBtn,
+    SpliteNumber
   },
   setup() {
-     const order_data = inject("order_data");
+    const order_data = inject("order_data");
     const group_item_name = computed(() => order_data.group_item_name);
-    const sargarmi_priceMarks = computed(() => order_data.subItem.sargarmi_price);
-    const sargarmi_price_items = ref(["قیمت", "حداقل", "حداکثر"]);
-
-
-
-    const moavezeMarks = ["نمایش فقط معاوضه ها", "حذف معاوشه ها"];
-    const moaveze_items = ref("نمایش  معاوضه ها");
-
-    const del_tavafoghi = computed(() => order_data.del_tavafoghi);
-
-    function conTavafoghiFn() {
-      order_data.del_tavafoghi = !order_data.del_tavafoghi;
-    }
-    /*
-vadie_melk: "",
-      ejare_melk: "",
-      vadie_ejare_melk: "",
-      vadie_tejari: "",
-      ejare_tejari: "",
- */
-    function minp(minprice) {
-      order_data.minprice = minprice;
-    }
-    function maxp(maxprice) {
-      order_data.maxprice = maxprice;
-    }
-
-   
-    
-    function moavezeFn(moaveze) {
-      order_data.moaveze = moaveze;
+    const strprice = ref("");
+    function getPrice(num) {
+      strprice.value = num;
     }
     return {
-
-      sargarmi_priceMarks,
-      sargarmi_price_items,
-
-      minp,
-      maxp,
-      
-
-      del_tavafoghi,
-      conTavafoghiFn,
-     
-      
-
-
-      moavezeMarks,
-      moaveze_items,
-      moavezeFn,
-      group_item_name
+      order_data,
+      group_item_name,
+      strprice,
+      getPrice,
     };
   },
 };
