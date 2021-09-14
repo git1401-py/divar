@@ -1,50 +1,51 @@
 <template>
-  <cllapse-btnone
-    :data_items="jens_child_items"
-    :marks="jens_childMarks"
-    @dataFn="jens_childFn"
-    id="jens_child"
-    exm="پسرانه یا دخترانه"
-  />
-
-  <hr />
+  <div class="mt-3">
+    <div class="fw-bold mb-3">نوع کالا</div>
+    <label for="zanane" class="form-check-label mx-2">دخترانه</label>
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="zanane"
+      name="jens_child"
+      value="دخترانه"
+      @input="order_data.jens_child"
+    />
+    <label for="mardane" class="form-check-label mx-2">پسرانه</label>
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="mardane"
+      name="jens_child"
+      value="پسرانه"
+      @input="order_data.jens_child"
+    />
+    <label for="dokhtaranepesarane" class="form-check-label mx-2"
+      >پسرانه و دخترانه</label
+    >
+    <input
+      type="radio"
+      class="form-check-input ms-5"
+      id="dokhtaranepesarane"
+      name="jens_child"
+      value="پسرانه و دخترانه"
+      @input="order_data.jens_child"
+    />
+  </div>
 </template>
 
 <script>
-import { computed, ref } from "@vue/reactivity";
-import CllapseBtnone from "../../UI/CllapseBtnone.vue";
+import { computed } from "@vue/reactivity";
 
 import { inject } from "@vue/runtime-core";
 
 export default {
-  components: {
-    CllapseBtnone,
-  },
+  components: {},
   setup() {
     const order_data = inject("order_data");
     const group_subitem_name = computed(() => order_data.group_subitem_name);
 
-    const jens_childMarks = computed(() => order_data.subItem.jens_child);
-    const jens_child_items = ref("دخترانه یا پسرانه");
-
-
-    // **********************
-
-    function jens_childFn(jens_child) {
-      order_data.jens_child = jens_child;
-    }
-    // *****************
-    
     return {
-        // **********one
-      jens_childMarks,
-      jens_child_items,
-      jens_childFn,
-    
-    // ****two
-
-    // *******moving
-
+      order_data,
       group_subitem_name,
     };
   },

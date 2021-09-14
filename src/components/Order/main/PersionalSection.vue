@@ -24,7 +24,7 @@
       v-model="order_data.viewMobile"
     />
   </div>
-  <div class="mt-5">
+<div class="mt-5">
     <span class="fw-bold">وضعیت</span>
     <select
       class="form-select form-select-sm text-secondary py-2 pe-4"
@@ -56,7 +56,7 @@
     {{ strprice }} تومان
   </div>
   <div class="mt-5">
-    <label for="moaveze" class="text-muted p-3">مایلم معاوضه کنم</label>
+    <label for="moaveze" class="text-muted px-3">مایلم معاوضه کنم</label>
     <input
       id="moaveze"
       type="checkbox"
@@ -65,19 +65,17 @@
       v-model="order_data.moaveze"
     />
   </div>
-  
- 
 </template>
 
 <script>
-import { computed } from "@vue/reactivity";
+import { computed, ref } from "@vue/reactivity";
 import { inject } from "@vue/runtime-core";
 import KifvaKafsh from "./persionalItems/KifvaKafsh.vue";
 import Tazin from "./persionalItems/Tazin.vue";
 import Araieshi from "./persionalItems/Araieshi.vue";
 import Child from "./persionalItems/Child.vue";
 import LavazemTahrir from "./persionalItems/LavazemTahrir.vue";
-import SpliteNumber from "../UI/SpliteNumber.vue";
+import SpliteNumber from "../UI/SpliteNumber"
 
 export default {
   components: {
@@ -92,11 +90,16 @@ export default {
     const order_data = inject("order_data");
     const group_item_name = computed(() => order_data.group_item_name);
     const statuses = computed(() => order_data.subItem.status);
-
+    const strprice = ref("");
+    function getPrice(num) {
+      strprice.value = num;
+    }
     return {
-      group_item_name,
       order_data,
+      group_item_name,
       statuses,
+      strprice,
+      getPrice,
     };
   },
 };
