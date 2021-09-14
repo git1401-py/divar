@@ -14,6 +14,7 @@
     </div>
   <div class="mt-5">
     <div class="fw-bold mb-3">آگهی‌دهنده</div>
+    <label for="shakhsi" class="form-check-label mx-2">شخصی</label>
     <input
       type="radio"
       class="form-check-input ms-5"
@@ -22,7 +23,7 @@
       value="شخصی"
       @input="order_data.adviser"
     />
-    <label for="shakhsi" class="form-check-label mx-2">شخصی</label>
+    <label for="moshaver" class="form-check-label mx-2">مشاور املاک</label>
     <input
       type="radio"
       class="form-check-input ms-5"
@@ -31,7 +32,6 @@
       value="مشاور املاک"
       @input="order_data.adviser"
     />
-    <label for="moshaver" class="form-check-label mx-2">مشاور املاک</label>
     
   </div>
 

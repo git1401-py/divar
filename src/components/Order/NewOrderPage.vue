@@ -8,7 +8,6 @@
       >
     </div>
     <div class="mt-4">
-
       <span class="fw-bolder">شهر</span>
       <cllapse-btnone
         :data_items="city_items"
@@ -19,7 +18,6 @@
       />
     </div>
     <div class="mt-4">
-
       <span class="fw-bolder">عکس آگهی</span>
       <p class="text-muted py-1">
         عکس‌هایی از فضای داخل و بیرون ملک اضافه کنید. آگهی‌های دارای عکس تا «۳
@@ -37,18 +35,29 @@
       />
     </div>
     <!-- {{order_data.subItem}} -->
-    <div v-if="order_data.group_name == 'املاک'" ><melk-section /></div>
-    <div v-if="order_data.group_name == 'وسایل نقلیه'" ><vehicles-section /></div>
-    <div v-if="order_data.group_name == 'لوازم الکتریکی'" ><electrisite-section /></div>
-    <div v-if="order_data.group_name == 'مربوط به خانه'" ><house-section /></div>
-    <div v-if="order_data.group_name == 'خدمات'"><khadamats-section  /></div>
-    <div v-if="order_data.group_name == 'وسایل شخصی'" ><persional-section /></div>
-    <div v-if="order_data.group_name == 'سرگرمی و فراعت'" ><sargarmi-section /></div>
+    <div v-if="order_data.group_name == 'املاک'"><melk-section /></div>
+    <div v-if="order_data.group_name == 'وسایل نقلیه'">
+      <vehicles-section />
+    </div>
+    <div v-if="order_data.group_name == 'لوازم الکتریکی'">
+      <electrisite-section />
+    </div>
+    <div v-if="order_data.group_name == 'مربوط به خانه'"><house-section /></div>
+    <div v-if="order_data.group_name == 'خدمات'"><khadamats-section /></div>
+    <div v-if="order_data.group_name == 'وسایل شخصی'">
+      <persional-section />
+    </div>
+    <div v-if="order_data.group_name == 'سرگرمی و فراعت'">
+      <sargarmi-section />
+    </div>
     <div v-if="order_data.group_name == 'اجتماعی'"><social-section /></div>
-    <div v-if="order_data.group_name == 'برای کسب و کار'"><kasbvakar-section /></div>
-    <div v-if="order_data.group_name == 'استخدام و کاریابی'"><estekhdam-section /></div>
+    <div v-if="order_data.group_name == 'برای کسب و کار'">
+      <kasbvakar-section />
+    </div>
+    <div v-if="order_data.group_name == 'استخدام و کاریابی'">
+      <estekhdam-section />
+    </div>
     <div class="mt-5">
-
       <span class="fw-bold">شمارهٔ موبایل</span>
       <p class="text-muted py-1">
         کد تأیید به شمارهٔ موبایل شما ارسال خواهد شد. تماس و چت نیز با این
@@ -59,19 +68,52 @@
         type="text"
         class="input-group-text myinput"
         placeholder="مثلا 09112223344"
-         v-model="order_data.mobile"
+        v-model="order_data.mobile"
       />
     </div>
     <div class="mt-5">
-
-      <span class="text-muted p-3">چت دیوار فعال شود </span>
-      <input type="checkbox" class="form-check-input" value="chat" checked v-model="order_data.chat">
-      
+      <label for="chat" class="text-muted px-3">چت دیوار فعال شود </label>
+      <input
+      id="chat"
+        type="checkbox"
+        class="form-check-input"
+        value="true"
+        v-model="order_data.chat"
+      />
     </div>
-    
+
     <div class="mt-5">
-        <button class="btn btn-outline-light py-3 ms-3" style="width:45%;border:1px solid #000;color:#000;">انصراف</button>
-        <button class="btn btn-danger py-3" style="width:45%">ارسال آگهی</button>
+      <span class="fw-bold">عنوان آگهی</span>
+      <p class="text-muted py-1">
+        {{ aboutTitle.title }}
+      </p>
+      <input
+        type="text"
+        class="input-group-text myinput"
+        :placeholder="aboutTitle.title_ex"
+        v-model="order_data.title"
+      />
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">توضیحات آگهی</span>
+      <p class="text-muted py-1">
+        {{ aboutTitle.explation }}
+      </p>
+      <textarea
+        type="text"
+        class="input-group-text myinput"
+        :placeholder="aboutTitle.explation_ex"
+        v-model="order_data.explation"
+      ></textarea>
+    </div>
+    <div class="mt-5">
+      <button
+        class="btn btn-outline-light py-3 ms-3"
+        style="width: 45%; border: 1px solid #000; color: #000"
+      >
+        انصراف
+      </button>
+      <button class="btn btn-danger py-3" style="width: 45%">ارسال آگهی</button>
     </div>
   </div>
 </template>
@@ -101,9 +143,12 @@ export default {
     PersionalSection,
     SargarmiSection,
     SocialSection,
-    VehiclesSection,},
+    VehiclesSection,
+  },
   setup(props, { emit }) {
     const order_data = inject("order_data");
+    const aboutTitle = inject("aboutTitle");
+    
 
     // const cityMarks = computed(() => order_data.subItem.city);
     const cityMarks = [
@@ -149,6 +194,7 @@ export default {
     return {
       Resetgroup_subitem_name,
       order_data,
+      aboutTitle,
 
       cityMarks,
       city_items,
@@ -173,9 +219,9 @@ export default {
 .itembtn:hover {
   background: rgb(241, 226, 229);
 }
-.myinput{
-    text-align: right !important;
-    width:100%;
-    background:#fff !important;
+.myinput {
+  text-align: right !important;
+  width: 100%;
+  background: #fff !important;
 }
 </style>

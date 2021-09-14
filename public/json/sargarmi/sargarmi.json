@@ -10,7 +10,7 @@
   {
     "id_catogery": 7,
     "id": 2,
-    "name": "تور و چادر",
+    "name": "تور و چارتر",
     "subItem":"no",
     "path":"sargarmi/torvaChador.json"
 
@@ -70,6 +70,12 @@
     "name": "اسباب بازی",
     "subItem":"no",
     "path":"sargarmi/toys.json"
+
+  },
+  {
+    "id_catogery": 7,
+    "id": 10,
+    "name": "متفرقه سرگرمی"
 
   }
 ]

@@ -1,6 +1,7 @@
 <template>
   <div class="mt-5">
     <div class="fw-bold mb-3">نوع آگهی</div>
+    <label for="foshi" class="form-check-label mx-2">فروشی</label>
     <input
       type="radio"
       class="form-check-input ms-5"
@@ -9,7 +10,7 @@
       value="فروشی"
       @input="order_data.type_order_vehicle"
     />
-    <label for="foshi" class="form-check-label mx-2">فروشی</label>
+    <label for="ejarei" class="form-check-label mx-2">اجاره ای</label>
     <input
       type="radio"
       class="form-check-input ms-5"
@@ -18,7 +19,7 @@
       value="اجاره ای"
       @input="order_data.type_order_vehicle"
     />
-    <label for="ejarei" class="form-check-label mx-2">اجاره ای</label>
+    <label for="darkhasti" class="form-check-label mx-2">درخواستی</label>
     <input
       type="radio"
       class="form-check-input ms-5"
@@ -27,7 +28,6 @@
       value="درخواستی"
       @input="order_data.type_order_vehicle"
     />
-    <label for="darkhasti" class="form-check-label mx-2">درخواستی</label>
   </div>
   <div class="mt-5">
     <span class="fw-bold">قیمت</span>

@@ -14,6 +14,7 @@
     </div>
   <div class="mt-5">
     <div class="fw-bold mb-3">آگهی‌دهنده</div>
+    <label for="shakhsi" class="form-check-label mx-2">شخصی</label>
     <input
       type="radio"
       class="form-check-input ms-5"
@@ -22,7 +23,7 @@
       value="شخصی"
       @input="order_data.adviser"
     />
-    <label for="shakhsi" class="form-check-label mx-2">شخصی</label>
+    <label for="moshaver" class="form-check-label mx-2">مشاور املاک</label>
     <input
       type="radio"
       class="form-check-input ms-5"
@@ -31,7 +32,6 @@
       value="مشاور املاک"
       @input="order_data.adviser"
     />
-    <label for="moshaver" class="form-check-label mx-2">مشاور املاک</label>
     </div>
 
   <div class="mt-5">
@@ -154,7 +154,7 @@
       <option class="text-start" value="false">ندارد</option>
     </select>
   </div>
-  <div class="" v-if="group_subitem_name == 'آپارتمان'">
+  <div class="" v-if="group_subitem_name == 'آپارتمان'" >
     <div class="mt-5">
       <span class="fw-bold">طبقه </span>
       <select
@@ -414,7 +414,7 @@
 
     <hr />
   </div>
-  <div class="" v-if="group_subitem_name == 'خانه و ویلا'">
+  <div class="" v-if="group_subitem_name == 'خانه و ویلا'" >
        <!-- ************** -->
     <!-- Button trigger modal -->
     <div class="mt-5">
@@ -669,6 +669,8 @@ export default {
       if (order_data.garmaieshi_melk) index_element.value++;
       if (order_data.boilwater_melk) index_element.value++;
     }
+   
+   
     return {
       strspace,strvadie_melk,strejare_melk,
       getspace,getvadie_melk,getejare_melk,

@@ -11,31 +11,7 @@
   <div class="" v-if="group_item_name == 'موتور سیکلت و لوازم جانبی'">
     <motor />
   </div>
-  <div class="mt-5">
-    <span class="fw-bold">عنوان آگهی</span>
-    <p class="text-muted py-1">
-      در عنوان آگهی به موارد مهم و چشمگیر اشاره کنید.
-    </p>
-    <input
-      type="text"
-      class="input-group-text myinput"
-      placeholder="مثال: خودرو مزدا 3 مدل 89"
-      v-model="order_data.title"
-    />
-  </div>
-  <div class="mt-5">
-    <span class="fw-bold">توضیحات آگهی</span>
-    <p class="text-muted py-1">
-      جزئیات و نکات قابل توجه آگهی خود را کامل و دقیق بنویسید. درج شماره موبایل
-      در متن آگهی مجاز نیست .
-    </p>
-    <textarea
-      type="text"
-      class="input-group-text myinput"
-      placeholder=""
-      v-model="order_data.explation"
-    ></textarea>
-  </div>
+  
 </template>
 
 <script>

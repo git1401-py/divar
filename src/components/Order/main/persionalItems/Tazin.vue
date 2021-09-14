@@ -3,6 +3,7 @@
   <div class="" v-if="group_subitem_name == 'ساعت'"></div>
   <div class="" v-if="group_subitem_name == 'جواهرات'"></div>
   <div class="" v-if="group_subitem_name == 'بدلیجات'"></div>
+  
 </template>
 
 <script>
@@ -14,7 +15,7 @@ import { computed } from "@vue/reactivity";
 import { inject } from "@vue/runtime-core";
 
 export default {
-  components: {
+  components: { 
     // CllapseBtnone,
     // CllapseBtntwo,
     // MovingBtn

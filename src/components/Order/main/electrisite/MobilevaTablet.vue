@@ -1,188 +1,380 @@
 <template>
   <div class="" v-if="group_subitem_name == 'موبایل'">
-    <cllapse-btnone
-      :data_items="brand_mobile_items"
-      :marks="brand_mobileMarks"
-      @dataFn="brand_mobileFn"
-      id="brand_mobile"
-      exm="تعیین برند مدل"
-    />
-    <hr />
-    <cllapse-btnone
-      :data_items="esalatBrand_items"
-      :marks="esalatBrandMarks"
-      @dataFn="esalatBrandFn"
-      id="esalatBrand"
-      exm="انتخاب"
-    />
-    <hr />
-    <cllapse-btnone
-      :data_items="simNumber_items"
-      :marks="simNumberMarks"
-      @dataFn="simNumberFn"
-      id="simNumber"
-      exm="انتخاب"
-    />
-    <hr />
-    <cllapse-btnone
-      :data_items="Rom_mobile_items"
-      :marks="Rom_mobileMarks"
-      @dataFn="Rom_mobileFn"
-      id="Rom_mobile"
-      exm="انتخاب"
-    />
-    <hr />
-    <cllapse-btnone
-    :data_items="Ram_mobile_items"
-      :marks="Ram_mobileMarks"
-      @dataFn="Ram_mobileFn"
-      id="Ram_mobile"
-      exm="انتخاب"
-    />
-    <hr />
-    <cllapse-btnone
-      :data_items="color_electric_items"
-      :marks="color_electricMarks"
-      @dataFn="color_electricFn"
-      id="color_electric"
-      exm="انتخاب"
-    />
-    <hr />
+    <div class="mt-5">
+      <span class="fw-bold">اطلاعات الزامی</span>
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">برند و مدل</span>
+      <!-- ************** -->
+      <!-- Button trigger modal -->
+      <div class="mt-5">
+        <button
+          type="button"
+          class="
+            py-2
+            px-3
+            myinput
+            d-flex
+            justify-content-between
+            align-items-center
+          "
+          style="border: 1px solid lightgray !important; border-radius: 5px"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <span>{{ order_data.mobiles }}</span>
+          <font-awesome-icon
+            :icon="['fa', 'chevron-left']"
+            style="color: lightgray"
+          />
+          <!-- <input
+            type="text"
+            class="input-group-text myinput"
+            :placeholder="order_data.mobiels"
+            v-model="order_data.mobiels"
+            disabled
+          /> -->
+        </button>
+      </div>
+
+      <!-- Modal -->
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="mobiles"
+        aria-hidden="true"
+      >
+        <div
+          class="
+            modal-dialog
+            modal-fullscreen-md-down
+            modal-dialog-centered
+            modal-dialog-scrollable
+          "
+        >
+          <div class="modal-content">
+            <div class="d-flex justify-content-between align-items-center p-4">
+              <h5 class="modal-title" id="mobiles">نام برند و مدل</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="w-100 border-bottom pb-4">
+              <input
+                type="text"
+                class="input-group-text myinput"
+                placeholder="جستجو در برندها و مدل ها"
+                v-model="searchTerm"
+              />
+            </div>
+            <div class="modal-body p-0 pt-0" style="width: 100%">
+              <ul>
+                <template v-if="brand == 'name'">
+                  <li
+                    v-for="mobile in mobiles"
+                    :key="mobile"
+                    @click="getTypes(mobile)"
+                    class="
+                      li-design
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                    "
+                  >
+                    <!--   -->
+                    <span>{{ mobile.name }}</span>
+                    <font-awesome-icon
+                      :icon="['fa', 'chevron-left']"
+                      style="color: lightgray"
+                    />
+                  </li>
+                </template>
+                <template v-if="brand == 'type'">
+                  <li @click="backBrands()" class="li-design">
+                    <font-awesome-icon
+                      :icon="['fa', 'chevron-right']"
+                      style="color: lightgray"
+                    />
+                    <span class="me-3">همه برندها</span>
+                  </li>
+                  <li
+                    v-for="item in types_mobile"
+                    :key="item"
+                    @click="sendBrand(item)"
+                    class="li-design"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <!-- data-bs-dismiss="modal"
+                    aria-label="Close" -->
+                    <!--   -->
+                    <span>{{ item }}</span>
+                  </li>
+                </template>
+                <template v-if="brand == 'searchtype'">
+                  <li @click="backBrands()" class="li-design">
+                    <font-awesome-icon
+                      :icon="['fa', 'chevron-right']"
+                      style="color: lightgray"
+                    />
+                    <span class="me-3">همه برندها</span>
+                  </li>
+                  <li
+                    v-for="item in filtermobiles"
+                    :key="item"
+                    @click="sendBrand(item)"
+                    class="li-design"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <!-- data-bs-dismiss="modal"
+                    aria-label="Close" -->
+                    <!--   -->
+                    <span>{{ item }}</span>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Modal -->
+    </div>
+
+    <div class="mt-5">
+      <span class="fw-bold">تعداد سیم‌کارت</span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.simNumber"
+      >
+        <option value="" selected disabled>انتخاب</option>
+        <option class="text-start" value="1">1</option>
+        <option class="text-start" value="2">2</option>
+        <option class="text-start" value="3">3 وبیشتر</option>
+      </select>
+    </div>
+
+    <div class="mt-5">
+      <div class="fw-bold mb-3">اصالت برند</div>
+      <label for="asl" class="form-check-label mx-2">اصل</label>
+      <input
+        type="radio"
+        class="form-check-input ms-5"
+        id="asl"
+        name="esalatBrand"
+        value="اصل"
+        @input="order_data.esalatBrand"
+      />
+      <label for="nasl" class="form-check-label mx-2">غیر اصل</label>
+      <input
+        type="radio"
+        class="form-check-input ms-5"
+        id="nasl"
+        name="esalatBrand"
+        value="غیر اصل"
+        @input="order_data.esalatBrand"
+      />
+    </div>
+    <div class="mt-5">
+      <span class="fw-bold">اطلاعات تکمیلی</span>
+      <p class="text-muted">
+        تکمیل این اطلاعات، کیفیت آگهی را افزایش می‌دهد و به خریداران کمک می‌کند
+        آگهی را با فیلترهای جستجو پیدا کنند.
+      </p>
+    </div>
+
+    <div class="mt-5">
+      <span class="fw-bold">حافظهٔ داخلی</span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.Rom_mobile"
+      >
+        <option value="" selected disabled>انتخاب</option>
+        <option
+          class="text-start"
+          v-for="Rom_mobile in Rom_mobiles"
+          :key="Rom_mobile"
+          :value="Rom_mobile"
+        >
+          {{ Rom_mobile }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mt-5">
+      <span class="fw-bold">مقدار رم</span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.Ram_mobile"
+      >
+        <option value="" selected disabled>انتخاب</option>
+        <option
+          class="text-start"
+          v-for="Ram_mobile in Ram_mobiles"
+          :key="Ram_mobile"
+          :value="Ram_mobile"
+        >
+          {{ Ram_mobile }}
+        </option>
+      </select>
+    </div>
+
   </div>
   <div class="" v-if="group_subitem_name == 'تبلت'">
-    <cllapse-btnone
-      :data_items="builder_tablet_items"
-      :marks="builder_tabletMarks"
-      @dataFn="builder_tabletFn"
-      id="builder_tablet"
-      exm="مثلا سامسونگ"
-    />
-    <hr />
+<div class="mt-5">
+      <span class="fw-bold">سازنده</span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.builder_tablet"
+      >
+        <option value="" selected disabled>انتخاب</option>
+        <option
+          class="text-start"
+          v-for="builder_tablet in builder_tablets"
+          :key="builder_tablet"
+          :value="builder_tablet"
+        >
+          {{ builder_tablet }}
+        </option>
+      </select>
+    </div>
+
+  
+    <div class="mt-5">
+      <label for="simSuport" class="text-muted px-3">پشتیبانی از سیم‌کارت</label>
+      <input
+      id="simSuport"
+        type="checkbox"
+        class="form-check-input"
+        value="true"
+        v-model="order_data.simSuport"
+      />
+    </div>
   </div>
   <div class="" v-if="group_subitem_name == 'لوازم جانبی موبایل و تبلت'"></div>
   <div class="" v-if="group_subitem_name == 'سیم‌کارت'">
-    <cllapse-btnone
-      :data_items="simType_items"
-      :marks="simTypeMarks"
-      @dataFn="simTypeFn"
-      id="simType"
-      exm="نوع سیمکارت"
-    />
-    <hr />
+    
+    <div class="mt-5">
+      <div class="fw-bold mb-3">نوع سیم‌کارت</div>
+      <label for="hamrah" class="form-check-label mx-2">همراه اول</label>
+      <input
+        type="radio"
+        class="form-check-input ms-5"
+        id="hamrah"
+        name="simType"
+        value="همراه اول"
+        @input="order_data.simType"
+      />
+      <label for="iransel" class="form-check-label mx-2">ایرانسل</label>
+      <input
+        type="radio"
+        class="form-check-input ms-5"
+        id="iransel"
+        name="simType"
+        value="ایرانسل"
+        @input="order_data.simType"
+      />
+      <label for="raitel" class="form-check-label mx-2">رایتل</label>
+      <input
+        type="radio"
+        class="form-check-input ms-5"
+        id="raitel"
+        name="simType"
+        value="رایتل"
+        @input="order_data.simType"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import { computed, ref } from "@vue/reactivity";
-import CllapseBtnone from "../../UI/CllapseBtnone.vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-import { inject } from "@vue/runtime-core";
+import { inject, watch } from "@vue/runtime-core";
 
 export default {
-  components: {
-    CllapseBtnone,
-  },
+  components: { FontAwesomeIcon },
   setup() {
     const order_data = inject("order_data");
+    order_data.mobiles = "نام برند و مدل";
+    const searchTerm = ref("");
     const group_subitem_name = computed(() => order_data.group_subitem_name);
+    const mobiles = computed(() => order_data.subItem.mobiles);
+    const brand_mobile = computed(() => order_data.subItem.brand_mobile);
+    const filtermobiles = computed(() => {
+      return brand_mobile.value.filter((product) => {
+        return (
+          product.toLowerCase().indexOf(searchTerm.value.toLowerCase()) != -1
+        );
+      });
+    });
+    const Rom_mobiles = computed(() => order_data.subItem.Rom_mobile);
+    const Ram_mobiles = computed(() => order_data.subItem.Ram_mobile);
+    const builder_tablets = computed(() => order_data.subItem.builder_tablet);
 
-    const brand_mobileMarks = computed(() => order_data.subItem.brand_mobile);
-    const brand_mobile_items = ref("برند و مدل");
-
-    const esalatBrandMarks = computed(() => order_data.subItem.esalatBrand);
-    const esalatBrand_items = ref("اصالت برند");
-
-    const simNumberMarks = computed(() => order_data.subItem.simNumber);
-    const simNumber_items = ref("تعداد سیم کارت");
-
-    const Rom_mobileMarks = computed(() => order_data.subItem.Rom_mobile);
-    const Rom_mobile_items = ref("حافظه داخلی");
-
-    const Ram_mobileMarks = computed(() => order_data.subItem.Ram_mobile);
-    const Ram_mobile_items = ref("مقدار رم");
-
-    const color_electricMarks = computed(() => order_data.subItem.color_electric);
-    const color_electric_items = ref("رنگ");
-
-    const builder_tabletMarks = computed(() => order_data.subItem.builder_tablet);
-    const builder_tablet_items = ref("برند");
-
-    const simTypeMarks = computed(() => order_data.subItem.simType);
-    const simType_items = ref("نوع سیمکارت");
-
-    // **********************
-
-    function brand_mobileFn(brand_mobile) {
-      order_data.brand_mobile = brand_mobile;
+    watch(searchTerm, () => {
+      if (searchTerm.value == "") {
+        order_data.mobiles = "نام برند و مدل";
+        brand.value = "name";
+      } else {
+        brand.value = "searchtype";
+      }
+    });
+    const types_mobile = ref([]);
+    const brand = ref("name");
+    function getTypes(mobile) {
+      types_mobile.value = mobile.type;
+      order_data.mobiles = mobile.name;
+      console.log("mobile.name", mobile.name);
+      console.log(" order_data.mobiles", order_data.mobiles);
+      brand.value = "type";
+      searchTerm.value = "";
     }
-
-    function esalatBrandFn(esalatBrand) {
-      order_data.esalatBrand = esalatBrand;
+    function backBrands() {
+      brand.value = "name";
+      searchTerm.value = "";
     }
-
-    function simNumberFn(simNumber) {
-      order_data.simNumber = simNumber;
+    function sendBrand(item) {
+      order_data.mobiles = item;
+      console.log(" order_data.mobiles", order_data.mobiles);
+      brand.value = "name";
     }
-
-    function Rom_mobileFn(Rom_mobile) {
-      order_data.Rom_mobile = Rom_mobile;
-    }
-
-    function Ram_mobileFn(Ram_mobile) {
-      order_data.Ram_mobile = Ram_mobile;
-    }
-
-    function color_electricFn(color_electric) {
-      order_data.color_electric = color_electric;
-    }
-
-    function builder_tabletFn(builder_tablet) {
-      order_data.builder_tablet = builder_tablet;
-    }
-
-    function simTypeFn(simType) {
-      order_data.simType = simType;
-    }
-    // *****************
-
     return {
-      // **********one
-      brand_mobileMarks,
-      brand_mobile_items,
-      brand_mobileFn,
-
-      esalatBrandMarks,
-      esalatBrand_items,
-      esalatBrandFn,
-
-      simNumberMarks,
-      simNumber_items,
-      simNumberFn,
-
-      Rom_mobileMarks,
-      Rom_mobile_items,
-      Rom_mobileFn,
-
-      Ram_mobileMarks,
-      Ram_mobile_items,
-      Ram_mobileFn,
-
-      color_electricMarks,
-      color_electric_items,
-      color_electricFn,
-
-      builder_tabletMarks,
-      builder_tablet_items,
-      builder_tabletFn,
-
-      simTypeMarks,
-      simType_items,
-      simTypeFn,
-
+      order_data,
       group_subitem_name,
+      mobiles,
+      getTypes,
+      backBrands,
+      sendBrand,
+      brand,
+      types_mobile,
+      searchTerm,
+      filtermobiles,
+      Rom_mobiles,
+      Ram_mobiles,
+      builder_tablets,
     };
   },
 };
 </script>
 
-<style></style>
+<style scoped>
+.li-design {
+  /* background: greenyellow; */
+  cursor: pointer;
+  list-style: none;
+  margin-top: 4px;
+  padding: 8px 4px;
+  border-bottom: 2px solid lightgray;
+}
+</style>

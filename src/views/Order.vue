@@ -32,7 +32,7 @@
     </div>
   </div>
   <div v-else class="mt-5 pt-5">
-    <new-order-page @Resetgroup_subitem_name="Resetgroup_subitem_name"/>
+    <new-order-page @Resetgroup_subitem_name="Resetgroup_subitem_name" />
   </div>
 </template>
 
@@ -42,6 +42,8 @@ import { useStore } from "vuex";
 import { onUpdated, provide, watch } from "@vue/runtime-core";
 import OrderPage from "../components/Order/UI/OrderPage.vue";
 import NewOrderPage from "../components/Order/NewOrderPage.vue";
+import useClear from "../components/Order/main/useClear.js";
+import useAboutTitle from "../components/Order/main/useAboutTitle";
 
 export default {
   components: { OrderPage, NewOrderPage },
@@ -62,14 +64,16 @@ export default {
       // electrisite
       type_mobile: "",
       brand_mobile: "",
+      mobiles: "",
       builder_tablet: "",
       type_console: "",
-      simNumber: "",
       esalatBrand: "",
       Rom_mobile: "",
       Ram_mobile: "",
       sellType: "",
       simType: "",
+      simNumber: "",
+      simSuport: "",
       builder_pc: "",
       HDD_pc: "",
       Ram_pc: "",
@@ -100,7 +104,7 @@ export default {
       jenseBody: "",
       jenseRokesh: "",
       numberNeshiman: "",
-      zemanat: "",
+      zemanat: false,
 
       // persional
       type_araiesh: "",
@@ -112,7 +116,7 @@ export default {
       type_javaher: "",
       type_badalijat: "",
       jenskala_javaher: "",
-      darRagMokhtalef: "",
+      darRagMokhtalef: false,
       tolidi: "",
 
       // vihicle
@@ -154,19 +158,17 @@ export default {
       anbar_melk: false,
       taeed_shode: false,
       sanad_edari: "",
-      sanad:"",
-
+      sanad: "",
       adviser: "",
+
       city: "",
       price: "",
       vadie_melk: "",
       ejare_melk: "",
-      vadie_ejare_melk:"",
-      vadie_tejari: "",
-      ejare_tejari: "",
-      vadie_ejare_tejari:"",
+      vadie_ejare_melk: "",
       status: "",
-      viewMobile: "",
+      chat: false,
+      viewMobile: false,
       just_img: false,
       just_imediate: false,
       del_tavafoghi: false,
@@ -176,7 +178,6 @@ export default {
       codemeli: "",
       title: "",
       explation: "",
-      chat: "",
     });
     provide("order_data", order_data);
     const pathing_module = ref("");
@@ -203,7 +204,7 @@ export default {
       order_data.subItem = computed(() => store.getters[pathing_module.value]);
     });
     async function Gettitle(title) {
-        catagoryname.value="items";
+      catagoryname.value = "items";
       order_data.group_name = title.title;
       await store.dispatch("items/fetchItems", title.path);
       if (order_data.group_name == "املاک") {
@@ -249,11 +250,26 @@ export default {
       order_data.group_item_name = item.name;
       await store.dispatch("subItems/fetchSubItems", item.path);
     }
+    const aboutTitle = reactive({
+      title: "",
+      title_ex: "",
+      explation:
+        "جزئیات و نکات قابل توجه آگهی خود را کامل و دقیق بنویسید. درج شماره موبایل در متن آگهی مجاز نیست .",
+      explation_ex: "",
+    });
+    provide("aboutTitle", aboutTitle);
+
     function Getsubitem(item) {
+      useClear(order_data);
       //   catagoryname.value = "subitems";
       order_data.group_subitem_name = item.name;
       newpageOrder.value = true;
+
+      // *********** aboutTitle ******
+      useAboutTitle(order_data,aboutTitle);
+      
     }
+
     function Resetgroup_name() {
       order_data.group_name = "";
       order_data.group_item_name = "";
@@ -273,10 +289,10 @@ export default {
     }
 
     async function fetchitems() {
-    //   await store.dispatch(
-    //     "items/allItems",
-    //     "vehicleDetails/fetchVehicleDetails"
-    //   );
+      //   await store.dispatch(
+      //     "items/allItems",
+      //     "vehicleDetails/fetchVehicleDetails"
+      //   );
     }
 
     async function allTitle() {
