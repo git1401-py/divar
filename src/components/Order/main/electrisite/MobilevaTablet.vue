@@ -226,10 +226,9 @@
         </option>
       </select>
     </div>
-
   </div>
   <div class="" v-if="group_subitem_name == 'تبلت'">
-<div class="mt-5">
+    <div class="mt-5">
       <span class="fw-bold">سازنده</span>
       <select
         class="form-select form-select-sm text-secondary py-2 pe-4"
@@ -248,11 +247,12 @@
       </select>
     </div>
 
-  
     <div class="mt-5">
-      <label for="simSuport" class="text-muted px-3">پشتیبانی از سیم‌کارت</label>
+      <label for="simSuport" class="text-muted px-3"
+        >پشتیبانی از سیم‌کارت</label
+      >
       <input
-      id="simSuport"
+        id="simSuport"
         type="checkbox"
         class="form-check-input"
         value="true"
@@ -262,7 +262,6 @@
   </div>
   <div class="" v-if="group_subitem_name == 'لوازم جانبی موبایل و تبلت'"></div>
   <div class="" v-if="group_subitem_name == 'سیم‌کارت'">
-    
     <div class="mt-5">
       <div class="fw-bold mb-3">نوع سیم‌کارت</div>
       <label for="hamrah" class="form-check-label mx-2">همراه اول</label>

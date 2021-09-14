@@ -1,90 +1,48 @@
 <template>
-  <cllapse-btnone
-    :data_items="status_items"
-    :marks="statusMarks"
-    @dataFn="statusFn"
-    id="status"
-    exm="انتخاب"
-  />
-  <hr />
-  <moving-btn
-    :conValue="anbar_melk"
-    @conFn="conAnbar_melkFn"
-    title="با انباری"
-  />
-  <hr />
-  <cllapse-btntwo
-    :price_items="roofs_items"
-    :marks="roofsMarks"
-    @minp="minRoof"
-    @maxp="maxRoof"
-    id="sellMelkRroofs"
-    exm="2"
-    txt=""
-  />
   <div class="" v-if="group_subitem_name == 'فیلم و موسیقی'"></div>
   <div class="" v-if="group_subitem_name == 'دوربین عکاسی و فیلم‌برداری'"></div>
   <div class="" v-if="group_subitem_name == 'پخش‌کننده همراه'"></div>
   <div class="" v-if="group_subitem_name == 'سیستم صوتی خانگی'"></div>
   <div class="" v-if="group_subitem_name == 'ویدئو و پخش کننده DVD'"></div>
-  <div class="" v-if="group_subitem_name == 'تلویزیون و پروژکتور'"></div>
+  <div class="" v-if="group_subitem_name == 'تلویزیون و پروژکتور'">
+    <div class="mt-5">
+      <span class="fw-bold">نوع کالا</span>
+      <select
+        class="form-select form-select-sm text-secondary py-2 pe-4"
+        aria-label=".form-select-sm example"
+        v-model="order_data.tv_p_type"
+      >
+        <option value="" selected disabled></option>
+        <option
+          class="text-start"
+          v-for="tv_p_type in tv_p_types"
+          :key="tv_p_type"
+          :value="tv_p_type"
+        >
+          {{ tv_p_type }}
+        </option>
+      </select>
+    </div>
+  </div>
   <div class="" v-if="group_subitem_name == 'دوربین مداربسته'"></div>
 </template>
 
 <script>
-import { computed, ref } from "@vue/reactivity";
-import CllapseBtntwo from "../../UI/CllapseBtntwo.vue";
-import CllapseBtnone from "../../UI/CllapseBtnone.vue";
-import MovingBtn from "../../UI/MovingBtn.vue";
+import { computed } from "@vue/reactivity";
 
 import { inject } from "@vue/runtime-core";
 
 export default {
-  components: {
-    CllapseBtnone,
-    CllapseBtntwo,
-    MovingBtn
-  },
+  components: {},
   setup() {
     const order_data = inject("order_data");
     const group_subitem_name = computed(() => order_data.group_subitem_name);
+    const tv_p_types = computed(() => order_data.subItem.tv_p_type);
 
-    const moavezeMarks = computed(() => order_data.subItem.electriciti_price);
-    const moaveze_items = ref(["", ""]);
-
-    const roofsMarks = computed(() => order_data.subItem.roof);
-    const roofs_items = ref(["طبقه", "حداقل", "حداکثر"]);
-
-    const anbar_melk = computed(() => order_data.anbar_melk);
-
-function conAnbar_melkFn() {
-      order_data.anbar_melk = !order_data.anbar_melk;
-    }
-    // **********************
-
-    function moavezeFn(moaveze) {
-      order_data.moaveze = moaveze;
-    }
-    // *****************
-    function minRoof(roofs) {
-      order_data.minroof_melk = roofs;
-    }
-    function maxRoof(roofs) {
-      order_data.maxroof_melk = roofs;
-    }
     return {
-        // **********one
-      moavezeMarks,
-      moaveze_items,
-      moavezeFn,
-    
-    // ****two
-      roofsMarks,roofs_items,minRoof,maxRoof,
-
-    // *******moving
-      anbar_melk,conAnbar_melkFn,
-
+      order_data,
       group_subitem_name,
+      tv_p_types,
     };
   },
 };

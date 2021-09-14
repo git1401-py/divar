@@ -22,6 +22,7 @@ const clear = (info) => {
   info.Ram_pc = "";
   info.cpu_pc = "";
   info.color_electric="";
+  info.tv_p_type="";
 
   // estekhdam
   info.typeHamkari = "";
@@ -47,7 +48,8 @@ const clear = (info) => {
   info.jenseBody = "";
   info.jenseRokesh = "";
   info.numberNeshiman = "";
-  info.zemanat = false;
+  info.zemanat = "";
+  info.type_abzar = "";
 
   // persional
   info.type_araiesh = "";

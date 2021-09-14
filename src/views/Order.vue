@@ -79,6 +79,7 @@ export default {
       Ram_pc: "",
       cpu_pc: "",
       color_electric: "",
+      tv_p_type:"",
 
       // estekhdam
       typeHamkari: "",
@@ -104,7 +105,8 @@ export default {
       jenseBody: "",
       jenseRokesh: "",
       numberNeshiman: "",
-      zemanat: false,
+      zemanat: "",
+      type_abzar: "",
 
       // persional
       type_araiesh: "",
