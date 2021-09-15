@@ -1,38 +1,46 @@
 <template>
-  <div v-if="newpageOrder == false" class="mt-5 pt-5">
-    <div v-if="catagoryname == 'title'">
-      <order-page
-        :order_data="order_data"
-        :data_items="data_titles"
-        :catagoryname="catagoryname"
-        @Gettitle="Gettitle"
-        @Resetgroup_name="Resetgroup_name"
-        @Resetgroup_item_name="Resetgroup_item_name"
-      />
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 col-lg-4"></div>
+      <div class="col-sm-12 col-md-8 col-lg-4">
+        <div v-if="newpageOrder == false" class="mt-5 pt-5">
+          <div v-if="catagoryname == 'title'">
+            <order-page
+              :order_data="order_data"
+              :data_items="data_titles"
+              :catagoryname="catagoryname"
+              @Gettitle="Gettitle"
+              @Resetgroup_name="Resetgroup_name"
+              @Resetgroup_item_name="Resetgroup_item_name"
+            />
+          </div>
+          <div v-if="catagoryname == 'items'">
+            <order-page
+              :order_data="order_data"
+              :data_items="data_items"
+              :catagoryname="catagoryname"
+              @Getitem="Getitem"
+              @Resetgroup_name="Resetgroup_name"
+              @Resetgroup_item_name="Resetgroup_item_name"
+            />
+          </div>
+          <div v-if="catagoryname == 'subitems'">
+            <order-page
+              :order_data="order_data"
+              :data_items="data_subitems"
+              :catagoryname="catagoryname"
+              @Getsubitem="Getsubitem"
+              @Resetgroup_name="Resetgroup_name"
+              @Resetgroup_item_name="Resetgroup_item_name"
+            />
+          </div>
+        </div>
+        <div v-else class="mt-5 pt-5">
+          <new-order-page @Resetgroup_subitem_name="Resetgroup_subitem_name" />
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-4"></div>
     </div>
-    <div v-if="catagoryname == 'items'">
-      <order-page
-        :order_data="order_data"
-        :data_items="data_items"
-        :catagoryname="catagoryname"
-        @Getitem="Getitem"
-        @Resetgroup_name="Resetgroup_name"
-        @Resetgroup_item_name="Resetgroup_item_name"
-      />
-    </div>
-    <div v-if="catagoryname == 'subitems'">
-      <order-page
-        :order_data="order_data"
-        :data_items="data_subitems"
-        :catagoryname="catagoryname"
-        @Getsubitem="Getsubitem"
-        @Resetgroup_name="Resetgroup_name"
-        @Resetgroup_item_name="Resetgroup_item_name"
-      />
-    </div>
-  </div>
-  <div v-else class="mt-5 pt-5">
-    <new-order-page @Resetgroup_subitem_name="Resetgroup_subitem_name" />
   </div>
 </template>
 
@@ -79,7 +87,7 @@ export default {
       Ram_pc: "",
       cpu_pc: "",
       color_electric: "",
-      tv_p_type:"",
+      tv_p_type: "",
 
       // estekhdam
       typeHamkari: "",
@@ -182,6 +190,14 @@ export default {
       explation: "",
     });
     provide("order_data", order_data);
+    const aboutTitle = reactive({
+      title: "در عنوان آگهی به موارد مهم و چشمگیر اشاره کنید",
+      title_ex: "",
+      explation:
+        "جزئیات و نکات قابل توجه آگهی خود را کامل و دقیق بنویسید. درج شماره موبایل در متن آگهی مجاز نیست .",
+      explation_ex: "",
+    });
+    provide("aboutTitle", aboutTitle);
     const pathing_module = ref("");
     const newpageOrder = ref(false);
     const catagory = ref("");
@@ -192,6 +208,7 @@ export default {
     const data_titles = computed(() => store.getters["titles/allTitles"]);
     const data_items = computed(() => store.getters["items/allItems"]);
     const data_subitems = computed(() => store.getters["subItems/allSubItems"]);
+    const noSubItems = computed(() => store.getters["subItems/allSubItems"]);
 
     onUpdated(() => {
       data_titles.value = computed(() => store.getters["titles/allTitles"]);
@@ -200,6 +217,7 @@ export default {
       data_subitems.value = computed(
         () => store.getters["subItems/allSubItems"]
       );
+      noSubItems.value = computed(() => store.getters["subItems/noSubItem"]);
     });
 
     watch(pathing_module, () => {
@@ -251,15 +269,12 @@ export default {
 
       order_data.group_item_name = item.name;
       await store.dispatch("subItems/fetchSubItems", item.path);
+      if (noSubItems) {
+        newpageOrder.value = true;
+        // *********** aboutTitle ******
+        useAboutTitle(order_data, aboutTitle);
+      }
     }
-    const aboutTitle = reactive({
-      title: "",
-      title_ex: "",
-      explation:
-        "جزئیات و نکات قابل توجه آگهی خود را کامل و دقیق بنویسید. درج شماره موبایل در متن آگهی مجاز نیست .",
-      explation_ex: "",
-    });
-    provide("aboutTitle", aboutTitle);
 
     function Getsubitem(item) {
       useClear(order_data);
@@ -268,8 +283,7 @@ export default {
       newpageOrder.value = true;
 
       // *********** aboutTitle ******
-      useAboutTitle(order_data,aboutTitle);
-      
+      useAboutTitle(order_data, aboutTitle);
     }
 
     function Resetgroup_name() {

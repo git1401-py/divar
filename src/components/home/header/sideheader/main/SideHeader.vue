@@ -1,8 +1,8 @@
 <template>
   <div
     id="style-2"
-    class="p-2 scrollable position-fixed end-0"
-    style="width: 350px; height: 88vh; top: 70px; z-index: 3"
+    class="p-2 pt-4 scrollable position-fixed end-0"
+    style="width: 351px; height: 88vh; top: 70px; z-index: 3"
     :class="{ bottom: fixedsideheader }"
   >
     <form action="">

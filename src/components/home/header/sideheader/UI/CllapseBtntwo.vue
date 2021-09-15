@@ -124,12 +124,12 @@ export default {
       if (data == "maxprice") maxprice.value = "";
     }
     watch(minprice, () => {
-      if (minprice.value == "") price.value = false;
+      if (minprice.value == "" && maxprice.value == "" ) price.value = false;
       else price.value = true;
       emit("minp", minprice.value);
     });
     watch(maxprice, () => {
-      if (maxprice.value == "") price.value = false;
+      if (maxprice.value == "" && minprice.value == "" ) price.value = false;
       else price.value = true;
       emit("maxp", maxprice.value);
     });

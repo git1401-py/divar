@@ -72,9 +72,21 @@
       />
     </div>
     <div class="mt-5">
+      <label for="viewMobile" class="text-muted p-3">
+        شماره تلفن در آگهی نمایش داده نشود</label
+      >
+      <input
+        id="viewMobile"
+        type="checkbox"
+        class="form-check-input"
+        value="true"
+        v-model="order_data.viewMobile"
+      />
+    </div>
+    <div class="mt-5">
       <label for="chat" class="text-muted px-3">چت دیوار فعال شود </label>
       <input
-      id="chat"
+        id="chat"
         type="checkbox"
         class="form-check-input"
         value="true"
@@ -148,7 +160,6 @@ export default {
   setup(props, { emit }) {
     const order_data = inject("order_data");
     const aboutTitle = inject("aboutTitle");
-    
 
     // const cityMarks = computed(() => order_data.subItem.city);
     const cityMarks = [

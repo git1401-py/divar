@@ -14,16 +14,6 @@
   <div class="" v-if="group_item_name == 'لوازم التحریر'">
     <lavazem-tahrir />
   </div>
-  <div class="mt-5">
-    <span class="text-muted p-3"> شماره تلفن در آگهی نمایش داده نشود</span>
-    <input
-      type="checkbox"
-      class="form-check-input"
-      value="true"
-      checked
-      v-model="order_data.viewMobile"
-    />
-  </div>
 <div class="mt-5">
     <span class="fw-bold">وضعیت</span>
     <select

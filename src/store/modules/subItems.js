@@ -4,14 +4,21 @@ const subItems = {
   namespaced: true,
   state: {
     subItems: [],
+    noSubItem: false,
   },
   getters: {
     allSubItems(state) {
       return state.subItems;
     },
+    noSubItem(state) {
+      return state.noSubItem;
+    },
   },
   mutations: {
     setSubItems(state, subItems) {
+      if (!subItems) {
+        state.noSubItem = true;
+      }
       state.subItems = subItems;
     },
   },
