@@ -1,4 +1,6 @@
 import { createStore } from "vuex";
+import user_orders from "./modules/user_orders.js";
+
 import titles from "./modules/titles.js";
 import items from "./modules/items.js";
 import subItems from "./modules/subItems.js";
@@ -25,6 +27,8 @@ export default createStore({
   mutations: {},
   actions: {},
   modules: {
+    user_orders,
+    
     titles,
     items,
     subItems,

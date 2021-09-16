@@ -61,7 +61,6 @@ async function fetchDefaultItems() {
     watch(pathing_module,()=>{
       info.subItem = computed(() => store.getters[pathing_module.value]);
     }) 
-const a = ref("");
 
     async function fetchItems(path, id, name) {
       info.group_name = name;
@@ -69,11 +68,11 @@ const a = ref("");
         pathing_module.value = "melkDetails/allmelkDetails";
         await store.dispatch("melkDetails/fetchMelkDetails");
       }
-      if (info.group_name == "وسایل نقلیه") {a.value = "vvvvvvv";
+      if (info.group_name == "وسایل نقلیه") {
         pathing_module.value = "vehicleDetails/allvehicleDetails";
         await store.dispatch("vehicleDetails/fetchVehicleDetails");
       }
-      if (info.group_name == "لوازم الکتریکی") {a.value = "eeeeeeeeeeee";
+      if (info.group_name == "لوازم الکتریکی") {
         pathing_module.value = "electrikiDetails/allelectrikiDetails";
         await store.dispatch("electrikiDetails/fetchElectrikiDetails");
       }
@@ -129,7 +128,7 @@ const a = ref("");
       displaySubitam,
       disSubitam,
       disSub,
-      a,info
+      info
     };
   },
 };

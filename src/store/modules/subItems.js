@@ -16,7 +16,10 @@ const subItems = {
   },
   mutations: {
     setSubItems(state, subItems) {
-      if (!subItems) {
+      console.log("subItems",subItems[1]);
+      if (subItems[1] ) {
+        state.noSubItem = false;
+      }else{
         state.noSubItem = true;
       }
       state.subItems = subItems;
@@ -24,14 +27,14 @@ const subItems = {
   },
   actions: {
     async fetchSubItems({ commit }, path) {
-      const res = await axios.get(`./json/${path}`, {
+      await axios.get(`./json/${path}`, {
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
 
           Accept: "application/json",
         },
-      });
-      commit("setSubItems", res.data);
+      }).then((res) => commit("setSubItems", res.data) )
+      
     },
   },
 };

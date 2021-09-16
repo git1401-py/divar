@@ -3,41 +3,45 @@
     <div class="row">
       <div class="col-md-2 col-lg-4"></div>
       <div class="col-sm-12 col-md-8 col-lg-4">
-        <div v-if="newpageOrder == false" class="mt-5 pt-5">
-          <div v-if="catagoryname == 'title'">
-            <order-page
-              :order_data="order_data"
-              :data_items="data_titles"
-              :catagoryname="catagoryname"
-              @Gettitle="Gettitle"
-              @Resetgroup_name="Resetgroup_name"
-              @Resetgroup_item_name="Resetgroup_item_name"
+        <form  v-on:submit.prevent="user_orders" multiple>
+          <div v-if="newpageOrder == false" class="mt-5 pt-5">
+            <div v-if="catagoryname == 'title'">
+              <order-page
+                :order_data="order_data"
+                :data_items="data_titles"
+                :catagoryname="catagoryname"
+                @Gettitle="Gettitle"
+                @Resetgroup_name="Resetgroup_name"
+                @Resetgroup_item_name="Resetgroup_item_name"
+              />
+            </div>
+            <div v-if="catagoryname == 'items'">
+              <order-page
+                :order_data="order_data"
+                :data_items="data_items"
+                :catagoryname="catagoryname"
+                @Getitem="Getitem"
+                @Resetgroup_name="Resetgroup_name"
+                @Resetgroup_item_name="Resetgroup_item_name"
+              />
+            </div>
+            <div v-if="catagoryname == 'subitems'">
+              <order-page
+                :order_data="order_data"
+                :data_items="data_subitems"
+                :catagoryname="catagoryname"
+                @Getsubitem="Getsubitem"
+                @Resetgroup_name="Resetgroup_name"
+                @Resetgroup_item_name="Resetgroup_item_name"
+              />
+            </div>
+          </div>
+          <div v-else class="mt-5 pt-5">
+            <new-order-page
+              @Resetgroup_subitem_name="Resetgroup_subitem_name"
             />
           </div>
-          <div v-if="catagoryname == 'items'">
-            <order-page
-              :order_data="order_data"
-              :data_items="data_items"
-              :catagoryname="catagoryname"
-              @Getitem="Getitem"
-              @Resetgroup_name="Resetgroup_name"
-              @Resetgroup_item_name="Resetgroup_item_name"
-            />
-          </div>
-          <div v-if="catagoryname == 'subitems'">
-            <order-page
-              :order_data="order_data"
-              :data_items="data_subitems"
-              :catagoryname="catagoryname"
-              @Getsubitem="Getsubitem"
-              @Resetgroup_name="Resetgroup_name"
-              @Resetgroup_item_name="Resetgroup_item_name"
-            />
-          </div>
-        </div>
-        <div v-else class="mt-5 pt-5">
-          <new-order-page @Resetgroup_subitem_name="Resetgroup_subitem_name" />
-        </div>
+        </form>
       </div>
       <div class="col-md-2 col-lg-4"></div>
     </div>
@@ -188,6 +192,7 @@ export default {
       codemeli: "",
       title: "",
       explation: "",
+      img_urls: []
     });
     provide("order_data", order_data);
     const aboutTitle = reactive({
@@ -208,7 +213,7 @@ export default {
     const data_titles = computed(() => store.getters["titles/allTitles"]);
     const data_items = computed(() => store.getters["items/allItems"]);
     const data_subitems = computed(() => store.getters["subItems/allSubItems"]);
-    const noSubItems = computed(() => store.getters["subItems/allSubItems"]);
+    const noSubItems = computed(() => store.getters["subItems/noSubItem"]);
 
     onUpdated(() => {
       data_titles.value = computed(() => store.getters["titles/allTitles"]);
@@ -269,7 +274,8 @@ export default {
 
       order_data.group_item_name = item.name;
       await store.dispatch("subItems/fetchSubItems", item.path);
-      if (noSubItems) {
+      if (noSubItems.value) {
+        console.log("noSubItems",noSubItems.value);
         newpageOrder.value = true;
         // *********** aboutTitle ******
         useAboutTitle(order_data, aboutTitle);
@@ -296,8 +302,14 @@ export default {
       catagoryname.value = "items";
     }
     function Resetgroup_subitem_name() {
+      if (noSubItems.value) {
+        order_data.group_subitem_name = "";
+      newpageOrder.value = false;
+              Resetgroup_item_name();
+      }else{
       order_data.group_subitem_name = "";
       newpageOrder.value = false;
+      }
     }
 
     async function fetchTitles() {
@@ -314,7 +326,12 @@ export default {
     async function allTitle() {
       await store.dispatch("titles/fetchTitles");
     }
+    async function user_orders() {
+      console.log("First");
+      await store.dispatch("user_orders/saveUser_orders" ,order_data );
+    }
     return {
+      user_orders,
       catagory,
       Getitem,
       Gettitle,

@@ -1,6 +1,6 @@
 <template>
   <div class="pt-5">
-    <form>
+    
       <ul>
         <h4>ثبت آگهی</h4>
         <div class="text-muted py-1">
@@ -60,7 +60,6 @@
           </li>
         </template>
       </ul>
-    </form>
   </div>
 </template>
 

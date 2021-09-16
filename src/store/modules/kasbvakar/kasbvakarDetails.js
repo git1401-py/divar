@@ -1,31 +1,31 @@
 import axios from "axios";
 
-const homeDetails = {
+const kasbvakarDetails = {
   namespaced: true,
   state: {
-    homeDetails: {},
+    kasbvakarDetails: {},
   },
   getters: {
-    allhomeDetails(state) {
-      return state.homeDetails;
+    allkasbvakarDetails(state) {
+      return state.kasbvakarDetails;
     },
   },
   mutations: {
-    sethomeDetails(state, homeDetails) {
-      state.homeDetails = homeDetails;
+    setkasbvakarDetails(state, kasbvakarDetails) {
+      state.kasbvakarDetails = kasbvakarDetails;
     },
   },
   actions: {
-    async fetchHomeDetails({ commit }) {
-      const res = await axios.get("./json/electrisite/homeDetails.json", {
+    async fetchKasbvakarDetails({ commit }) {
+      const res = await axios.get("./json/kasbvakar/kasbvakarDetails.json", {
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
 
           Accept: "application/json",
         },
       });
-      commit("sethomeDetails", res.data);
+      commit("setkasbvakarDetails", res.data);
     },
   },
 };
-export default homeDetails;
+export default kasbvakarDetails;

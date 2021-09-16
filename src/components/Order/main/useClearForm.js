@@ -124,7 +124,16 @@ const clear = (info) => {
   info.codemeli = "";
   info.title = "";
   info.explation = "";
-  info.img_urls = [];
+  info.img_url1 = "";
+  info.img_url2 = "";
+  info.img_url3 = "";
+  info.img_url4 = "";
+  info.img_url5 = "";
+  info.img_url6 = "";
+  info.img_url7 = "";
+  info.img_url8 = "";
+  info.img_url9 = "";
+  info.img_url10 = "";
 
 };
 export default clear;

@@ -53,7 +53,7 @@ export default {
     
     async function fetchSubItems(path, id, hasSub, name) {
       
-      // if (info.group_name == "برای کسب و کار") {
+      // if (info.grobup_name == "برای کسب و کار") {
       // }
       // if (info.group_item__name == "فروش مسکونی") {
       // }

@@ -15,6 +15,7 @@
         @dataFn="cityFn"
         id="city"
         exm="انتخاب"
+        :v_model_data="order_data.city"
       />
     </div>
     <div class="mt-4">
@@ -23,16 +24,34 @@
         عکس‌هایی از فضای داخل و بیرون ملک اضافه کنید. آگهی‌های دارای عکس تا «۳
         برابر» بیشتر توسط کاربران دیده می‌شوند.
       </p>
-      <input
-        id="input-b3"
-        name="input-b3[]"
-        type="file"
-        class="file"
-        multiple
-        data-show-upload="false"
-        data-show-caption="true"
-        data-msg-placeholder="Select {files} for upload..."
-      />
+      <div class="custom-file pmd-custom-file">
+        <br />
+        <div class="d-flex flex-grow-0 flex-wrap align-items-center">
+          <input
+            @change="imgUploadFn"
+            type="file"
+            class="custom-file-input bg-danger"
+            id="customFile"
+            multiple
+          />
+          <div class="uploading-image">
+            <label
+              @mouseenter="grayScale = true"
+              @mouseleave="grayScale = false"
+              class="custom-file-label w-100 h-100"
+              :class="{ 'label-grayscale': grayScale }"
+              for="customFile"
+            ></label>
+          </div>
+
+          <div v-for="(img , index ) in previewImage" :key="img" class="position-relative" >
+            <img :src="img" class="uploading-image position-relative"/>
+            <div class="small close-img" @click="deleteImg(index)">
+              <font-awesome-icon :icon="['fa', 'trash']" style="color: #fff" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- {{order_data.subItem}} -->
     <div v-if="order_data.group_name == 'املاک'"><melk-section /></div>
@@ -119,20 +138,21 @@
       ></textarea>
     </div>
     <div class="mt-5">
-      <button
+      <label
         class="btn btn-outline-light py-3 ms-3"
-        style="width: 45%; border: 1px solid #000; color: #000"
+        style="width: 45%; border: 1px solid #000; color: #000; cursor: pointer"
+        @click="clearForm"
       >
         انصراف
-      </button>
+      </label>
       <button class="btn btn-danger py-3" style="width: 45%">ارسال آگهی</button>
     </div>
   </div>
 </template>
 
 <script>
-import { inject, ref } from "@vue/runtime-core";
-import CllapseBtnone from "../home/header/sideheader/UI/CllapseBtnone.vue";
+import { inject, reactive, ref } from "@vue/runtime-core";
+import CllapseBtnone from "./UI/CllapseBtnone.vue";
 import MelkSection from "./main/MelkSection.vue";
 import ElectrisiteSection from "./main/ElectrisiteSection.vue";
 import EstekhdamSection from "./main/EstekhdamSection.vue";
@@ -143,6 +163,11 @@ import PersionalSection from "./main/PersionalSection.vue";
 import SargarmiSection from "./main/SargarmiSection.vue";
 import SocialSection from "./main/SocialSection.vue";
 import VehiclesSection from "./main/VehiclesSection.vue";
+
+import useClear from "./main/useClear.js";
+import { useStore } from "vuex";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 export default {
   components: {
     CllapseBtnone,
@@ -156,11 +181,16 @@ export default {
     SargarmiSection,
     SocialSection,
     VehiclesSection,
+    FontAwesomeIcon,
   },
   setup(props, { emit }) {
+    const store = useStore();
     const order_data = inject("order_data");
     const aboutTitle = inject("aboutTitle");
-
+    const grayScale = ref(false);
+    order_data.subItem.value = {};
+    const previewImage = reactive([]);
+    const imgFiles = reactive([]);
     // const cityMarks = computed(() => order_data.subItem.city);
     const cityMarks = [
       "ارومیه",
@@ -200,7 +230,69 @@ export default {
     }
 
     function cityFn(sarbazi) {
-      order_data.sarbazi = sarbazi;
+      order_data.city = sarbazi;
+    }
+    async function user_orders() {
+      console.log("First");
+      await store.dispatch("user_orders/saveUser_orders", order_data);
+    }
+
+    function imgUploadFn(event) {
+      // console.log('27/12/97' | moment("DD, mm, YYYY"));
+      event.target.files.forEach((element) => {
+        const exit = ref(false);
+        imgFiles.forEach((el) => {
+          if (el.name == element.name) {
+            exit.value = true;
+            return;
+          }
+        });
+        if (exit.value == false) {
+          imgFiles.unshift(element);
+          //  console.log(imgFiles);
+
+          const image = element;
+          const reader2 = new FileReader();
+          reader2.readAsDataURL(image);
+          reader2.onload = (e) => {
+            previewImage.push(e.target.result);
+            console.log(previewImage);
+          };
+        }
+      });
+
+      order_data.img_urls = [];
+      imgFiles.forEach((element) => {
+        const url = ref("");
+        url.value = "./userImages/" + Date.now() + "" + element.name;
+        element = { size: element.size, url: url.value, name: element.name };
+        order_data.img_urls.push(element.url);
+      });
+      console.log("****************************************");
+    }
+    function clearForm() {
+      order_data.img_urls.forEach((el) => {
+        order_data.img_urls.pop(el);
+        imgFiles.forEach((el) => {
+          imgFiles.pop(el);
+        });
+        previewImage.forEach((el) => {
+          previewImage.pop(el);
+        });
+      });
+      imgFiles.forEach((el) => {
+        imgFiles.pop(el);
+      });
+      previewImage.forEach((el) => {
+        previewImage.pop(el);
+      });
+      useClear(order_data);
+    }
+    function deleteImg(index){
+      order_data.img_urls.splice(index,index);
+      previewImage.splice(index,index);
+      imgFiles.splice(index,index);
+
     }
     return {
       Resetgroup_subitem_name,
@@ -210,12 +302,63 @@ export default {
       cityMarks,
       city_items,
       cityFn,
+      user_orders,
+      imgUploadFn,
+      clearForm,
+      previewImage,
+      grayScale,
+      deleteImg,
     };
   },
 };
 </script>
 
-<style>
+<style scoped>
+.uploading-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.custom-file-input {
+  width: 0px;
+  height: 0px;
+  /*position:relative;
+  bottom:0;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 0 auto; */
+  visibility: hidden;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-label {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  filter: grayscale(100);
+  border-radius: 5px;
+  margin: 0px 0px 10px 10px;
+  cursor: pointer;
+  background: url("../../../public/img/imgUpload.png") no-repeat center center;
+}
+.label-grayscale {
+  filter: grayscale(0) !important;
+}
+.close-img{
+  position:absolute;
+  color:red;
+  text-align: center;
+  padding: 0 4px;
+  left: 12px; 
+  top: 12px;
+  cursor: pointer;
+  background:rgba(0,0,0,.6);
+}
+
 .subitem {
   padding: 20px;
   border: 1px solid lightgray;

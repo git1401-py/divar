@@ -51,7 +51,7 @@
           class="form-select form-select-sm text-secondary py-2 pe-4"
           aria-label=".form-select-sm example"
           :class="{ 'close-select': data }"
-          v-model="data"
+          v-model="order_data.city"
         >
           <option value="" selected disabled> {{ exm }}</option>
           <template v-for="money in marks" :key="money">
@@ -73,13 +73,14 @@
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"; 
 import { ref } from "@vue/reactivity";
-import { watch } from "@vue/runtime-core";
+import { inject, watch } from "@vue/runtime-core";
 import {} from "vuex";
 
 export default {
   components: { FontAwesomeIcon },
-  props: ["data_items", "marks", "id", "txt", "exm"],
+  props: ["data_items", "marks", "id", "txt", "exm","v_model_data"],
   setup(props, { emit }) {
+    const order_data = inject("order_data");    
     const ID = ref("");
     const showDelete = ref(false);
     const price = ref(false);
@@ -101,6 +102,7 @@ export default {
       showDelete.value = !showDelete.value;
     }
     return {
+      order_data,
       ID,
       data,
       price,
