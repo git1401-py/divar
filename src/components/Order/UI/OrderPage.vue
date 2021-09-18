@@ -1,65 +1,73 @@
 <template>
   <div class="pt-5">
-    
-      <ul>
-        <h4>ثبت آگهی</h4>
-        <div class="text-muted py-1">
-          <span>دستهٔ آگهی را انتخاب کنید</span>
-        </div>
-        <div
-          class="text-muted py-3 titlehover small"
-          v-if="order_data.group_name && !order_data.group_item_name"
+    <ul>
+      <h4>ثبت آگهی</h4>
+      <div class="text-muted py-1">
+        <span>دستهٔ آگهی را انتخاب کنید</span>
+      </div>
+      <div
+        class="text-muted py-3 titlehover small"
+        v-if="order_data.group_name && !order_data.group_item_name"
+      >
+        <a @click="Resetgroup_name"
+          ><font-awesome-icon :icon="['fa', 'chevron-right']" />
+          <span class="pe-2">بازگشت به همهٔ دسته‌ها</span>
+        </a>
+      </div>
+      <div
+        class="text-muted py-3 titlehover small"
+        v-if="order_data.group_item_name"
+      >
+        <a class="" @click="Resetgroup_item_name">
+          <font-awesome-icon :icon="['fa', 'chevron-right']" />
+          <span class="pe-2">بازگشت به همهٔ {{ order_data.group_name }}</span>
+        </a>
+      </div>
+      <template v-if="catagoryname == 'title'">
+        <li
+          v-for="item in data_items"
+          :key="item"
+          @click="sendTitle(item)"
+          class="li-design d-flex justify-content-between align-items-center"
         >
-          <a @click="Resetgroup_name"
-            ><font-awesome-icon :icon="['fa', 'chevron-right']" />
-            <span class="pe-2">بازگشت به همهٔ دسته‌ها</span>
-          </a>
-        </div>
-        <div
-          class="text-muted py-3 titlehover small"
-          v-if="order_data.group_item_name"
+          <!-- املاک -->
+          <span>{{ item.title }}</span>
+          <font-awesome-icon
+            :icon="['fa', 'chevron-left']"
+            style="color: lightgray"
+          />
+        </li>
+      </template>
+      <template v-if="catagoryname == 'items'">
+        <li
+          v-for="item in data_items"
+          :key="item"
+          @click="sendItem(item)"
+          class="li-design d-flex justify-content-between align-items-center"
         >
-          <a class="" @click="Resetgroup_item_name">
-            <font-awesome-icon :icon="['fa', 'chevron-right']" />
-            <span class="pe-2">بازگشت به همهٔ {{ order_data.group_name }}</span>
-          </a>
-        </div>
-        <template v-if="catagoryname == 'title'">
-          <li
-            v-for="item in data_items"
-            :key="item"
-            @click="sendTitle(item)"
-            class="li-design d-flex justify-content-between align-items-center"
-          >
-            <!-- املاک -->
-            <span>{{ item.title }}</span>
-            <font-awesome-icon :icon="['fa', 'chevron-left']" style="color:lightgray;"/>
-          </li>
-        </template>
-        <template v-if="catagoryname == 'items'">
-          <li
-            v-for="item in data_items"
-            :key="item"
-            @click="sendItem(item)"
-            class="li-design d-flex justify-content-between align-items-center"
-          >
-            <span>{{ item.name }}</span>
-            
-            <font-awesome-icon :icon="['fa', 'chevron-left']" style="color:lightgray;"/>
-          </li>
-        </template>
-        <template v-if="catagoryname == 'subitems'">
-          <li
-            v-for="item in data_items"
-            :key="item"
-            @click="sendsubItem(item)"
-            class="li-design d-flex justify-content-between align-items-center"
-          >
-            <span>{{ item.name }}</span>
-            <font-awesome-icon :icon="['fa', 'chevron-left']" style="color:lightgray;"/>
-          </li>
-        </template>
-      </ul>
+          <span>{{ item.name }}</span>
+
+          <font-awesome-icon
+            :icon="['fa', 'chevron-left']"
+            style="color: lightgray"
+          />
+        </li>
+      </template>
+      <template v-if="catagoryname == 'subitems'">
+        <li
+          v-for="item in data_items"
+          :key="item"
+          @click="sendsubItem(item)"
+          class="li-design d-flex justify-content-between align-items-center"
+        >
+          <span>{{ item.name }}</span>
+          <font-awesome-icon
+            :icon="['fa', 'chevron-left']"
+            style="color: lightgray"
+          />
+        </li>
+      </template>
+    </ul>
   </div>
 </template>
 

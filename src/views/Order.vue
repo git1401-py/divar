@@ -247,6 +247,7 @@ export default {
       if (order_data.group_name == "استخدام و کاریابی") {
         pathing_module.value = "estekhdamDetails/allestekhdamDetails";
         await store.dispatch("estekhdamDetails/fetchEstekhdamDetails");
+      
       }
       if (order_data.group_name == "مربوط به خانه") {
         pathing_module.value = "homeDetails/allhomeDetails";
@@ -267,6 +268,11 @@ export default {
       if (order_data.group_name == "اجتماعی") {
         pathing_module.value = "socialDetails/allsocialDetails";
         await store.dispatch("socialDetails/fetchSocialDetails");
+      }
+      if (order_data.group_name == "استخدام و کاریابی") {
+        newpageOrder.value = true;
+        // *********** aboutTitle ******
+        useAboutTitle(order_data, aboutTitle);
       }
     }
     async function Getitem(item) {

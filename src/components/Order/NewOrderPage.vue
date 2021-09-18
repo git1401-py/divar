@@ -289,9 +289,9 @@ export default {
       useClear(order_data);
     }
     function deleteImg(index){
-      order_data.img_urls.splice(index,index);
-      previewImage.splice(index,index);
-      imgFiles.splice(index,index);
+      order_data.img_urls.splice(index,1);
+      previewImage.splice(index,1);
+      imgFiles.splice(index,1);
 
     }
     return {

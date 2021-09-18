@@ -16,7 +16,7 @@ const sargarmiDetails = {
     },
   },
   actions: {
-    async fetchSargarmiDetails({ commit }) {
+    async fetchsargarmiDetails({ commit }) {
       const res = await axios.get("./json/sargarmi/sargarmiDetails.json", {
         headers: {
           "Content-Type": "application/json; charset=UTF-8",

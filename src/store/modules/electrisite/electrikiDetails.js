@@ -24,7 +24,6 @@ const electrikiDetails = {
           Accept: "application/json",
         },
       });
-      console.log("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
       commit("setelectrikiDetails", res.data);
     },
   },

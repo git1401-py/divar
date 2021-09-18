@@ -2,78 +2,78 @@
   {
     "id": 1,
     "name": "اداری و مدیریت",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 2,
     "name": "سرایداری و نظافت",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 3,
     "name": "معماری، عمران و ساختمانی",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 4,
     "name": "خدمات فروشگاه و رستوران",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 5,
     "name": "رایانه و فناوری اطلاعات",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 6,
     "name": "مالی و حسابداری و حقوقی",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 7,
     "name": "بازاریابی و فروش",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 8,
     "name": "صنعتی و فنی و مهندسی",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 9,
     "name": "آموزشی",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 10,
     "name": "حمل و نقل",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 11,
     "name": "درمانی و زیبایی و بهداشتی",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 12,
     "name": "هنری و رسانه",
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   },
   {
     "id": 13,
-    "path":"estekhdam/details.json",
+    "path":"estekhdam/estekhdamDetails.json",
     "subItem":"no"
   }
 ]
