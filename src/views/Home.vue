@@ -53,7 +53,7 @@
           >
             {{ order.group_name }}//{{ order.group_item_name }}//{{
               order.group_subitem_name
-            }}//{{ order.price }}//{{ order.mobile }}
+            }}//{{ order.price }}//{{ order.mobile }}//{{ order.space }}
           </div>
         </template>
       </main-section>
@@ -156,6 +156,8 @@ export default {
       type_order_vehicle: "",
       color_vehicle: "",
       karkard: "",
+      minkarkard:"",
+      maxkarkard:"",
       type_adv: "",
       moaveze: "",
       brande_motor: "",
@@ -211,6 +213,7 @@ export default {
       max_ejare_tejari: "",
       status: "",
       viewMobile: "",
+      img_urls:"",
       just_img: false,
       just_imediate: false,
       del_tavafoghi: false,
@@ -299,10 +302,16 @@ export default {
 
     watch(group_name, () => {
       console.log("WATCHname", group_name.value);
-        useFilter(info, ODatas, orderData , group_name);
+        useFilter(info, ODatas, orderData , group_name,minprice.value,maxprice.value);
+        watch(info, () => {
+          useFilter(info, ODatas, orderData , group_name,minprice.value,maxprice.value);
+    });
     });
     watch(group_item_name, () => {
-        useFiltergroup_item_name(info, ODatas, orderData , group_item_name);
+        useFiltergroup_item_name(info, ODatas, orderData , group_item_name,minprice,maxprice);
+        watch(info, () => {
+        useFiltergroup_item_name(info, ODatas, orderData , group_item_name,minprice.value,maxprice.value,min_vadie_melk.value,max_vadie_melk.value,min_ejare_melk.value,max_ejare_melk.value,info.spaceFrom_melk,info.spaceTo_melk);
+        });
     });
     watch(group_subitem_name, () => {
         useFiltergroup_subitem_name(info, ODatas, orderData , group_subitem_name);

@@ -58,6 +58,7 @@
       <option class="text-start" value="false">ندارد</option>
     </select>
   </div>
+  <hr/>
 
   <div class="" v-if="group_subitem_name == 'دفتر کار،اتاق اداری و مطب'">
     <div class="mt-5">

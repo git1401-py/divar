@@ -65,6 +65,8 @@ const clear = (info) => {
   info.type_order_vehicle = "";
   info.color_vehicle = "";
   info.karkard = "";
+  info.minkarkard = "";
+  info.maxkarkard = "";
   info.type_adv = "";
   info.moaveze = "";
   info.brande_motor = "";
@@ -78,7 +80,6 @@ const clear = (info) => {
   info.sanad_vehicle = "";
   info.girbox_vehicle = "";
   info.sellType_vehicle = "";
-  info.karkard = "";
   info.with_zemanat = false;
 
   // melk

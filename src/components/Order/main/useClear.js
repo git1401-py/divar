@@ -74,6 +74,7 @@ const clear = (info) => {
   info.brande_savari = "";
   info.minyearsofbuild_vehicle = "";
   info.maxyearsofbuild_vehicle = "";
+  info.yearsofbuild_vehicle = "";
   info.motor_vehicle = "";
   info.shasi_vehicle = "";
   info.body_vehicle = "";
@@ -118,6 +119,7 @@ const clear = (info) => {
   info.just_img = false;
   info.just_imediate = false;
   info.del_tavafoghi = false;
+  info.tavafoghi = false;
   info.tormajazi = false;
   info.just_single = false;
   info.mobile = "";
